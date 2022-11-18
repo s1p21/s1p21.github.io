@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>s1p21的blog</title>
+  
+  <subtitle>s1p21</subtitle>
+  <link href="https://s1p21.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://s1p21.github.io/"/>
+  <updated>2022-11-18T11:56:37.162Z</updated>
+  <id>https://s1p21.github.io/</id>
+  
+  <author>
+    <name>s1p21</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入了解Composition API和 watch 源码分析</title>
+    <link href="https://s1p21.github.io/2022/11/18/shen-ru-liao-jie-composition-api-he-watch-yuan-ma-fen-xi/"/>
+    <id>https://s1p21.github.io/2022/11/18/shen-ru-liao-jie-composition-api-he-watch-yuan-ma-fen-xi/</id>
+    <published>2022-11-18T07:24:30.000Z</published>
+    <updated>2022-11-18T11:56:37.162Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;什么是-Composition-API（VCA）&quot;&gt;&lt;a href=&quot;#什么是-Composition-API（VCA）&quot; class=&quot;headerlink&quot; title=&quot;什么是 Composition API（VCA）&quot;&gt;&lt;/a&gt;什么是</summary>
+        
+      
+    
+    
+    
+    
+    <category term="vue3" scheme="https://s1p21.github.io/tags/vue3/"/>
+    
+    <category term="composition API" scheme="https://s1p21.github.io/tags/composition-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>防腐层在前端领域的实践</title>
+    <link href="https://s1p21.github.io/2022/11/16/fang-fu-ceng-zai-qian-duan-ling-yu-de-shi-jian/"/>
+    <id>https://s1p21.github.io/2022/11/16/fang-fu-ceng-zai-qian-duan-ling-yu-de-shi-jian/</id>
+    <published>2022-11-16T11:36:44.000Z</published>
+    <updated>2022-11-18T11:56:37.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;什么是防腐层&quot;&gt;&lt;a href=&quot;#什么是防腐层&quot; class=&quot;headerlink&quot; title=&quot;什么是防腐层&quot;&gt;&lt;/a&gt;什么是防腐层&lt;/h3&gt;&lt;p&gt;防腐层(Anti-corruption layer) ： 防腐层（Anti-corruption</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DDD" scheme="https://s1p21.github.io/tags/DDD/"/>
+    
+    <category term="领域驱动设计" scheme="https://s1p21.github.io/tags/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="RxJS" scheme="https://s1p21.github.io/tags/RxJS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React 组件性能优化</title>
+    <link href="https://s1p21.github.io/2022/11/15/react-zu-jian-xing-neng-you-hua/"/>
+    <id>https://s1p21.github.io/2022/11/15/react-zu-jian-xing-neng-you-hua/</id>
+    <published>2022-11-15T08:02:22.000Z</published>
+    <updated>2022-11-18T11:56:37.159Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;React-组件性能优化&quot;&gt;&lt;a href=&quot;#React-组件性能优化&quot; class=&quot;headerlink&quot; title=&quot;React 组件性能优化&quot;&gt;&lt;/a&gt;React 组件性能优化&lt;/h1&gt;&lt;p&gt;React 基于虚拟 DOM 和高效 Diff</summary>
+        
+      
+    
+    
+    
+    
+    <category term="React" scheme="https://s1p21.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react-native</title>
+    <link href="https://s1p21.github.io/2022/11/04/react-native/"/>
+    <id>https://s1p21.github.io/2022/11/04/react-native/</id>
+    <published>2022-11-04T03:51:43.000Z</published>
+    <updated>2022-11-18T11:56:37.161Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;react-native&quot;&gt;&lt;a href=&quot;#react-native&quot; class=&quot;headerlink&quot; title=&quot;react-native&quot;&gt;&lt;/a&gt;react-native&lt;/h2&gt;&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react-native" scheme="https://s1p21.github.io/tags/react-native/"/>
+    
+    <category term="RN" scheme="https://s1p21.github.io/tags/RN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react&amp;react-router</title>
+    <link href="https://s1p21.github.io/2022/11/04/react-he-react-router/"/>
+    <id>https://s1p21.github.io/2022/11/04/react-he-react-router/</id>
+    <published>2022-11-04T02:57:21.000Z</published>
+    <updated>2022-11-18T11:56:37.162Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;React&quot;&gt;&lt;a href=&quot;#React&quot; class=&quot;headerlink&quot; title=&quot;React&quot;&gt;&lt;/a&gt;React&lt;/h2&gt;&lt;h3 id=&quot;React-初识&quot;&gt;&lt;a href=&quot;#React-初识&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react" scheme="https://s1p21.github.io/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typescript学习</title>
+    <link href="https://s1p21.github.io/2022/11/04/typescript-xue-xi/"/>
+    <id>https://s1p21.github.io/2022/11/04/typescript-xue-xi/</id>
+    <published>2022-11-04T02:57:21.000Z</published>
+    <updated>2022-11-18T11:56:37.159Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;一、TS-的优势&quot;&gt;&lt;a href=&quot;#一、TS-的优势&quot; class=&quot;headerlink&quot; title=&quot;一、TS 的优势&quot;&gt;&lt;/a&gt;一、TS</summary>
+        
+      
+    
+    
+    
+    
+    <category term="TS" scheme="https://s1p21.github.io/tags/TS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>dva&amp;umi&amp;redux</title>
+    <link href="https://s1p21.github.io/2022/11/04/dva-umi-redux/"/>
+    <id>https://s1p21.github.io/2022/11/04/dva-umi-redux/</id>
+    <published>2022-11-04T02:55:50.000Z</published>
+    <updated>2022-11-18T11:56:37.160Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;dva 首先是一个基于 redux 和 redux-saga 的数据流方案，然后为了简化开发体验，dva 还额外内置了</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react" scheme="https://s1p21.github.io/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单页应用路由原理</title>
+    <link href="https://s1p21.github.io/2022/11/04/dan-ye-ying-yong-lu-you-yuan-li/"/>
+    <id>https://s1p21.github.io/2022/11/04/dan-ye-ying-yong-lu-you-yuan-li/</id>
+    <published>2022-11-04T02:53:43.000Z</published>
+    <updated>2022-11-18T11:56:37.162Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;补充知识：window-location&quot;&gt;&lt;a href=&quot;#补充知识：window-location&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="spa" scheme="https://s1p21.github.io/tags/spa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>flutter跨组件通信</title>
+    <link href="https://s1p21.github.io/2022/11/03/flutter-kua-zu-jian-tong-xin/"/>
+    <id>https://s1p21.github.io/2022/11/03/flutter-kua-zu-jian-tong-xin/</id>
+    <published>2022-11-03T08:18:53.000Z</published>
+    <updated>2022-11-18T11:56:37.160Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;flutter-跨组件通信&quot;&gt;&lt;a href=&quot;#flutter-跨组件通信&quot; class=&quot;headerlink&quot; title=&quot;flutter 跨组件通信&quot;&gt;&lt;/a&gt;flutter</summary>
+        
+      
+    
+    
+    
+    
+    <category term="flutter" scheme="https://s1p21.github.io/tags/flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动技术发展&amp;flutter简介</title>
+    <link href="https://s1p21.github.io/2022/11/03/yi-dong-ji-zhu-fa-zhan-he-flutter-jian-jie/"/>
+    <id>https://s1p21.github.io/2022/11/03/yi-dong-ji-zhu-fa-zhan-he-flutter-jian-jie/</id>
+    <published>2022-11-03T08:18:02.000Z</published>
+    <updated>2022-11-18T11:56:37.162Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;移动技术发展及-flutter-简介&quot;&gt;&lt;a href=&quot;#移动技术发展及-flutter-简介&quot; class=&quot;headerlink&quot; title=&quot;移动技术发展及 flutter 简介&quot;&gt;&lt;/a&gt;移动技术发展及 flutter 简介&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="flutter" scheme="https://s1p21.github.io/tags/flutter/"/>
+    
+  </entry>
+  
+</feed>
