@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: flutter, 前端 vue js ts react node">
-    <meta name="description" content="前端技术栈 微信公众号：前端技术宅博客">
+    <meta name="keywords" content="面试-CSS, 前端 vue js ts react node">
+    <meta name="description" content="1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
+ #main{
+  background-color:aqua;
+  width:100%;
+  f">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: flutter | s1p21的blog</title>
+    <title>面试-CSS | s1p21的blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
     
 
@@ -289,278 +293,481 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                s1p21
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "求知若饥，虚心若愚",
-                            
-                                "Stay hungry，Stay foolish",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">面试-CSS</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                            <a href="/tags/css/">
+                                <span class="chip bg-color">css</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-11-29
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h4 id="1-定位、布局-不同定位的区别，两栏布局、三栏布局，flex布局必会"><a href="#1-定位、布局-不同定位的区别，两栏布局、三栏布局，flex布局必会" class="headerlink" title="1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会"></a>1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会</h4><p> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
+<pre><code> #main{
+  background-color:aqua;
+  width:100%;
+  float:left;
+}
+#left{
+  width:200px;
+  background-color:yellow;
+  float:left;
+  margin-left:-100%;
+}
+#right{
+  width:300px;
+  background-color:orange;
+  float:left;
+  margin-left:-300px;
+}
+#content{
+  margin-left:200px;
+  margin-right:300px;
+}
+
+ 
+ &lt;!--中间栏写在最前面--&gt;
+&lt;div id = "main"&gt;
+  &lt;div id="content"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id = "left"&gt;
+&lt;/div&gt;
+
+&lt;div id = "right"&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="2-对于一些常见css的书写-比如文本溢出显示省略号"><a href="#2-对于一些常见css的书写-比如文本溢出显示省略号" class="headerlink" title="2. 对于一些常见css的书写:比如文本溢出显示省略号"></a>2. 对于一些常见css的书写:比如文本溢出显示省略号</h4><pre><code>text-overflow:ellipsis
+
+##多行
+display:-webkit-box
+-webkit-line-clamp:2;
+</code></pre>
+<h4 id="3-link和-import的区别"><a href="#3-link和-import的区别" class="headerlink" title="3. link和@import的区别"></a>3. link和@import的区别</h4><ul>
+<li>link的功能比较多，可以定义RSS、Rel等作用，而@import只能用于加载css</li>
+<li>解析到link时，同步加载引到的css，而@import引到的css等到页面加载完成后才被加载</li>
+<li>@import 需要ES5 以上</li>
+<li>link可以js动态导入，@import不行</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">s1p21</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://s1p21.github.io/2022/11/29/mian-shi-css/">https://s1p21.github.io/2022/11/29/mian-shi-css/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">s1p21</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
+                                </a>
+                            
+                                <a href="/tags/css/">
+                                    <span class="chip bg-color">css</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
 
-
+            
+        </div>
     </div>
-</div>
-
-<main class="content">
 
     
 
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/React/" title="React: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="React" style="background-color: #F9EBEA;">React
-                        <span class="tag-length">1</span>
-                    </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/11/29/mian-shi-js/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/13.jpg" class="responsive-img" alt="面试-JS">
+                        
+                        <span class="card-title">面试-JS</span>
+                    </div>
                 </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
                 
-                
-                <a href="/tags/react/" title="react: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="react" style="background-color: #F5EEF8;">react
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/flutter/" title="flutter: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="flutter" style="background-color: #D5F5E3;">flutter
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/react-native/" title="react-native: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="react-native" style="background-color: #E8F8F5;">react-native
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/RN/" title="RN: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="RN" style="background-color: #FEF9E7;">RN
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/spa/" title="spa: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="spa" style="background-color: #F8F9F9;">spa
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/vue3/" title="vue3: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="vue3" style="background-color: #82E0AA;">vue3
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/composition-API/" title="composition API: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="composition API" style="background-color: #D7BDE2;">composition API
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/DDD/" title="DDD: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="DDD" style="background-color: #A3E4D7;">DDD
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/" title="领域驱动设计: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="领域驱动设计" style="background-color: #85C1E9;">领域驱动设计
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/RxJS/" title="RxJS: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="RxJS" style="background-color: #F8C471;">RxJS
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/TS/" title="TS: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="TS" style="background-color: #F9E79F;">TS
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9D%A2%E8%AF%95/" title="面试: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="面试" style="background-color: #F9EBEA;">面试
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/promise/" title="promise: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="promise" style="background-color: #F9E79F;">promise
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/css/" title="css: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="css" style="background-color: #82E0AA;">css
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/JS/" title="JS: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="JS" style="background-color: #F9E79F;">JS
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
+                    </a>
+                    
+                </div>
                 
             </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/11/18/shen-ru-liao-jie-composition-api-he-watch-yuan-ma-fen-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/3.jpg" class="responsive-img" alt="深入了解Composition API和 watch 源码分析">
+                        
+                        <span class="card-title">深入了解Composition API和 watch 源码分析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue3/">
+                        <span class="chip bg-color">vue3</span>
+                    </a>
+                    
+                    <a href="/tags/composition-API/">
+                        <span class="chip bg-color">composition API</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
 </div>
 
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="flutter" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/11/03/flutter-kua-zu-jian-tong-xin/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/5.jpg" class="responsive-img" alt="flutter跨组件通信">
-                            
-                            <span class="card-title">flutter跨组件通信</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                s1p21
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="flutter" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/11/03/yi-dong-ji-zhu-fa-zhan-he-flutter-jian-jie/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/9.jpg" class="responsive-img" alt="移动技术发展&amp;flutter简介">
-                            
-                            <span class="card-title">移动技术发展&amp;flutter简介</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                s1p21
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
 
 
