@@ -6,10 +6,11 @@
     <meta charset="utf-8">
     <meta name="keywords" content="面试-CSS, 前端 vue js ts react node">
     <meta name="description" content="1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
+
  #main{
   background-color:aqua;
   width:100%;
-  f">
+  ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -368,44 +369,46 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="1-定位、布局-不同定位的区别，两栏布局、三栏布局，flex布局必会"><a href="#1-定位、布局-不同定位的区别，两栏布局、三栏布局，flex布局必会" class="headerlink" title="1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会"></a>1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会</h4><p> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
-<pre><code> #main{
-  background-color:aqua;
-  width:100%;
-  float:left;
-}
-#left{
-  width:200px;
-  background-color:yellow;
-  float:left;
-  margin-left:-100%;
-}
-#right{
-  width:300px;
-  background-color:orange;
-  float:left;
-  margin-left:-300px;
-}
-#content{
-  margin-left:200px;
-  margin-right:300px;
-}
+<pre class=" language-css"><code class="language-css">
+ <span class="token selector"><span class="token id">#main</span></span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span>aqua<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token id">#left</span></span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span>yellow<span class="token punctuation">;</span>
+  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span>-<span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token id">#right</span></span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">300</span>px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span>orange<span class="token punctuation">;</span>
+  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span>-<span class="token number">300</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token id">#content</span></span><span class="token punctuation">{</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token property">margin-right</span><span class="token punctuation">:</span><span class="token number">300</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
  
- &lt;!--中间栏写在最前面--&gt;
-&lt;div id = "main"&gt;
-  &lt;div id="content"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id = "left"&gt;
-&lt;/div&gt;
+ &lt;!--中间栏写在最前面-->
+&lt;div id = <span class="token string">"main"</span>>
+  &lt;div id=<span class="token string">"content"</span>>&lt;/div>
+&lt;/div>
+&lt;div id = <span class="token string">"left"</span>>
+&lt;/div>
 
-&lt;div id = "right"&gt;
-&lt;/div&gt;
+&lt;div id = <span class="token string">"right"</span>>
+&lt;/div>
 </code></pre>
-<h4 id="2-对于一些常见css的书写-比如文本溢出显示省略号"><a href="#2-对于一些常见css的书写-比如文本溢出显示省略号" class="headerlink" title="2. 对于一些常见css的书写:比如文本溢出显示省略号"></a>2. 对于一些常见css的书写:比如文本溢出显示省略号</h4><pre><code>text-overflow:ellipsis
+<h4 id="2-对于一些常见css的书写-比如文本溢出显示省略号"><a href="#2-对于一些常见css的书写-比如文本溢出显示省略号" class="headerlink" title="2. 对于一些常见css的书写:比如文本溢出显示省略号"></a>2. 对于一些常见css的书写:比如文本溢出显示省略号</h4><pre class=" language-css"><code class="language-css">
+<span class="token property">text-overflow</span><span class="token punctuation">:</span>ellipsis
 
-##多行
-display:-webkit-box
--webkit-line-clamp:2;
+#多行
+<span class="token property">display</span><span class="token punctuation">:</span>-webkit-box
+<span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="3-link和-import的区别"><a href="#3-link和-import的区别" class="headerlink" title="3. link和@import的区别"></a>3. link和@import的区别</h4><ul>
 <li>link的功能比较多，可以定义RSS、Rel等作用，而@import只能用于加载css</li>

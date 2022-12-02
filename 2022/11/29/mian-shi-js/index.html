@@ -436,6 +436,9 @@
 <li>完全可控，参数一样，返回值一定一样: 例如函数不能包含new Date()或者Math.rando()等这种不可控因素；</li>
 <li>引用透明；</li>
 </ul>
+<h4 id="6-call、-apply-和-bind-的区别"><a href="#6-call、-apply-和-bind-的区别" class="headerlink" title="6. call、 apply 和 bind 的区别"></a>6. call、 apply 和 bind 的区别</h4><p>call( this,a,b,c ) 在第一个参数之后的，后续所有参数就是传入该函数的值。apply( this,[a,b,c] ) 只有两个参数，第一个是对象，第二个是数组，这个数组就是该函数的参数。</p>
+<p>bind 除了返回是函数以外，它的参数和 call 一样。</p>
+<p>共同之处：都可以用来代替另一个对象调用一个方法，将一个函数的对象上下文从初始的上下文改变为由thisObj指定的新对象</p>
 
                 
             </div>

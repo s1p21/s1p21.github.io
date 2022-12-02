@@ -6,7 +6,7 @@
   <link href="https://s1p21.github.io/atom.xml" rel="self"/>
   
   <link href="https://s1p21.github.io/"/>
-  <updated>2022-11-29T12:47:35.678Z</updated>
+  <updated>2022-12-01T09:56:59.377Z</updated>
   <id>https://s1p21.github.io/</id>
   
   <author>
@@ -17,11 +17,75 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>面试-bff</title>
+    <link href="https://s1p21.github.io/2022/12/01/mian-shi-bff/"/>
+    <id>https://s1p21.github.io/2022/12/01/mian-shi-bff/</id>
+    <published>2022-12-01T09:56:59.000Z</published>
+    <updated>2022-12-01T09:56:59.377Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试-vue</title>
+    <link href="https://s1p21.github.io/2022/11/30/mian-shi-vue/"/>
+    <id>https://s1p21.github.io/2022/11/30/mian-shi-vue/</id>
+    <published>2022-11-30T07:00:39.000Z</published>
+    <updated>2022-12-01T09:56:29.883Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;vue-的双向绑定&quot;&gt;&lt;a href=&quot;#vue-的双向绑定&quot; class=&quot;headerlink&quot; title=&quot;vue 的双向绑定&quot;&gt;&lt;/a&gt;vue 的双向绑定&lt;/h4&gt;&lt;p&gt;vue2.x</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="vue" scheme="https://s1p21.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-React</title>
+    <link href="https://s1p21.github.io/2022/11/30/mian-shi-react/"/>
+    <id>https://s1p21.github.io/2022/11/30/mian-shi-react/</id>
+    <published>2022-11-30T04:33:51.000Z</published>
+    <updated>2022-12-01T09:25:15.074Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;react生命周期&quot;&gt;&lt;a href=&quot;#react生命周期&quot; class=&quot;headerlink&quot; title=&quot;react生命周期&quot;&gt;&lt;/a&gt;react生命周期&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;constructor（并不属于生命周期 - 初始化</summary>
+        
+      
+    
+    
+    
+    
+    <category term="React" scheme="https://s1p21.github.io/tags/React/"/>
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>手写实现promise</title>
     <link href="https://s1p21.github.io/2022/11/29/shou-xie-shi-xian-promise/"/>
     <id>https://s1p21.github.io/2022/11/29/shou-xie-shi-xian-promise/</id>
     <published>2022-11-29T12:46:39.000Z</published>
-    <updated>2022-11-29T12:47:35.678Z</updated>
+    <updated>2022-11-30T04:33:23.371Z</updated>
     
     
       
@@ -46,7 +110,7 @@
     <link href="https://s1p21.github.io/2022/11/29/mian-shi-js/"/>
     <id>https://s1p21.github.io/2022/11/29/mian-shi-js/</id>
     <published>2022-11-29T09:13:37.000Z</published>
-    <updated>2022-11-29T12:46:12.178Z</updated>
+    <updated>2022-11-30T07:31:42.804Z</updated>
     
     
       
@@ -71,7 +135,7 @@
     <link href="https://s1p21.github.io/2022/11/29/mian-shi-css/"/>
     <id>https://s1p21.github.io/2022/11/29/mian-shi-css/</id>
     <published>2022-11-29T09:10:51.000Z</published>
-    <updated>2022-11-29T09:14:11.070Z</updated>
+    <updated>2022-11-30T04:32:20.622Z</updated>
     
     
       
@@ -148,7 +212,7 @@
     <link href="https://s1p21.github.io/2022/11/15/react-zu-jian-xing-neng-you-hua/"/>
     <id>https://s1p21.github.io/2022/11/15/react-zu-jian-xing-neng-you-hua/</id>
     <published>2022-11-15T08:02:22.000Z</published>
-    <updated>2022-11-18T11:56:37.159Z</updated>
+    <updated>2022-12-01T08:12:30.472Z</updated>
     
     
       
@@ -192,29 +256,6 @@
   </entry>
   
   <entry>
-    <title>react&amp;react-router</title>
-    <link href="https://s1p21.github.io/2022/11/04/react-he-react-router/"/>
-    <id>https://s1p21.github.io/2022/11/04/react-he-react-router/</id>
-    <published>2022-11-04T02:57:21.000Z</published>
-    <updated>2022-11-18T11:56:37.162Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;React&quot;&gt;&lt;a href=&quot;#React&quot; class=&quot;headerlink&quot; title=&quot;React&quot;&gt;&lt;/a&gt;React&lt;/h2&gt;&lt;h3 id=&quot;React-初识&quot;&gt;&lt;a href=&quot;#React-初识&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react" scheme="https://s1p21.github.io/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Typescript学习</title>
     <link href="https://s1p21.github.io/2022/11/04/typescript-xue-xi/"/>
     <id>https://s1p21.github.io/2022/11/04/typescript-xue-xi/</id>
@@ -234,6 +275,29 @@
     
     
     <category term="TS" scheme="https://s1p21.github.io/tags/TS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react&amp;react-router</title>
+    <link href="https://s1p21.github.io/2022/11/04/react-he-react-router/"/>
+    <id>https://s1p21.github.io/2022/11/04/react-he-react-router/</id>
+    <published>2022-11-04T02:57:21.000Z</published>
+    <updated>2022-11-30T10:25:47.711Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;React&quot;&gt;&lt;a href=&quot;#React&quot; class=&quot;headerlink&quot; title=&quot;React&quot;&gt;&lt;/a&gt;React&lt;/h2&gt;&lt;h3 id=&quot;React-初识&quot;&gt;&lt;a href=&quot;#React-初识&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="react" scheme="https://s1p21.github.io/tags/react/"/>
     
   </entry>
   

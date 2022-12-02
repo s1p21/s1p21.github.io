@@ -52,9 +52,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -587,14 +587,14 @@
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> rootElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>在同级目录有一个 child.js</p>
-<pre><code>
-// child.js
-import React from"react";
+<pre class=" language-ts"><code class="language-ts">
+<span class="token comment" spellcheck="true">// child.js</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span><span class="token string">"react"</span><span class="token punctuation">;</span>
 
-function Child(props) {
-  console.log(props.name)
-  return&lt;h1&gt;{props.name}&lt;/h1&gt;
-}
+<span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>props<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+  <span class="token keyword">return</span><span class="token operator">&lt;</span>h1<span class="token operator">></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+<span class="token punctuation">}</span>
 
 exportdefault Child
 </code></pre>
