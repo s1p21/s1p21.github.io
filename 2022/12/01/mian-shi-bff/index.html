@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="面试-bff, 前端 vue js ts react node">
-    <meta name="description" content="">
+    <meta name="description" content="bff 作用业务遇到的问题：PC 端移植至移动端，不同端展示内容不同；产品形态，业务属于哪个行业（西红柿在买菜和优选），面向用户群体等；面向 C 端用户带来的功能频繁迭代问题。
+解决问题：服务端需要对不同端进行适配和裁剪问题。即针对多端差异">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -320,9 +321,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                            <a href="/tags/bff/">
+                                <span class="chip bg-color">bff</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -355,7 +364,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="bff-作用"><a href="#bff-作用" class="headerlink" title="bff 作用"></a>bff 作用</h3><p>业务遇到的问题：PC 端移植至移动端，不同端展示内容不同；产品形态，业务属于哪个行业（西红柿在买菜和优选），面向用户群体等；面向 C 端用户带来的功能频繁迭代问题。</p>
+<p>解决问题：服务端需要对不同端进行适配和裁剪问题。即针对多端差异进行适配。</p>
+<p>缺点：<br>BFF 引入“解决”服务端单一稳定与端的差异灵活诉求之间的矛盾，但它不是解决，而是转移到了 BFF 与前端之间。<br>业务支撑效率：场景越来越多，API 爆炸性增长，系统能力难以支撑业务场景规模化拓展<br>系统复杂度高：核心功能持续迭代，内部逻辑充斥 if…else，系统难以维护</p>
+<h3 id="GraphQL-特点"><a href="#GraphQL-特点" class="headerlink" title="GraphQL 特点"></a>GraphQL 特点</h3><p>合并多次请求<br>自由定制数据（精确查询想要的字段）</p>
+<p>新手容易造成N+1查询的问题<br>针对批量查询的性能优化，可以使用DataLoader 。</p>
+<p>不支持部分渲染<br>用rxjs的Observable 来做部分成功的数据渲染</p>
+
                 
             </div>
             <hr/>
@@ -418,7 +433,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
+                                </a>
+                            
+                                <a href="/tags/bff/">
+                                    <span class="chip bg-color">bff</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -495,18 +518,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/12/01/mian-shi-bff/">
+                <a href="/2022/12/04/mian-shi-kuai-pai/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/16.jpg" class="responsive-img" alt="面试-bff">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/15.jpg" class="responsive-img" alt="面试-快排">
                         
-                        <span class="card-title">面试-bff</span>
+                        <span class="card-title">面试-快排</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -516,9 +538,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -527,7 +549,22 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

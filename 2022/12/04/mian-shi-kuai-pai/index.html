@@ -4,10 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面试-vue, 前端 vue js ts react node">
-    <meta name="description" content="vue 的双向绑定vue2.x 中通过发布者-订阅者设计模式的方式实现，通过get和set方法，通过Object.defineProperty() 实现数据劫持有三个参数，对象，对象的属性，以及描述符对象描述符对象： 数据属性：
-
-writ">
+    <meta name="keywords" content="面试-快排, 前端 vue js ts react node">
+    <meta name="description" content="var quickSort = function (a, l, r) {
+  var i = l;
+  var j = r;
+  if (l &amp;lt; r) {
+    x = a[i];
+    while (i !== j) {
+   ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +23,7 @@ writ">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面试-vue | s1p21的blog</title>
+    <title>面试-快排 | s1p21的blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
     
 
@@ -295,12 +299,12 @@ writ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面试-vue</h1>
+                    <h1 class="description center-align post-title">面试-快排</h1>
                 </div>
             </div>
         </div>
@@ -328,8 +332,12 @@ writ">
                                 <span class="chip bg-color">面试</span>
                             </a>
                         
-                            <a href="/tags/vue/">
-                                <span class="chip bg-color">vue</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                <span class="chip bg-color">排序</span>
                             </a>
                         
                     </div>
@@ -344,7 +352,7 @@ writ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-30
+                    2022-12-04
                 </div>
                 
 
@@ -365,56 +373,32 @@ writ">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="vue-的双向绑定"><a href="#vue-的双向绑定" class="headerlink" title="vue 的双向绑定"></a>vue 的双向绑定</h4><p>vue2.x 中通过发布者-订阅者设计模式的方式实现，通过get和set方法，通过Object.defineProperty() 实现数据劫持<br>有三个参数，对象，对象的属性，以及描述符对象<br>描述符对象： 数据属性：</p>
-<ul>
-<li>writable 可读写</li>
-<li>enumerable 可迭代，表示是否可用for in循环</li>
-<li>configurable 是否可删除</li>
-<li>value 值</li>
-</ul>
-<p>访问器属性</p>
-<ul>
-<li>get</li>
-<li>set</li>
-</ul>
-<p>同时需要遍历所有属性进行双向绑定</p>
-<p>缺点：对于新增的属性无法监听，需要通过 vm.$set方法新增属性；</p>
-<p>vue3 中通过proxy的api 来实现监听<br>proxy有两个参数<br>target:要使用 Proxy 包装的目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）<br>handler:一个通常以函数作为属性的对象，各属性中的函数分别定义了在执行各种操作时代理 p 的行为。</p>
-<h4 id="vue的生命周期"><a href="#vue的生命周期" class="headerlink" title="vue的生命周期"></a>vue的生命周期</h4><p>vue2.x</p>
-<p>beforeCreate<br>created<br>beforeMount<br>mounted<br>beforeUpdate<br>updated<br>beforeDestory<br>destoryed</p>
-<p>vue3<br>setup<br>onBeforeMount<br>onMounted<br>onBeforeUpdated<br>onUpdated<br>onBeforeUnmount<br>onUnmounted</p>
-<h4 id="vuex-和pinia"><a href="#vuex-和pinia" class="headerlink" title="vuex 和pinia"></a>vuex 和pinia</h4><p>vuex分为State、Getter、Mutation、Action、Module<br>dispatch方法操作-&gt;action-&gt;commit方法-&gt;mutation<br>State是状态，mapState通常用来解决一个组件需要获取多个状态时的辅助函数；<br>Getter state对象读取方法，用来计算state然后生成新的数据，相当于对于部分state重新封装了一层<br>Mutation对state进行改变的唯一方法，其中Mutation必须是同步的<br>Action是通过触发Mutation从而改变state，可以包含任意异步操作，其中通过store.dispatch进行触发<br>Module可以说是对store进行分割，每一个module拥有自己的state，mutation，action，getter等。命名空间使得模块的封装和复用更加方便<br>插件使用使得vuex扩展性更好，表单处理的双向绑定需要绑定事件或者通过计算属性的setter进行双向绑定</p>
-<p>缺点：</p>
-<ol>
-<li>TS支持不良好</li>
-<li>不能同时支持Composition API和Option API（vuex5 之后支持）</li>
-</ol>
-<p>pinia</p>
-<ol>
-<li>去掉了容易混淆的mutation和action概念，只保留了action，action中的函数可以是同步的也可以是异步的，并且可以直接调用action中的方法，不再需要commit、dispatch等方法，语法更简洁；</li>
-<li>无需创建自定义复杂包装器来支持 TypeScript，所有内容都是类型化的，并且 API 的设计方式尽可能地利用了 TS 的类型推断；</li>
-<li>不再有 modules 的嵌套结构。 Pinia 通过设计提供平面结构，同时仍然支持 Store 之间的交叉组合方式；</li>
-<li>更加轻便 Pinia 大小约1kb</li>
-</ol>
-<h4 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h4><p>在下次 DOM 更新循环结束之后执行延迟回调，在修改数据之后立即使用 nextTick 来获取更新后的 DOM。 nextTick主要使用了宏任务和微任务。 根据执行环境分别尝试采用Promise、MutationObserver、setImmediate，如果以上都不行则采用setTimeout定义了一个异步方法，多次调用nextTick会将方法存入队列中，通过这个异步方法清空当前队列。</p>
-<ol>
-<li>nextTick是Vue提供的一个全局API,是在下次DOM更新循环结束之后执行延迟回调，在修改数据之后使用$nextTick，则可以在回调中获取更新后的DOM；</li>
-<li>Vue在更新DOM时是异步执行的。只要侦听到数据变化，Vue将开启1个队列，并缓冲在同一事件循环中发生的所有数据变更。如果同一个watcher被多次触发，只会被推入到队列中-次。这种在缓冲时去除重复数据对于避免不必要的计算和DOM操作是非常重要的。nextTick方法会在队列中加入一个回调函数，确保该函数在前面的dom操作完成后才调用；</li>
-<li>比如，我在干什么的时候就会使用nextTick，传一个回调函数进去，在里面执行dom操作即可；</li>
-<li>我也有简单了解nextTick实现，它会在callbacks里面加入我们传入的函数，然后用timerFunc异步方式调用它们，首选的异步方式会是Promise。这让我明白了为什么可以在nextTick中看到dom操作结果。</li>
-</ol>
-<h4 id="v-model语法糖和-vue3的v-model变化"><a href="#v-model语法糖和-vue3的v-model变化" class="headerlink" title="v-model语法糖和 vue3的v-model变化"></a>v-model语法糖和 vue3的v-model变化</h4><p>value+input 是v-band和v-on的简洁写法<br>在vue2中 v-model 只能绑定在组件的 value 属性上<br>在2.x 版本中 可以在组件内部定义一个model项，其中prop用来设置v-model中默认的value的别名， event用来设置v-model中默认的input事件的别名<br>一个组件上只能一个v-model</p>
-<p>在vue3中v-bind的.sync修饰符和组件的model选项被删除了<br>支持同一组件同时设置多个 v-model<br>也可以自定义修饰符<br>v-model绑定的不再是value，而是modelValue，接收的方法也不再是input，而是update:modelValue</p>
-<h4 id="vue-的通信方式"><a href="#vue-的通信方式" class="headerlink" title="vue 的通信方式"></a>vue 的通信方式</h4><ul>
-<li>父子：props和$emit</li>
-<li>爷孙：$attrs和$listeners</li>
-<li>eventbus</li>
-<li>provide和 inject</li>
-<li>$parent 和$children</li>
-<li>vuex</li>
-<li>自定义store</li>
-</ul>
-<h4 id="子组件调用父组件的方法"><a href="#子组件调用父组件的方法" class="headerlink" title="子组件调用父组件的方法"></a>子组件调用父组件的方法</h4>
+                <pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> quickSort <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> l<span class="token punctuation">,</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> i <span class="token operator">=</span> l<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> j <span class="token operator">=</span> r<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    x <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">!==</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j <span class="token operator">&amp;&amp;</span> a<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">>=</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        j<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j <span class="token operator">&amp;&amp;</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        i<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token punctuation">[</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span>a<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">,</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">quickSort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> l<span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">quickSort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>快排核心是先找到数字的位置，然后两边分别是该数字的小值和大值，其时间复杂度为O(nlogn)</p>
+
                 
             </div>
             <hr/>
@@ -440,7 +424,7 @@ writ">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://s1p21.github.io/2022/11/30/mian-shi-vue/">https://s1p21.github.io/2022/11/30/mian-shi-vue/</a>
+                    <a href="https://s1p21.github.io/2022/12/04/mian-shi-kuai-pai/">https://s1p21.github.io/2022/12/04/mian-shi-kuai-pai/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -482,8 +466,12 @@ writ">
                                     <span class="chip bg-color">面试</span>
                                 </a>
                             
-                                <a href="/tags/vue/">
-                                    <span class="chip bg-color">vue</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                    <span class="chip bg-color">排序</span>
                                 </a>
                             
                         </div>
@@ -566,6 +554,55 @@ writ">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2022/12/04/mian-shi-webpack/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/5.jpg" class="responsive-img" alt="面试-webpack">
+                        
+                        <span class="card-title">面试-webpack</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/tags/webpack/">
+                        <span class="chip bg-color">webpack</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2022/12/01/mian-shi-bff/">
                     <div class="card-image">
                         
@@ -582,9 +619,9 @@ writ">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -602,55 +639,6 @@ writ">
                     
                     <a href="/tags/bff/">
                         <span class="chip bg-color">bff</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/11/30/mian-shi-react/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/19.jpg" class="responsive-img" alt="面试-React">
-                        
-                        <span class="card-title">面试-React</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-30
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            s1p21
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/React/">
-                        <span class="chip bg-color">React</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">面试</span>
                     </a>
                     
                 </div>
