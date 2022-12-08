@@ -4,14 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面试-快排, 前端 vue js ts react node">
-    <meta name="description" content="var quickSort = function (a, l, r) {
+    <meta name="keywords" content="面试-算法, 前端 vue js ts react node">
+    <meta name="description" content="1.排序1.1 快排var quickSort = function (a, l, r) {
   var i = l;
   var j = r;
   if (l &amp;lt; r) {
     x = a[i];
-    while (i !== j) {
-   ">
+    while (i !=">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面试-快排 | s1p21的blog</title>
+    <title>面试-算法 | s1p21的blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
     
 
@@ -58,9 +57,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -299,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面试-快排</h1>
+                    <h1 class="description center-align post-title">面试-算法</h1>
                 </div>
             </div>
         </div>
@@ -334,10 +333,6 @@
                         
                             <a href="/tags/%E7%AE%97%E6%B3%95/">
                                 <span class="chip bg-color">算法</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%8E%92%E5%BA%8F/">
-                                <span class="chip bg-color">排序</span>
                             </a>
                         
                     </div>
@@ -373,7 +368,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> quickSort <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> l<span class="token punctuation">,</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <h3 id="1-排序"><a href="#1-排序" class="headerlink" title="1.排序"></a>1.排序</h3><h4 id="1-1-快排"><a href="#1-1-快排" class="headerlink" title="1.1 快排"></a>1.1 快排</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> quickSort <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> l<span class="token punctuation">,</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">var</span> i <span class="token operator">=</span> l<span class="token punctuation">;</span>
   <span class="token keyword">var</span> j <span class="token operator">=</span> r<span class="token punctuation">;</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -398,6 +393,45 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>快排核心是先找到数字的位置，然后两边分别是该数字的小值和大值，其时间复杂度为O(nlogn)</p>
+<h3 id="2-排列组合"><a href="#2-排列组合" class="headerlink" title="2.排列组合"></a>2.排列组合</h3><h4 id="2-1-全排列"><a href="#2-1-全排列" class="headerlink" title="2.1 全排列"></a>2.1 全排列</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">peru</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> len <span class="token operator">=</span> arr<span class="token punctuation">.</span>length
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">const</span> dfs <span class="token operator">=</span> <span class="token punctuation">(</span>tempArr<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>leftArr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>tempArr<span class="token punctuation">.</span>length <span class="token operator">===</span> len<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tempArr<span class="token punctuation">,</span><span class="token string">'temp'</span><span class="token punctuation">)</span>
+            res<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>tempArr<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            leftArr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+                <span class="token keyword">let</span> temp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>leftArr<span class="token punctuation">]</span>
+                temp<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+                <span class="token function">dfs</span><span class="token punctuation">(</span>tempArr<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">,</span>temp<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+     <span class="token punctuation">}</span>
+     <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>arr<span class="token punctuation">)</span>
+     <span class="token keyword">return</span> res
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">peru</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="2-2-组合"><a href="#2-2-组合" class="headerlink" title="2.2 组合"></a>2.2 组合</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> combine <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>n<span class="token punctuation">,</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token keyword">function</span> <span class="token function">dfs</span><span class="token punctuation">(</span>cur<span class="token punctuation">,</span>n<span class="token punctuation">,</span>k<span class="token punctuation">,</span>temp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>temp<span class="token punctuation">.</span>length<span class="token operator">+</span><span class="token punctuation">(</span>n<span class="token operator">-</span>cur<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">&lt;</span>k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>temp<span class="token punctuation">.</span>length<span class="token operator">===</span>k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          res<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span>
+          <span class="token keyword">return</span> 
+      <span class="token punctuation">}</span>
+      <span class="token function">dfs</span><span class="token punctuation">(</span>cur<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">,</span>k<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token operator">...</span>temp<span class="token punctuation">,</span>cur<span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token function">dfs</span><span class="token punctuation">(</span>cur<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">,</span>k<span class="token punctuation">,</span>temp<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">,</span>k<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> res
+<span class="token punctuation">}</span>
+</code></pre>
 
                 
             </div>
@@ -424,7 +458,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://s1p21.github.io/2022/12/04/mian-shi-kuai-pai/">https://s1p21.github.io/2022/12/04/mian-shi-kuai-pai/</a>
+                    <a href="https://s1p21.github.io/2022/12/04/mian-shi-suan-fa/">https://s1p21.github.io/2022/12/04/mian-shi-suan-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -468,10 +502,6 @@
                             
                                 <a href="/tags/%E7%AE%97%E6%B3%95/">
                                     <span class="chip bg-color">算法</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%8E%92%E5%BA%8F/">
-                                    <span class="chip bg-color">排序</span>
                                 </a>
                             
                         </div>

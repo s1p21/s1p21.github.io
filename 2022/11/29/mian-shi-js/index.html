@@ -53,9 +53,9 @@
 
     <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -373,7 +373,8 @@
 </ol>
 <p>新生代的垃圾回收，将新生代空间内存分为两个区域，一半是对象区域，一半是空闲区域，当对象区域写满后，需要执行一次垃圾清理操作。在垃圾回收过程中，对使用对象进行标记。在垃圾清理阶段，把存活的对象复制到空闲区域，并有序排列这些对象。同时经过两次垃圾回收依然还存活的对象，将放置在老生区中</p>
 <p>老生代的垃圾回收，使用标记清除。通过遍历调用栈，能够到达的元素称为活动对象，没有对象的可以判断为垃圾数据，进行标记。之后进行垃圾清除，这个是直接删除标记数据。清除之后，产生大量不连续的内存碎片，于是产生了标记-整理的过程。对所有的可以活动的对象向一端移动，清理边界以外的内存，从而占据连续的内存块。</p>
-<h4 id="2-模块化"><a href="#2-模块化" class="headerlink" title="2. 模块化"></a>2. 模块化</h4><p>浏览器中 ES6 的模块化支持、node 采用 commonJS 的模块化支持<br>分类</p>
+<h4 id="2-模块化"><a href="#2-模块化" class="headerlink" title="2. 模块化"></a>2. 模块化</h4><p>AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块 CMD推崇就近依赖，只有在用到某个模块的时候再去require<br>CommonJS通过同步的方式加载模块，其输出的模块是一个拷贝对象，所以修改原的模块不会对被引入的模块内部产生影响，且模块在代码运行的时候加载<br>es6模块是在代码编译时输出接口即编译时加载，es6是通过命令来指定导出和加载，且导出的是模块中的只读引用，如果原始模块中的值被改变了，那么加载的值也会随之改变，所以是动态引用</p>
+<p>浏览器中 ES6 的模块化支持、node 采用 commonJS 的模块化支持<br>分类</p>
 <ul>
 <li>es6 <code>import/export</code></li>
 <li>commonjs <code>require/module.exports/exports</code></li>
@@ -434,7 +435,8 @@
 <li>完全可控，参数一样，返回值一定一样: 例如函数不能包含 new Date()或者 Math.rando()等这种不可控因素；</li>
 <li>引用透明；</li>
 </ul>
-<h4 id="6-call、-apply-和-bind-的区别"><a href="#6-call、-apply-和-bind-的区别" class="headerlink" title="6. call、 apply 和 bind 的区别"></a>6. call、 apply 和 bind 的区别</h4><p>call( this,a,b,c ) 在第一个参数之后的，后续所有参数就是传入该函数的值。apply( this,[a,b,c] ) 只有两个参数，第一个是对象，第二个是数组，这个数组就是该函数的参数。</p>
+<h4 id="6-call、-apply-和-bind-的区别"><a href="#6-call、-apply-和-bind-的区别" class="headerlink" title="6. call、 apply 和 bind 的区别"></a>6. call、 apply 和 bind 的区别</h4><p>全局环境下this指向window，箭头函数的this永远指向创建当前词法环境时的this，作为构造函数时，函数中的this指向实例对象<br>执行上下文在被执行的时候才会创建，创建执行上下文时才会绑定this，所以this的指向永远是在执行时确定</p>
+<p>call( this,a,b,c ) 在第一个参数之后的，后续所有参数就是传入该函数的值。apply( this,[a,b,c] ) 只有两个参数，第一个是对象，第二个是数组，这个数组就是该函数的参数。</p>
 <p>bind 除了返回是函数以外，它的参数和 call 一样。</p>
 <p>共同之处：都可以用来代替另一个对象调用一个方法，将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象</p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 实现bind</span>
@@ -460,11 +462,11 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
     <span class="token keyword">return</span> context<span class="token punctuation">.</span><span class="token function">fun</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="reduce-参数"><a href="#reduce-参数" class="headerlink" title="reduce 参数"></a>reduce 参数</h4><p>arr.reduce(callback,[initialValue])</p>
+<h4 id="7-reduce-参数"><a href="#7-reduce-参数" class="headerlink" title="7. reduce 参数"></a>7. reduce 参数</h4><p>arr.reduce(callback,[initialValue])</p>
 <p>callback （执行数组中每个值的函数，包含四个参数）</p>
 <p>1、previousValue （上一次调用回调返回的值，或者是提供的初始值（initialValue））<br>2、currentValue （数组中当前被处理的元素）<br>3、index （当前元素在数组中的索引）<br>4、array （调用 reduce 的数组）</p>
 <p>initialValue （作为第一次调用 callback 的第一个参数。）</p>
-<h4 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> deepClone<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h4 id="8-深拷贝"><a href="#8-深拷贝" class="headerlink" title="8. 深拷贝"></a>8. 深拷贝</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> deepClone<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">function</span> <span class="token function">isObject</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> typeOf data <span class="token operator">===</span><span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> data <span class="token operator">!==</span><span class="token keyword">null</span>
@@ -486,7 +488,7 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
     <span class="token keyword">return</span> <span class="token function">clone</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="new-关键字做了什么"><a href="#new-关键字做了什么" class="headerlink" title="new 关键字做了什么"></a>new 关键字做了什么</h4><p>做了四件事，1，创建空对象，2，将空对象的<code>__proto__</code>指向构造函数的<code>prototype</code>3，构造函数的 this 作用域赋给新对象，4，返回原始值需要忽略，返回对象需要正常处理</p>
+<h4 id="9-new-关键字做了什么"><a href="#9-new-关键字做了什么" class="headerlink" title="9. new 关键字做了什么"></a>9. new 关键字做了什么</h4><p>做了四件事，1，创建空对象，2，将空对象的<code>__proto__</code>指向构造函数的<code>prototype</code>3，构造函数的 this 作用域赋给新对象，4，返回原始值需要忽略，返回对象需要正常处理</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">_new</span><span class="token punctuation">(</span>constructor<span class="token punctuation">,</span> <span class="token operator">...</span>arg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment" spellcheck="true">// 创建一个空对象</span>
   <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -498,7 +500,8 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
   <span class="token keyword">return</span> Object<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">"[object Object]"</span> <span class="token operator">?</span> res <span class="token punctuation">:</span> obj<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="手动实现一个-instanceOf"><a href="#手动实现一个-instanceOf" class="headerlink" title="手动实现一个 instanceOf"></a>手动实现一个 instanceOf</h4><p>instanceOf 基于原型链</p>
+<h4 id="10-判断类型-三种方式"><a href="#10-判断类型-三种方式" class="headerlink" title="10. 判断类型 三种方式"></a>10. 判断类型 三种方式</h4><p>typeOf、  instanceOf、Object.prototype.toString.call()<br>typeOf 不能区分Array和Object<br>instanceOf 不能区分基本类型</p>
+<h4 id="11-手动实现一个-instanceOf"><a href="#11-手动实现一个-instanceOf" class="headerlink" title="11. 手动实现一个 instanceOf"></a>11. 手动实现一个 instanceOf</h4><p>instanceOf 基于原型链</p>
 <pre class=" language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">isInstanceOf</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span> fun<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> fun <span class="token operator">!==</span> <span class="token string">"function"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token string">"arg2 fun is not a function"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -512,7 +515,7 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
   <span class="token keyword">return</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="观察者模式和发布订阅模式"><a href="#观察者模式和发布订阅模式" class="headerlink" title="观察者模式和发布订阅模式"></a>观察者模式和发布订阅模式</h4><p>观察者模式是一对多的依赖关系，他表示多个观察者对象同时监听某一个主题对象，当这个主题对象发生变化时，会通知所有观察者，使他们能够自我更新<br>发布-订阅者模式引入了第三方组件，叫做信息中介，它将订阅者和发布者联系起来，当发布者发生变化时，由信息中介通知订阅者，并进行更新。</p>
+<h4 id="12-观察者模式和发布订阅模式"><a href="#12-观察者模式和发布订阅模式" class="headerlink" title="12. 观察者模式和发布订阅模式"></a>12. 观察者模式和发布订阅模式</h4><p>观察者模式是一对多的依赖关系，他表示多个观察者对象同时监听某一个主题对象，当这个主题对象发生变化时，会通知所有观察者，使他们能够自我更新<br>发布-订阅者模式引入了第三方组件，叫做信息中介，它将订阅者和发布者联系起来，当发布者发生变化时，由信息中介通知订阅者，并进行更新。</p>
 <ul>
 <li>观察者模式</li>
 </ul>
@@ -557,7 +560,7 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="虚拟-DOM-和真实-DOM-的转换"><a href="#虚拟-DOM-和真实-DOM-的转换" class="headerlink" title="虚拟 DOM 和真实 DOM 的转换"></a>虚拟 DOM 和真实 DOM 的转换</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">VDom</span> <span class="token punctuation">{</span>
+<h4 id="13-虚拟-DOM-和真实-DOM-的转换"><a href="#13-虚拟-DOM-和真实-DOM-的转换" class="headerlink" title="13. 虚拟 DOM 和真实 DOM 的转换"></a>13. 虚拟 DOM 和真实 DOM 的转换</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">VDom</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span>tag<span class="token punctuation">,</span> data<span class="token punctuation">,</span> value<span class="token punctuation">,</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>tag <span class="token operator">=</span> tag <span class="token operator">&amp;&amp;</span> tag<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 节点名</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 属性</span>
@@ -619,7 +622,7 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
   <span class="token keyword">return</span> rdom<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="广度优先和深度优先"><a href="#广度优先和深度优先" class="headerlink" title="广度优先和深度优先"></a>广度优先和深度优先</h4><p>深度优先采用堆栈的形式，即先进后出<br>广度优先采用队列的形式，先进先出</p>
+<h4 id="14-广度优先和深度优先"><a href="#14-广度优先和深度优先" class="headerlink" title="14. 广度优先和深度优先"></a>14. 广度优先和深度优先</h4><p>深度优先采用堆栈的形式，即先进后出<br>广度优先采用队列的形式，先进先出</p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>   name<span class="token punctuation">:</span> <span class="token string">'a2'</span><span class="token punctuation">,</span>
         children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
@@ -656,6 +659,46 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
     <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<h4 id="15-node-的eventloop"><a href="#15-node-的eventloop" class="headerlink" title="15. node 的eventloop"></a>15. node 的eventloop</h4><p> node的 事件循环有times, I/o callbacks, idle prepare, poll,check,close callbacks</p>
+<ul>
+<li>times 执行setTimeOut 和setTimeInterval</li>
+<li>check 直接执行setTimeImmediate</li>
+</ul>
+<h4 id="16-ajax"><a href="#16-ajax" class="headerlink" title="16. ajax"></a>16. ajax</h4><p>readyState 0 表示 请求还未初始化，尚未调用 open() 方法。<br>1 表示 已建立服务器链接，open() 方法已经被调用。<br>2 表示 请求已接受，send() 方法已经被调用，并且头部和状态已经可获得。<br>3 表示 正在处理请求，下载中； responseText 属性已经包含部分数据。<br>4 表示 完成，下载操作已完成。</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">ajax</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> method<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> method<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+      xhr<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">404</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'404'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">'请求数据失败'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</code></pre>
+<h4 id="17-flutter-的生命周期"><a href="#17-flutter-的生命周期" class="headerlink" title="17. flutter 的生命周期"></a>17. flutter 的生命周期</h4><p>分为两种情况，<br>一个是statelessWidget 其生命周期是constructor、build、deactive、dispose<br>另外一个是statefulWidget，其生命周期是constructor、initState、didChangeDependencies,build、didUpdate Widget、deactive、dispose</p>
+<h4 id="18-js-加载的async-和defer的区别"><a href="#18-js-加载的async-和defer的区别" class="headerlink" title="18. js 加载的async 和defer的区别"></a>18. js 加载的async 和defer的区别</h4><p>async script标签设置了这个值，则说明引入的js需要<strong>异步加载和执行</strong><br>在有async的情况下脚本异步加载和执行，并且不会阻塞页面加载，但是也并不会保证其加载的顺序，如果多个async优先执行，则先加载好的js文件，所以使用此方式加载的js文件最好不要包含其他依赖</p>
+<p>defer<br>果使用此属性，也将会使js异步加载执行，且会在文档被解析完成后执行，这样就不会阻塞页面加载，但是它将会按照原来的执行顺序执行，对于有依赖关系的也可使用’</p>
+<p>如果只有async，那么脚本在下载完成后异步执行。<br>如果只有defer，那么脚本会在页面解析完毕之后执行。</p>
+<h4 id="19-虚拟列表"><a href="#19-虚拟列表" class="headerlink" title="19. 虚拟列表"></a>19. 虚拟列表</h4><p>可见区域</p>
+<ul>
+<li>列表高度是固定的，条数计算</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> height <span class="token operator">=</span> <span class="token number">60</span>
+<span class="token keyword">const</span> bufferSize <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>visibleCount <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>clientHeight<span class="token operator">||</span>window<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>height<span class="token punctuation">)</span> <span class="token operator">/</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>列表高度不固定<br>通过观察者方式，来观察元素是否进入视口。我们会对固定元素的第一个和最后一个分别打上标签，例如把第一个元素的id设置为top，把最后一个元素的id值设置为bottom。<br>此时调用异步的api：IntersectionObserver，他能获取到进入到视口的元素，判断当前进入视口的元素是最后个元素，则说明内容是往上滚的，如果进入视口的是第一个元素，则说明内容是往下滚的。<br>我们依次保存下当前第一个元素距离顶部的高度和距离底部的高度，赋值给滚动内容元素的paddingTop和paddingBottom，这样内容区域的高度就不会坍塌，依旧保持这传统滚动元素充满列表时的内容高度:</li>
+</ul>
 
                 
             </div>

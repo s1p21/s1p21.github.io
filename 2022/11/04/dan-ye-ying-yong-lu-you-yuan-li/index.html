@@ -5,9 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="单页应用路由原理, 前端 vue js ts react node">
-    <meta name="description" content="补充知识：window.location```
-http://172.16.49.154:3000/search?q=URL#search
-console.log(location.href);  // http://172.16.49.1">
+    <meta name="description" content="补充知识：window.location    http://172.16.49.154:3000/search?q=URL#search
+    console.log(location.href);  // http://172.16.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -54,9 +53,9 @@ console.log(location.href);  // http://172.16.49.1">
 
     <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -361,34 +360,31 @@ console.log(location.href);  // http://172.16.49.1">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="补充知识：window-location"><a href="#补充知识：window-location" class="headerlink" title="补充知识：window.location"></a>补充知识：window.location</h3><pre><code>```
-http://172.16.49.154:3000/search?q=URL#search
-console.log(location.href);  // http://172.16.49.154:3000/search?q=URL#search
-console.log(location.protocol); // http:
-console.log(location.host); // 172.16.49.154:3000
-console.log(location.hostname); // 172.16.49.154
-console.log(location.port); // 3000
-console.log(location.pathname); // search
-console.log(location.search); // ?q=UR
-console.log(location.hash); // #search
-console.log(location.origin); // http://172.16.49.154:3000
-
-```
-
-1. **Location.reload()**
-
-    重新加载来自当前 URL的资源。他有一个特殊的可选参数，类型为 Boolean，该参数为true时会导致该方法引发的刷新一定会从服务器上加载数据。如果是 false或没有制定这个参数，浏览器可能从缓存当中加载页面。
-
-2. **Location.replace()**
-
-    用给定的URL替换掉当前的资源。与 assign() 方法不同的是用 replace()替换的新页面不会被保存在会话的历史 History中，这意味着用户将不能用后退按钮转到该页面。
+                <h3 id="补充知识：window-location"><a href="#补充知识：window-location" class="headerlink" title="补充知识：window.location"></a>补充知识：window.location</h3><pre class=" language-js"><code class="language-js">    http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token number">172.16</span><span class="token punctuation">.</span><span class="token number">49.154</span><span class="token punctuation">:</span><span class="token number">3000</span><span class="token operator">/</span>search<span class="token operator">?</span>q<span class="token operator">=</span>URL#search
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// http://172.16.49.154:3000/search?q=URL#search</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>protocol<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// http:</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>host<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 172.16.49.154:3000</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>hostname<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 172.16.49.154</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>port<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3000</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>pathname<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// search</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>search<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ?q=UR</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>hash<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// #search</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>origin<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// http://172.16.49.154:3000</span>
 </code></pre>
+<ol>
+<li><strong>Location.reload()</strong></li>
+</ol>
+<p>重新加载来自当前 URL的资源。他有一个特殊的可选参数，类型为 Boolean，该参数为true时会导致该方法引发的刷新一定会从服务器上加载数据。如果是 false或没有制定这个参数，浏览器可能从缓存当中加载页面。</p>
+<ol start="2">
+<li><strong>Location.replace()</strong></li>
+</ol>
+<p>用给定的URL替换掉当前的资源。与 assign() 方法不同的是用 replace()替换的新页面不会被保存在会话的历史 History中，这意味着用户将不能用后退按钮转到该页面。</p>
 <h3 id="补充知识：window-history-和-History"><a href="#补充知识：window-history-和-History" class="headerlink" title="补充知识：window.history 和 History"></a>补充知识：window.history 和 History</h3><p>window.history 是一个只读属性，用来获取 History 对象的引用，History 对象提供了操作浏览器会话历史（浏览器地址栏中访问的页面，以及当前页面中通过框架加载的页面）的接口。</p>
 <ol>
-<li><p><strong>History.length</strong></p>
-<pre><code>会话历史中元素的数目，包括当前加载的页
-</code></pre>
-</li>
+<li><strong>History.length</strong></li>
+</ol>
+<p>会话历史中元素的数目，包括当前加载的页</p>
+<ol start="2">
 <li><p><strong>History.state</strong></p>
 <p>返回一个表示历史堆栈顶部的状态的值。</p>
 </li>
@@ -398,228 +394,235 @@ console.log(location.origin); // http://172.16.49.154:3000
 </li>
 <li><p><strong>History.pushState / repalceState</strong></p>
 <p>pushState() 和 repalceState 按指定的名称和 URL（如果提供该参数）将数据 push 进会话历史栈或者更新历史栈上最新的入口，页面不会跳转。</p>
-<pre><code>// pushState() 需要三个参数: 一个状态对象, 一个标题 (目前被忽略), 和 (可选的) 一个URL
-history.pushState({foo: "bar",};, "page 2", "bar.html");
-</code></pre>
 </li>
+</ol>
+<pre class=" language-js"><code class="language-js">   <span class="token comment" spellcheck="true">// pushState() 需要三个参数: 一个状态对象, 一个标题 (目前被忽略), 和 (可选的) 一个URL</span>
+   history<span class="token punctuation">.</span><span class="token function">pushState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>foo<span class="token punctuation">:</span> <span class="token string">"bar"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">,</span> <span class="token string">"page 2"</span><span class="token punctuation">,</span> <span class="token string">"bar.html"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="5">
 <li><p><strong>window.popstate 事件</strong></p>
-<pre><code>//
-window.addEventListener('popstate', (event) =&gt; {
-    ...
-});
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'popstate'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ol>
 <h3 id="history-js-库"><a href="#history-js-库" class="headerlink" title="history.js 库"></a>history.js 库</h3><p>以创建 history 路由进行分析：（方便区分，分为 window.history 和 history 库）</p>
 <ol>
 <li><p><strong>辅助函数</strong></p>
-<pre><code>import {
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>
     createLocation
-    // 创建history.location格式的对象
-    // 类似 {key: '',state: '',pathname: '',search: '',hash: ''}
-    // createLocation(path, state, key, currentLocation)
-    // 入参path可以为string类型或者包含 {pathname: '',search: '',hash: ''}的对象
-    // state为一个对象，初始为window.history的state，push，replace等方法可以传入一个state，history把它用来当做传入下一个页面的参数来读取
+    <span class="token comment" spellcheck="true">// 创建history.location格式的对象</span>
+    <span class="token comment" spellcheck="true">// 类似 {key: '',state: '',pathname: '',search: '',hash: ''}</span>
+    <span class="token comment" spellcheck="true">// createLocation(path, state, key, currentLocation)</span>
+    <span class="token comment" spellcheck="true">// 入参path可以为string类型或者包含 {pathname: '',search: '',hash: ''}的对象</span>
+    <span class="token comment" spellcheck="true">// state为一个对象，初始为window.history的state，push，replace等方法可以传入一个state，history把它用来当做传入下一个页面的参数来读取</span>
 
-} from './LocationUtils';
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./LocationUtils'</span><span class="token punctuation">;</span>
 
-import {
-  addLeadingSlash, // 路径最前面加斜杠
-  stripTrailingSlash, // 路径最后面去斜杠
-  hasBasename, // 创建history时，是否传入了basename属性
-  stripBasename, // 去掉basename
-  createPath // 创建完成路径 pathname + search + hash
-} from './PathUtils';
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  addLeadingSlash<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 路径最前面加斜杠</span>
+  stripTrailingSlash<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 路径最后面去斜杠</span>
+  hasBasename<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 创建history时，是否传入了basename属性</span>
+  stripBasename<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 去掉basename</span>
+  createPath <span class="token comment" spellcheck="true">// 创建完成路径 pathname + search + hash</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./PathUtils'</span><span class="token punctuation">;</span>
 
-import createTransitionManager from './createTransitionManager';
+<span class="token keyword">import</span> createTransitionManager <span class="token keyword">from</span> <span class="token string">'./createTransitionManager'</span><span class="token punctuation">;</span>
 
-import {
-  canUseDOM, // 是否可以使用DOM API
-  getConfirmation, // 跳转前确认的弹框
-  supportsHistory, // 是否支持H5的History API
-  supportsPopStateOnHashChange, // 是否支持onPopstate事件
-  isExtraneousPopstateEvent // 源码注释：Ignore extraneous popstate events in WebKit.
-} from './DOMUtils';
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  canUseDOM<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 是否可以使用DOM API</span>
+  getConfirmation<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 跳转前确认的弹框</span>
+  supportsHistory<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 是否支持H5的History API</span>
+  supportsPopStateOnHashChange<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 是否支持onPopstate事件</span>
+  isExtraneousPopstateEvent <span class="token comment" spellcheck="true">// 源码注释：Ignore extraneous popstate events in WebKit.</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./DOMUtils'</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p><strong>createBrowserHistory</strong></p>
-<pre><code>// transitionManager 为一个发布订阅模式，
-// 包含appendListene（添加监听），notifyListeners(触发所有监听)，
-// setPrompt（设置一个Prompt，用于跳转前的弹框），
-// comfirmTransitionTo(确认跳转函数)四个方法
-
-function createBrowserHistory(props = {}) {
-    // ...
-    const history = {
-         // globalHistory.length = window.history.length
-        length: globalHistory.length,
-        action: 'POP', // history内部管理的一个变量，导航的action
-        location: initialLocation,
-        createHref, // 生成完整href地址的方法
-        // push（path，state）方法接受path（string或者对象）和 state为参数
-        // 随机创建一个key，调用createLocation生成要跳转路由的location
-        // 调用createHref生成 href
-        // 调用 transitionManager.confirmTransitionTo 主要用于跳转前的确认
-        // 如果确认跳转，window.history.pushState({ key, state }, null, href)
-        // history对象merge上要跳转路由的 key，state，和window.history.length
-        // 然后出发所有监听事件（传入**location,action**）
-        push,
-           // replace与push类似
-        replace,
-        go, // history.go()
-        goBack, // history.go(-1)
-        goForward, // history.go(1)
-        block,
-        // 重要！ listen方法使用 transitionManager.appendListene方法向订阅数组里推入一个监听函数，返回一个卸载监听的方法（这种设计模式，在react中非常常见），
-        // 同时调用checkDOMListeners方法，此方法会在订阅数据添加上 **第一个** 监听事件后，同时发起window.addEventListener('popstate', handlePopState);
-        // 同时会在卸载完全部监听后，**订阅数组为空时**，移除监听 window.removeEventListener('popstate', handlePopState);
-        listen
-     };
-
-    return history;
-}
-</code></pre>
 </li>
 </ol>
+<pre class=" language-js"><code class="language-js"> <span class="token comment" spellcheck="true">// transitionManager 为一个发布订阅模式，</span>
+ <span class="token comment" spellcheck="true">// 包含appendListene（添加监听），notifyListeners(触发所有监听)，</span>
+ <span class="token comment" spellcheck="true">// setPrompt（设置一个Prompt，用于跳转前的弹框），</span>
+ <span class="token comment" spellcheck="true">// comfirmTransitionTo(确认跳转函数)四个方法</span>
+
+ <span class="token keyword">function</span> <span class="token function">createBrowserHistory</span><span class="token punctuation">(</span>props <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token comment" spellcheck="true">// ...</span>
+     <span class="token keyword">const</span> history <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// globalHistory.length = window.history.length</span>
+         length<span class="token punctuation">:</span> globalHistory<span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+         action<span class="token punctuation">:</span> <span class="token string">'POP'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// history内部管理的一个变量，导航的action</span>
+         location<span class="token punctuation">:</span> initialLocation<span class="token punctuation">,</span>
+         createHref<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 生成完整href地址的方法</span>
+         <span class="token comment" spellcheck="true">// push（path，state）方法接受path（string或者对象）和 state为参数</span>
+         <span class="token comment" spellcheck="true">// 随机创建一个key，调用createLocation生成要跳转路由的location</span>
+         <span class="token comment" spellcheck="true">// 调用createHref生成 href</span>
+         <span class="token comment" spellcheck="true">// 调用 transitionManager.confirmTransitionTo 主要用于跳转前的确认</span>
+         <span class="token comment" spellcheck="true">// 如果确认跳转，window.history.pushState({ key, state }, null, href)</span>
+         <span class="token comment" spellcheck="true">// history对象merge上要跳转路由的 key，state，和window.history.length</span>
+         <span class="token comment" spellcheck="true">// 然后出发所有监听事件（传入**location,action**）</span>
+         push<span class="token punctuation">,</span>
+       	 <span class="token comment" spellcheck="true">// replace与push类似</span>
+         replace<span class="token punctuation">,</span>
+         go<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// history.go()</span>
+         goBack<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// history.go(-1)</span>
+         goForward<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// history.go(1)</span>
+         block<span class="token punctuation">,</span>
+         <span class="token comment" spellcheck="true">// 重要！ listen方法使用 transitionManager.appendListene方法向订阅数组里推入一个监听函数，返回一个卸载监听的方法（这种设计模式，在react中非常常见），</span>
+         <span class="token comment" spellcheck="true">// 同时调用checkDOMListeners方法，此方法会在订阅数据添加上 **第一个** 监听事件后，同时发起window.addEventListener('popstate', handlePopState);</span>
+         <span class="token comment" spellcheck="true">// 同时会在卸载完全部监听后，**订阅数组为空时**，移除监听 window.removeEventListener('popstate', handlePopState);</span>
+         listen
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+     <span class="token keyword">return</span> history<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</code></pre>
 <h3 id="react-router"><a href="#react-router" class="headerlink" title="react-router"></a>react-router</h3><p>对外暴露了 Router，Router，Switch，matchPath，withRouter 等 API</p>
 <ol>
-<li><p><strong>Router</strong></p>
-<pre><code>class Router extends React.Component {
+<li><strong>Router</strong></li>
+</ol>
+<pre class=" language-js"><code class="language-js"> <span class="token keyword">class</span> <span class="token class-name">Router</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
 
-    static computeRootMatch(pathname) { // 静态方法
-        return { path: "/", url: "/", params: {}, isExact: pathname === "/" };
-    }
+     <span class="token keyword">static</span> <span class="token function">computeRootMatch</span><span class="token punctuation">(</span>pathname<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 静态方法</span>
+         <span class="token keyword">return</span> <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span> url<span class="token punctuation">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span> params<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> isExact<span class="token punctuation">:</span> pathname <span class="token operator">===</span> <span class="token string">"/"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
 
-    constructor(props) {
-        super(props);
+     <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        this.state = {
-            location: props.history.location
-        };
+         <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+             location<span class="token punctuation">:</span> props<span class="token punctuation">.</span>history<span class="token punctuation">.</span>location
+         <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-        // 这是一种hack的写法，从新建实例的时候就开始对location的监听
-        this._isMounted = false;
-        this._pendingLocation = null;
+         <span class="token comment" spellcheck="true">// 这是一种hack的写法，从新建实例的时候就开始对location的监听</span>
+         <span class="token keyword">this</span><span class="token punctuation">.</span>_isMounted <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+         <span class="token keyword">this</span><span class="token punctuation">.</span>_pendingLocation <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
 
-        if (!props.staticContext) {
-            this.unlisten = props.history.listen(location =&gt; {
-                // 如果组件以加载到真实的DOM，直接设置location的state
-                if (this._isMounted) {
-                    this.setState({ location });
-                } else {
-                //  如果没有，先用一个变量进行保存，等到componentDidMount后进行赋值
-                    this._pendingLocation = location;
-                }
-            });
-        }
-    }
+         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>props<span class="token punctuation">.</span>staticContext<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             <span class="token keyword">this</span><span class="token punctuation">.</span>unlisten <span class="token operator">=</span> props<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>location <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+                 <span class="token comment" spellcheck="true">// 如果组件以加载到真实的DOM，直接设置location的state</span>
+                 <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>_isMounted<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> location <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                 <span class="token comment" spellcheck="true">//  如果没有，先用一个变量进行保存，等到componentDidMount后进行赋值</span>
+                     <span class="token keyword">this</span><span class="token punctuation">.</span>_pendingLocation <span class="token operator">=</span> location<span class="token punctuation">;</span>
+                 <span class="token punctuation">}</span>
+             <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
 
-    componentDidMount() {
-        this._isMounted = true;
+     <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">this</span><span class="token punctuation">.</span>_isMounted <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 
-        if (this._pendingLocation) {
-            this.setState({ location: this._pendingLocation });
-        }
-    }
+         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>_pendingLocation<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> location<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_pendingLocation <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
 
-    componentWillUnmount() {
-        // 卸载监听
-        if (this.unlisten) this.unlisten();
-    }
+     <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token comment" spellcheck="true">// 卸载监听</span>
+         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>unlisten<span class="token punctuation">)</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">unlisten</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
 
-    render() {
-        return (
-            // 使用了React新的Context API，在最外层提供了history，location等供全局使用
-            &lt;RouterContext.Provider
-                children={this.props.children || null} // 子代属性
-                value={{
-   					// 使用的 路由类型
-   					history: this.props.history,
-   					// history.js库封装的location，然后内部进行管理
-   					location: this.state.location,
-   					// 返回类似{ path: "/", url: "/", params: {}, isExact: pathname === 	"/" }的匹配对象;
-   					match: Router.computeRootMatch(this.state.location.pathname),
-   					// 自定义传入的context
-   					staticContext: this.props.staticContext
-   				}}
-            /&gt;
-        );
-    }
-}
+     <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">return</span> <span class="token punctuation">(</span>
+             <span class="token comment" spellcheck="true">// 使用了React新的Context API，在最外层提供了history，location等供全局使用</span>
+             <span class="token operator">&lt;</span>RouterContext<span class="token punctuation">.</span>Provider
+                 children<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children <span class="token operator">||</span> <span class="token keyword">null</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 子代属性</span>
+                 value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+   					<span class="token comment" spellcheck="true">// 使用的 路由类型</span>
+   					history<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>history<span class="token punctuation">,</span>
+   					<span class="token comment" spellcheck="true">// history.js库封装的location，然后内部进行管理</span>
+   					location<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>location<span class="token punctuation">,</span>
+   					<span class="token comment" spellcheck="true">// 返回类似{ path: "/", url: "/", params: {}, isExact: pathname === 	"/" }的匹配对象;</span>
+   					match<span class="token punctuation">:</span> Router<span class="token punctuation">.</span><span class="token function">computeRootMatch</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>location<span class="token punctuation">.</span>pathname<span class="token punctuation">)</span><span class="token punctuation">,</span>
+   					<span class="token comment" spellcheck="true">// 自定义传入的context</span>
+   					staticContext<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>staticContext
+   				<span class="token punctuation">}</span><span class="token punctuation">}</span>
+             <span class="token operator">/</span><span class="token operator">></span>
+         <span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
 </code></pre>
-</li>
-<li><p><strong>Route</strong></p>
-<pre><code>&lt;RouterContext.Consumer&gt;
-    {context =&gt; {
-        // Router组件传入this.props.location 或者 context 的 location
-      const location = this.props.location || context.location;
-      const match = this.props.computedMatch // Router组件传入computedMatch
-        ? this.props.computedMatch // &lt;Switch&gt; already computed the match for us
-        : this.props.path // Router组件传入path
-        // matchPath 函数返回类似{ path: "/", url: "/", params: {}, isExact: pathname === 	"/" }的匹配对象
-          ? matchPath(location.pathname, this.props)
-          : context.match;
+<ol start="2">
+<li><strong>Route</strong></li>
+</ol>
+<pre class=" language-js"><code class="language-js"> <span class="token operator">&lt;</span>RouterContext<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
+     <span class="token punctuation">{</span>context <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+         <span class="token comment" spellcheck="true">// Router组件传入this.props.location 或者 context 的 location</span>
+       <span class="token keyword">const</span> location <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>location <span class="token operator">||</span> context<span class="token punctuation">.</span>location<span class="token punctuation">;</span>
+       <span class="token keyword">const</span> match <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>computedMatch <span class="token comment" spellcheck="true">// Router组件传入computedMatch</span>
+         <span class="token operator">?</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>computedMatch <span class="token comment" spellcheck="true">// &lt;Switch> already computed the match for us</span>
+         <span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>path <span class="token comment" spellcheck="true">// Router组件传入path</span>
+         <span class="token comment" spellcheck="true">// matchPath 函数返回类似{ path: "/", url: "/", params: {}, isExact: pathname === 	"/" }的匹配对象</span>
+           <span class="token operator">?</span> <span class="token function">matchPath</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>pathname<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">)</span>
+           <span class="token punctuation">:</span> context<span class="token punctuation">.</span>match<span class="token punctuation">;</span>
 
-      const props = { ...context, location, match };
-      let { children, component, render } = this.props;
-      ......
-      // 最后为每个Router提供一个新的Provider，包含history,location，match等
-      return (
-        &lt;RouterContext.Provider value={props}&gt;
-          {children &amp;&amp; !isEmptyChildren(children) // children不为空则渲染children
-            ? children
-            : props.match //
-              ? component // Router组件传入类组件 使用createElement 创建组件
-                ? React.createElement(component, props)
-                : render // Route组件传入函数组件 传入props执行
-                  ? render(props)
-                  : null
-              : null} // 没有匹配到返回null
-        &lt;/RouterContext.Provider&gt;
-      );
-    }}
-&lt;/RouterContext.Consumer&gt;
+       <span class="token keyword">const</span> props <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>context<span class="token punctuation">,</span> location<span class="token punctuation">,</span> match <span class="token punctuation">}</span><span class="token punctuation">;</span>
+       <span class="token keyword">let</span> <span class="token punctuation">{</span> children<span class="token punctuation">,</span> component<span class="token punctuation">,</span> render <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+       <span class="token operator">...</span><span class="token operator">...</span>
+       <span class="token comment" spellcheck="true">// 最后为每个Router提供一个新的Provider，包含history,location，match等</span>
+       <span class="token keyword">return</span> <span class="token punctuation">(</span>
+         <span class="token operator">&lt;</span>RouterContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token punctuation">{</span>props<span class="token punctuation">}</span><span class="token operator">></span>
+           <span class="token punctuation">{</span>children <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">isEmptyChildren</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// children不为空则渲染children</span>
+             <span class="token operator">?</span> children
+             <span class="token punctuation">:</span> props<span class="token punctuation">.</span>match <span class="token comment" spellcheck="true">//</span>
+               <span class="token operator">?</span> component <span class="token comment" spellcheck="true">// Router组件传入类组件 使用createElement 创建组件</span>
+                 <span class="token operator">?</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>component<span class="token punctuation">,</span> props<span class="token punctuation">)</span>
+                 <span class="token punctuation">:</span> render <span class="token comment" spellcheck="true">// Route组件传入函数组件 传入props执行</span>
+                   <span class="token operator">?</span> <span class="token function">render</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span>
+                   <span class="token punctuation">:</span> <span class="token keyword">null</span>
+               <span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 没有匹配到返回null</span>
+         <span class="token operator">&lt;</span><span class="token operator">/</span>RouterContext<span class="token punctuation">.</span>Provider<span class="token operator">></span>
+       <span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span><span class="token punctuation">}</span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>RouterContext<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
 </code></pre>
-</li>
-<li><p><strong>withRouter</strong></p>
-<pre><code>&lt;Router ...&gt;
-    &lt;Route ... /&gt;
-    &lt;Route ... /&gt;
-    &lt;Route ... /&gt;
-    // 这些Route中能从props中获取到 history location match等，
-    // 但是Route里面的子组件是没有的，
-    // 如果想获得这些属性，可以通过props往下层传递，
-    // 或者直接通过withRouter,它是利用RouterContext.Consumer获得
-&lt;/Router&gt;
+<ol start="3">
+<li><strong>withRouter</strong></li>
+</ol>
+<pre class=" language-js"><code class="language-js"> <span class="token operator">&lt;</span>Router <span class="token operator">...</span><span class="token operator">></span>
+     <span class="token operator">&lt;</span>Route <span class="token operator">...</span> <span class="token operator">/</span><span class="token operator">></span>
+     <span class="token operator">&lt;</span>Route <span class="token operator">...</span> <span class="token operator">/</span><span class="token operator">></span>
+     <span class="token operator">&lt;</span>Route <span class="token operator">...</span> <span class="token operator">/</span><span class="token operator">></span>
+     <span class="token comment" spellcheck="true">// 这些Route中能从props中获取到 history location match等，</span>
+     <span class="token comment" spellcheck="true">// 但是Route里面的子组件是没有的，</span>
+     <span class="token comment" spellcheck="true">// 如果想获得这些属性，可以通过props往下层传递，</span>
+     <span class="token comment" spellcheck="true">// 或者直接通过withRouter,它是利用RouterContext.Consumer获得</span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>Router<span class="token operator">></span>
 </code></pre>
-</li>
+<ol start="4">
 <li><p><strong>generatePath</strong></p>
 <p>根据路径（例如：’/user/:id/:name’）和 params（例如：{id: 10001, name: ‘bob’}）生成完整路径（/user/10001/bob）的函数，就是填充 url 的字符串</p>
 </li>
 </ol>
 <h3 id="react-router-dom"><a href="#react-router-dom" class="headerlink" title="react-router-dom"></a>react-router-dom</h3><ol>
-<li><p><strong>导出内容</strong></p>
-<pre><code>export * from "react-router"; // 对react-router的API直接导出
+<li><strong>导出内容</strong></li>
+</ol>
+<pre class=" language-js"><code class="language-js"> <span class="token keyword">export</span> <span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">"react-router"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 对react-router的API直接导出</span>
 
-// 导出 BrowserRouter HashRouter Link NavLink
-export { default as BrowserRouter } from "./BrowserRouter";
-export { default as HashRouter } from "./HashRouter";
-export { default as Link } from "./Link";
-export { default as NavLink } from "./NavLink";
+ <span class="token comment" spellcheck="true">// 导出 BrowserRouter HashRouter Link NavLink</span>
+ <span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> BrowserRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./BrowserRouter"</span><span class="token punctuation">;</span>
+ <span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> HashRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./HashRouter"</span><span class="token punctuation">;</span>
+ <span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./Link"</span><span class="token punctuation">;</span>
+ <span class="token keyword">export</span> <span class="token punctuation">{</span> <span class="token keyword">default</span> <span class="token keyword">as</span> NavLink <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./NavLink"</span><span class="token punctuation">;</span>
 </code></pre>
-</li>
-<li><p><strong>BrowserRouter</strong></p>
-<pre><code>class BrowserRouter extends React.Component {
-    history = createHistory(this.props); // history库暴露的createHistory方法
-    render() {
-        // Router 组件传入生成的history对象
-        return &lt;Router history={this.history} children={this.props.children} /&gt;;
-      }
-}
-export default BrowserRouter;
-// HashRouter 与其一样 创建history对象时使用了hash
+<ol start="2">
+<li><strong>BrowserRouter</strong></li>
+</ol>
+<pre class=" language-js"><code class="language-js"> <span class="token keyword">class</span> <span class="token class-name">BrowserRouter</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+     history <span class="token operator">=</span> <span class="token function">createHistory</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// history库暴露的createHistory方法</span>
+     <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token comment" spellcheck="true">// Router 组件传入生成的history对象</span>
+         <span class="token keyword">return</span> <span class="token operator">&lt;</span>Router history<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>history<span class="token punctuation">}</span> children<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+ <span class="token keyword">export</span> <span class="token keyword">default</span> BrowserRouter<span class="token punctuation">;</span>
+ <span class="token comment" spellcheck="true">// HashRouter 与其一样 创建history对象时使用了hash</span>
 </code></pre>
-</li>
+<ol start="3">
 <li><p><strong>Link 和 NavLink</strong></p>
 <p>Link 封装的 a 标签，NavLink 封装的 Link 组件</p>
 </li>
