@@ -374,7 +374,15 @@
 <p>新生代的垃圾回收，将新生代空间内存分为两个区域，一半是对象区域，一半是空闲区域，当对象区域写满后，需要执行一次垃圾清理操作。在垃圾回收过程中，对使用对象进行标记。在垃圾清理阶段，把存活的对象复制到空闲区域，并有序排列这些对象。同时经过两次垃圾回收依然还存活的对象，将放置在老生区中</p>
 <p>老生代的垃圾回收，使用标记清除。通过遍历调用栈，能够到达的元素称为活动对象，没有对象的可以判断为垃圾数据，进行标记。之后进行垃圾清除，这个是直接删除标记数据。清除之后，产生大量不连续的内存碎片，于是产生了标记-整理的过程。对所有的可以活动的对象向一端移动，清理边界以外的内存，从而占据连续的内存块。</p>
 <h4 id="2-模块化"><a href="#2-模块化" class="headerlink" title="2. 模块化"></a>2. 模块化</h4><p>AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块 CMD推崇就近依赖，只有在用到某个模块的时候再去require<br>CommonJS通过同步的方式加载模块，其输出的模块是一个拷贝对象，所以修改原的模块不会对被引入的模块内部产生影响，且模块在代码运行的时候加载<br>es6模块是在代码编译时输出接口即编译时加载，es6是通过命令来指定导出和加载，且导出的是模块中的只读引用，如果原始模块中的值被改变了，那么加载的值也会随之改变，所以是动态引用</p>
-<p>浏览器中 ES6 的模块化支持、node 采用 commonJS 的模块化支持<br>分类</p>
+<h5 id="CommonJS-与-ESM-的区别"><a href="#CommonJS-与-ESM-的区别" class="headerlink" title="CommonJS 与 ESM 的区别"></a>CommonJS 与 ESM 的区别</h5><p>实际开发中，经常会将 ESM 和 CommonJS 混用，因此有必要了解它们之间的区别。</p>
+<h6 id="动态与静态"><a href="#动态与静态" class="headerlink" title="动态与静态"></a>动态与静态</h6><p>CommonJS中对模块依赖的解决是“动态的”，而ESM是静态的。所谓动态，是指模块依赖关系的建立发生在代码运行阶段；而静态是指模块依赖关系的建立发生在代码编译阶段。</p>
+<p>CommonJS在运行时才会加载模块，确定模块依赖关系。因此可以在任意地方导入模块，甚至可以通过if语句来判断是否加载某个模块。</p>
+<p>ESM的导入、导出语句都是声明式的，导入和导出语句必须位于模块的顶层作用域。它是一种静态的模块结构，在编译阶段就可以分析出模块的依赖关系。相比CommonJS，其具有以下优势：</p>
+<p>死代码检测和排除。可以减小打包资源体积。</p>
+<p>模块变量类型检查。</p>
+<p>编译器优化。CommonJS中不论采用那种方式，本质上导入的都是一个对象。而ESM中，可以直接导入变量，减少了引用层级，程序效率更高。</p>
+<h6 id="值拷贝和动态映射"><a href="#值拷贝和动态映射" class="headerlink" title="值拷贝和动态映射"></a>值拷贝和动态映射</h6><p>导入一个模块时，CommonJS中获取的是一份值的拷贝，而在ESM中，获取的是值的动态映射，并且这个映射是只读的。</p>
+<p>浏览器中 ES6 的模块化支持、node 采用 commonJS 的模块化支持</p>
 <ul>
 <li>es6 <code>import/export</code></li>
 <li>commonjs <code>require/module.exports/exports</code></li>
@@ -699,10 +707,26 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
 <ul>
 <li>列表高度不固定<br>通过观察者方式，来观察元素是否进入视口。我们会对固定元素的第一个和最后一个分别打上标签，例如把第一个元素的id设置为top，把最后一个元素的id值设置为bottom。<br>此时调用异步的api：IntersectionObserver，他能获取到进入到视口的元素，判断当前进入视口的元素是最后个元素，则说明内容是往上滚的，如果进入视口的是第一个元素，则说明内容是往下滚的。<br>我们依次保存下当前第一个元素距离顶部的高度和距离底部的高度，赋值给滚动内容元素的paddingTop和paddingBottom，这样内容区域的高度就不会坍塌，依旧保持这传统滚动元素充满列表时的内容高度:</li>
 </ul>
-<h4 id="node-的多个通信"><a href="#node-的多个通信" class="headerlink" title="node 的多个通信"></a>node 的多个通信</h4><p>通过socket 和HTTP进行通信<br>同一台电脑通信可以通过IPC进行通信<br>PM2 监听node的原理：<br>pm2包括 Satan进程、God Deamon守护进程、进程间的远程调用rpc、cluster等几个概念<br>1.Satan.js提供了程序的退出、杀死等方法，因此它是魔鬼；God.js 负责维护进程的正常运行，当有异常退出时能保证重启，所以它是上帝。作者这么命名，我只能说一句：oh my god。<br>God进程启动后一直运行，它相当于cluster中的Master进程，守护者worker进程的正常运行。</p>
+<h4 id="20-node-的多个通信"><a href="#20-node-的多个通信" class="headerlink" title="20. node 的多个通信"></a>20. node 的多个通信</h4><p>通过socket 和HTTP进行通信<br>同一台电脑通信可以通过IPC进行通信<br>PM2 监听node的原理：<br>pm2包括 Satan进程、God Deamon守护进程、进程间的远程调用rpc、cluster等几个概念<br>1.Satan.js提供了程序的退出、杀死等方法，因此它是魔鬼；God.js 负责维护进程的正常运行，当有异常退出时能保证重启，所以它是上帝。作者这么命名，我只能说一句：oh my god。<br>God进程启动后一直运行，它相当于cluster中的Master进程，守护者worker进程的正常运行。</p>
 <p>2.rpc（Remote Procedure Call Protocol）是指远程过程调用，也就是说两台服务器A，B，一个应用部署在A服务器上，想要调用B服务器上应用提供的函数/方法，由于不在一个内存空间，不能直接调用，需要通过网络来表达调用的语义和传达调用的数据。同一机器不同进程间的方法调用也属于rpc的作用范畴。</p>
 <p>3.代码中采用了axon-rpc 和 axon 两个库，基本原理是提供服务的server绑定到一个域名和端口下，调用服务的client连接端口实现rpc连接。后续新版本采用了pm2-axon-rpc 和 pm2-axon两个库，绑定的方法也由端口变成.sock文件，因为采用port可能会和现有进程的端口产生冲突。</p>
-<p>每次命令行的输入都会执行一次satan程序。如果God进程不在运行，首先需要启动God进程。然后根据指令，satan通过rpc调用God中对应的方法执行相应的逻辑。<br>God在初次执行时会配置cluster，同时监听cluster中的事件：<br>在God启动后， 会建立Satan和God的rpc链接，然后调用prepare方法。prepare方法会调用cluster.fork，完成集群的启动</p>
+<p>每次命令行的输入都会执行一次satan程序。如果God进程不在运行，首先需要启动God进程。然后根据指令，satan通过rpc调用God中对应的方法执行相应的逻辑。<br>God在初次执行时会配置cluster，同时监听cluster中的事件：<br>在God启动后， 会建立Satan和God的rpc链接，然后调用prepare方法。prepare方法会调用cluster.fork，完成集群的启动.</p>
+<h4 id="21-性能指标："><a href="#21-性能指标：" class="headerlink" title="21. 性能指标："></a>21. 性能指标：</h4><ul>
+<li>FP（首次绘制）</li>
+<li>FCP（首次内容绘制 First contentful paint）</li>
+<li>LCP（最大内容绘制时间 Largest contentful paint）</li>
+<li>FPS（每秒传输帧数）</li>
+<li>CLS (累积布局偏移)</li>
+<li>TTI（页面可交互时间 Time to Interactive）</li>
+<li>HTTP 请求响应时间</li>
+<li>DNS 解析时间</li>
+<li>TCP 连接时间</li>
+</ul>
+<h4 id="22-interface-和-type的区别"><a href="#22-interface-和-type的区别" class="headerlink" title="22. interface 和 type的区别"></a>22. interface 和 type的区别</h4><p>interface 只能定义对象类型。type声明可以声明任何类型。</p>
+<p>interface 能够声明合并，两个相同接口会合并。Type声明合并会报错<br>type可以类型推导</p>
+<h4 id="23-泛型位置"><a href="#23-泛型位置" class="headerlink" title="23 泛型位置"></a>23 泛型位置</h4><p>// 定义callback遍历方法 两种方式 应该采用哪一种？<br><code>type Callback = &lt;T&gt;(item: T) =&gt; void</code><br>// 第二种声明方式<br><code>type Callback&lt;T&gt; = (item: T) =&gt; void;</code></p>
+<p>当泛型出现在内部时，比接口本身并不具备任何泛型定义。而接口代表的函数则会接受一个泛型定义。换句话说接口本身不需要泛型，而在实现使用接口代表的函数类型时需要声明该函数接受一个泛型参数。</p>
+<p>当泛型出现在接口中时，比如Callback<t> 代表的是使用接口时需要传入泛型的类型.</t></p>
 
                 
             </div>
