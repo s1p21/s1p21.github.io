@@ -1,0 +1,1168 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="移动技术发展&amp;flutter简介, 前端 vue js ts react node">
+    <meta name="description" content="移动技术发展及 flutter 简介移动技术发展2008 年 7 月 IPhone 推出第一代手机 IPhone 3G，同年 9 月谷歌正式发布了 Android 1.0 系统，标志着我们正式步入移动端发展期，按照技术开发的历程移动端（目前">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>移动技术发展&amp;flutter简介 | s1p21的blog</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/matery.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/my.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/reward.css">
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">s1p21的blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">s1p21的blog</div>
+        <div class="logo-desc">
+            
+            前端技术栈 微信公众号：前端技术宅博客
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/s1p21/hexo" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/s1p21/hexo" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">移动技术发展&amp;flutter简介</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/flutter/">
+                                <span class="chip bg-color">flutter</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-11-03
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="移动技术发展及-flutter-简介"><a href="#移动技术发展及-flutter-简介" class="headerlink" title="移动技术发展及 flutter 简介"></a>移动技术发展及 flutter 简介</h1><h2 id="移动技术发展"><a href="#移动技术发展" class="headerlink" title="移动技术发展"></a>移动技术发展</h2><p>2008 年 7 月 IPhone 推出第一代手机 IPhone 3G，同年 9 月谷歌正式发布了 Android 1.0 系统，标志着我们正式步入移动端发展期，按照技术开发的历程移动端（目前特指 Android 和 iOS）的发展大致可以分为 4 个阶段：原生阶段-&gt;Hybird 阶段-&gt;RN 阶段-&gt;Flutter 阶段。</p>
+<h3 id="原生阶段"><a href="#原生阶段" class="headerlink" title="原生阶段"></a>原生阶段</h3><p>使用原生语言（Android 使用 Java 或 Kotlin，iOS 使用 Objective-C 或 Swift ）开发应用，称之为原生阶段。<br>在此阶段发现一样的功能需要在 Android 和 iOS 两端开发，开发和维护成本较高，同时无动态化更新能力，紧急问题的修复和添加新功能都需要到相应平台发版，尤其是 iOS 审核的周期非常长，在国内 Android 虽然有动态化方案，但如果上架 Google Play 很有可能审核不通过或者下架，iOS 也有动态化，但苹果官方基本审核不通过，所以原生的动态化更新受政策影响很大。</p>
+<p>从开发者的角度出发，是否有一种方案可以开发一套代码在多个平台运行且可以动态化更新，无需在走平台的审核。基于这个需求 H5 兴起，也就是我们所说的 Hybird 阶段。</p>
+<h3 id="Hybird-阶段"><a href="#Hybird-阶段" class="headerlink" title="Hybird 阶段"></a>Hybird 阶段</h3><p>Hybird 实现的基本原理是通过原生的 WebView 容器加载 H5 网页进行渲染，通过 JavaScript Bridge 调用一部分系统能力，同步更新服务器上的 H5 网页也实现了动态更新，俗称混合应用。</p>
+<p><img src="http://img.laomengit.com/image-20200608113600654.png" alt="Hybird"></p>
+<p>当时大量的公司使用此方案进行开发，最出名的就是 Facebook，早期的 Facebook 在 H5 上投入了大量的精力，一次开发、快速迭代这是使用 H5 技术巨大的优势。</p>
+<p>然而一切看似美好，但很快发现，H5 方案存在致命的缺陷-用户体验极差。</p>
+<p>Facebook 创始人兼 CEO 马克·扎克伯格在接受采访的时候承认：专注在 HTML 5 上面是他有史以来犯过的最大的错误。</p>
+<p>然而福兮祸所伏，虽然在 Facebook 上大量使用 H5 而导致用户体验极差，但 Facebook 基于强大的 H5 技术积累开发出了伟大的 React 框架，此框架是 React Native 框架的基础。</p>
+<h3 id="React-Native-阶段"><a href="#React-Native-阶段" class="headerlink" title="React Native 阶段"></a>React Native 阶段</h3><p>React Native 简称 RN，是 FaceBook 在 2015 年开源，基于 JavaScript，具备动态配置能力跨平台开发框架。React Native 框架原理如下：</p>
+<p><img src="http://img.laomengit.com/image-20200608115921953.png" alt="RN"></p>
+<p>React Native 使用 React 开发，然后生成虚拟 DOM 树，虚拟 DOM 是一个 JavaScript 的树形结构，通过虚拟 DOM 树映射到不同平台的本地控件，最终显示的 UI 是原生控件，因此在性能体验上和原生非常相近。和 React Native 类似的框架还有阿里巴巴的 Weex 框架，Weex 是在 React Native 基础上重新设计了一套开发模式，原理上和 React Native 一样。</p>
+<p>React Native 解决了继承了 H5 的优点，同时解决了性能体验上的问题，2015 年 React Native 一经发布，就在技术圈引起了巨大的反响，在当时看来 React Native 是一个非常完美的跨平台解决方案，很快大量开发者涌入。</p>
+<p>当年使用 React Native 的开发者最担心的不是 React Native 性能如何？体验如何？而是担心苹果会不会封掉 React Native，可想而之 React Native 的火爆程度，当年著名的 JSPatch 事件起初，起初大家都在说苹果开始对 React Native 下手了，虽然后来证实和 React Native 无关，但多多少少都对 React Native 开发者造成了一定的影响。</p>
+<p>随着时间的流逝，发现 React Native 和原生桥接的成本非常高，在复杂场景下会出现严重的性能问题，比如早期的 ListView 滑动卡顿问题。</p>
+<p>React Native 要桥接到原生控件，但 Android 和 IOS 控件的差异导致 React Native 无法统一 API，有的属性 IOS 支持，Android 不支持，有的 Android 支持，IOS 不支持，这就导致经常需要开发 Android 和 IOS 两套插件，随着项目的复杂度提升，也导致维护成本大幅提升。</p>
+<p>还有一个很大的问题就是 React Native 依赖于 Facebook 的维护，而每次 iOS 和 Android 系统版本更新，很大程度上会受到影响。</p>
+<h3 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h3><p>从技术上来说，小程序（指微信小程序，下同）并不是新的跨平台方案，它使用浏览器内核来渲染界面，小部分由原生组件渲染，原理图如下：</p>
+<p><img src="http://img.laomengit.com/image-20200608140924092.png" alt="小程序"></p>
+<p>小程序的运行环境分成渲染层和逻辑层，通信会经由微信客户端（Native）做中转。</p>
+<p>微信小程序目前来看是非常成功的，在我看来微信小程序成功主要原因并不是因为技术，而是生态，当然微信小程序体验也是非常好的。</p>
+<p>对商家来说，微信小程序拥有月活 10 亿的微信用户，获客成本低，这是一个流量极佳的平台，因此很多商家开发了体验极好的小程序，甚至一些商家把主要平台迁移到了微信小程序。</p>
+<p>对于用户来说，无需下载，用完就走，极大的提升了用户体验，微信提供基础服务平台，商家获客成本低，用户体验提升，三方形成完美的平衡，因此微信小程序的生态越来越完善。</p>
+<p>除了小程序外，类似的方案还有百度的轻应用和快应用，但都不温不火。</p>
+<h3 id="Flutter-阶段"><a href="#Flutter-阶段" class="headerlink" title="Flutter 阶段"></a>Flutter 阶段</h3><p>千呼万唤始出来，主角-Flutter 终于登场了，Flutter 是谷歌的移动 UI 框架，可以快速在 iOS 和 Android 上构建高质量的原生用户界面。</p>
+<p><img src="http://img.laomengit.com/image-20200608143242580.png" alt="Flutter"></p>
+<p>Flutter 吸收了前面的经验，它既没有使用 WebView，也没有使用原生控件进行绘制，而是自己实现了一套高性能渲染引擎来绘制 UI，这个引擎就是大名鼎鼎的 Skia，Skia 是一个 2D 绘图引擎库，Chrome 和 Android 都是采用 Skia 作为引擎。Flutter 完美的解决了跨平台代码复用和性能问题，大家都在感叹：似乎 UI 迎来了终极解决方案。</p>
+<p>UI 平台一致性<br>由于 Flutter 使用自己的引擎进行 UI 渲染，而不是用原生控件渲染，导致控件显示效果和原生不是完全一样，虽然肉眼看起来基本一样，但还是有一些细微的差别，尤其当 Android 和 iOS 系统升级导致原生控件效果发生变化时，Flutter 开发的 App 并不会进行相应的变化，如果您的 App 需要原生控件保持完全一致，Flutter 可能并不适合您。</p>
+<p>动态化更新<br>动态化功能在国内来说是一项非常重要的功能，Google 官方已经明确现阶段不会实现动态化功能。<br>此功能并不是技术上无法实现，更多的还是政策和法律上的约束。<br>因此如果您的 App 需要动态化功能，那么 Flutter 可能并不适合您。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>既然 Flutter 已经如此优秀了，那是不是以后使用 Flutter 就可以了呢？答案是否定的，未来很长一段时间应该是原生、Hybird、React Native、Flutter 共存时代。</p>
+<p>原生开发是无法完全避开的，一些硬件（比如蓝牙、传感器等）功能、音视频和 ARVR 等相关功能必须使用原生开发，有人说我开发蓝牙功能没用写原生代码啊，直接引入即可，你没有写，那是因为有人为你封装好了第三方插件。<br>Hybird 虽然有一些缺陷，但依然有其使用的场景，比如京东、天猫 App 中的营销活动都是是 H5 实现的。<br>React Native 可以使用原生控件渲染，因此，如果您需要使用原生控件而又想跨平台，React Native 是不错的选择。</p>
+<h2 id="Flutter-基本原理"><a href="#Flutter-基本原理" class="headerlink" title="Flutter 基本原理"></a>Flutter 基本原理</h2><h3 id="Flutter-高性能（AOT、JIT）"><a href="#Flutter-高性能（AOT、JIT）" class="headerlink" title="Flutter 高性能（AOT、JIT）"></a>Flutter 高性能（AOT、JIT）</h3><p>Flutter 高性能主要靠两点来保证，首先，Flutter APP 采用 Dart 语言开发。Dart 在 JIT（即时编译）模式下，速度与 JavaScript 基本持平。但是 Dart 支持 AOT，当以 AOT 模式运行时，JavaScript 便远远追不上了。速度的提升对高帧率下的视图数据计算很有帮助。其次，Flutter 使用自己的渲染引擎来绘制 UI，布局数据等由 Dart 语言直接控制，所以在布局过程中不需要像 RN 那样要在 JavaScript 和 Native 之间通信，这在一些滑动和拖动的场景下具有明显优势，因为在滑动和拖动过程往往都会引起布局发生变化，所以 JavaScript 需要和 Native 之间不停的同步布局信息，这和在浏览器中要 JavaScript 频繁操作 DOM 所带来的问题是相同的，都会带来比较可观的性能开销。</p>
+<p>在了解 Flutter 为什么选择了 Dart 而不是 JavaScript 之前我们先来介绍两个概念：JIT 和 AOT。</p>
+<p>目前，程序主要有两种运行方式：静态编译与动态解释。静态编译的程序在执行前全部被翻译为机器码，通常将这种类型称为 AOT （Ahead of time）即 “提前编译”；而解释执行的则是一句一句边翻译边运行，通常将这种类型称为 JIT（Just-in-time）即“即时编译”。AOT 程序的典型代表是用 C/C++开发的应用，它们必须在执行前编译成机器码，而 JIT 的代表则非常多，如 JavaScript、python 等，事实上，所有脚本语言都支持 JIT 模式。但需要注意的是 JIT 和 AOT 指的是程序运行方式，和编程语言并非强关联的，有些语言既可以以 JIT 方式运行也可以以 AOT 方式运行，如 Java、Python，它们可以在第一次执行时编译成中间字节码、然后在之后执行时可以直接执行字节码，也许有人会说，中间字节码并非机器码，在程序执行时仍然需要动态将字节码转为机器码，是的，这没有错，不过通常我们区分是否为 AOT 的标准就是看代码在执行之前是否需要编译，只要需要编译，无论其编译产物是字节码还是机器码，都属于 AOT。在此，读者不必纠结于概念，概念就是为了传达精神而发明的，只要读者能够理解其原理即可，得其神忘其形。</p>
+<p>现在我们看看 Flutter 为什么选择 Dart 语言？笔者根据官方解释以及自己对 Flutter 的理解总结了以下几条（由于其它跨平台框架都将 JavaScript 作为其开发语言，所以主要将 Dart 和 JavaScript 做一个对比）：</p>
+<ol>
+<li><p>开发效率高</p>
+<p>Dart 运行时和编译器支持 Flutter 的两个关键特性的组合：</p>
+<p>基于 JIT 的快速开发周期：Flutter 在开发阶段采用，采用 JIT 模式，这样就避免了每次改动都要进行编译，极大的节省了开发时间；</p>
+<p>基于 AOT 的发布包: Flutter 在发布时可以通过 AOT 生成高效的 ARM 代码以保证应用性能。而 JavaScript 则不具有这个能力。</p>
+</li>
+<li><p>高性能</p>
+<p>Flutter 旨在提供流畅、高保真的的 UI 体验。为了实现这一点，Flutter 中需要能够在每个动画帧中运行大量的代码。这意味着需要一种既能提供高性能的语言，而不会出现会丢帧的周期性暂停，而 Dart 支持 AOT，在这一点上可以做的比 JavaScript 更好。</p>
+</li>
+</ol>
+<h3 id="Flutter-渲染引擎"><a href="#Flutter-渲染引擎" class="headerlink" title="Flutter 渲染引擎"></a>Flutter 渲染引擎</h3><p>Flutter 与用于构建移动应用程序的其它大多数框架不同，因为 Flutter 既不使用 WebView，也不使用操作系统的原生控件。 相反，Flutter 使用自己的高性能渲染引擎来绘制 widget。这样不仅可以保证在 Android 和 iOS 上 UI 的一致性，而且也可以避免对原生控件依赖而带来的限制及高昂的维护成本。</p>
+<p>Flutter 使用 Skia 作为其 2D 渲染引擎，Skia 是 Google 的一个 2D 图形处理函数库，包含字型、坐标转换，以及点阵图都有高效能且简洁的表现，Skia 是跨平台的，并提供了非常友好的 API，目前 Google Chrome 浏览器和 Android 均采用 Skia 作为其绘图引擎。</p>
+<p>Flutter 渲染引擎在 iOS 上支持三种渲染方式，分别是纯软件（CPU），Metal 和 GL。其中纯软件的方式仅限于特定的构建，需要在编译时开启 TARGET_IPHONE_SIMULATOR 宏，应该是用于在模拟器上的测试，实机运行只会使用 Metal 和 GL。Flutter 会在运行时先判断是否能够使用 Metal，如果设备不支持，才会降级到 GL。iOS 10 以上的版本默认使用 Metal，GL 只用于兼容 iOS 9 的老旧设备。</p>
+<p>Flutter 渲染引擎在 Android 上也支持三种渲染方式，分别是纯软件（CPU），GL 和 Vulkan。其中纯软件模式是运行时由 Settings 的 enable_software_rendering 开关控制，默认为 false，目前只看到是通过命令行开关来控制，猜测是用于特定的测试用途。</p>
+<p>跟 iOS 不一样的是，Flutter 在 Android 上并不是动态判断系统和硬件环境，在运行时来选择 Vulkan 或者 GL，而是需要开发者自行编译一个开启 SHELL_ENABLE_VULKAN 宏的 Flutter Engine，可能 Skia 对 Vulkan 在 Android 上的支持还不够完善的缘故，这个宏是默认关闭的，所以 Flutter 在 Android 上目前还是以 GL 为主。</p>
+<p>Flutter 的渲染流程：</p>
+<ol>
+<li>需要的 GL GPU（Metal GPU）上下文环境是如何完成初始化；</li>
+<li>目标输出 Surface 的设置过程；</li>
+<li>渲染流水线执行光栅化的调用过程。</li>
+</ol>
+<p>总的说来 Flutter 的渲染流水线，整体架构上（包括线程架构）跟 Android 5.x 之后的 Android View Rendering 架构基本一致，跟目前其他主流的 UI Toolkit，如 iOS，Qt QML 也十分类似。但是在内部实现的一些概念和细节上更接近于浏览器，特别是 WebKit/Blink，这跟 Flutter 的几位初期成员都是来自 Chrome 团队，负责 WebKit/Blink 的排版和绘制相关的工作有关。</p>
+<p>跟 Android 5.x View Rendering Pipeline 一样，Flutter 的渲染流水线也包括两个线程 —— UI 线程和 GPU 线程。</p>
+<p>UI 线程主要负责的是根据 UI 界面的描述生成 UI 界面的绘制指令，而 GPU 线程负责光栅化和合成。</p>
+<p>Flutter 以图层树（Layer Tree）的方式对生成的 UI 界面绘制指令进行组织，而从 Android 4.x 开始，Android View Rendering 使用的 View DisplayList 树的方式，虽然组织的方式有所差异，但是其中的主要内容都是 UI 界面的绘制指令。而图层树这种组织方式又非常类似 WebKit/Blink。</p>
+<p><img src="http://api.fly63.com/vue_blog/public/Uploads/20190428/5cc52cdd043ee.jpg" alt="渲染流程"></p>
+<p>上图显示了 Flutter 更新 UI 界面的过程：</p>
+<ol>
+<li>运行动画，动画的结果会导致 Widget State 的改变；</li>
+<li>State Changes 触发 Flutter 生成一棵新的 Widget 树；</li>
+<li>Flutter 根据新/旧 Widget 树的差异更新 Render 树，重新排版更新界面布局；</li>
+<li>Flutter 根据新的 Render 树更新 Composited Layer（合成图层）的 Display List；</li>
+<li>输出新的图层树；</li>
+</ol>
+<h3 id="Widget"><a href="#Widget" class="headerlink" title="Widget"></a>Widget</h3><p>在 Flutter 里面 Widget 的定义是 UI 界面的不可变的抽象描述，它跟其他 UI Toolkit 的 Widget 或者 View 有较大差别，相比其他 UI Toolkit 里面的基础 UI 组件，Flutter Widget 的抽象层次更高，涵盖的范围更广，单纯从抽象层次来说，倒是更类似浏览器的 DOM/CSSOM，虽然两者实际上并不相同。给我的感觉就像是混合了各种不同的对 UI 界面进行描述的方式所创造出的一个新概念，采用浏览器渲染里面抽象层次划分的方式对其他 UI Toolkit 的基础 UI 组件进行层次划分得到的一个新的抽象层。</p>
+<h3 id="RenderObject"><a href="#RenderObject" class="headerlink" title="RenderObject"></a>RenderObject</h3><p>Flutter 使用 RenderObject 作为 UI 界面的内部描述方式，基于 RenderObject 计算 UI 的布局和生成 UI 的绘制指令。Flutter 里面 RenderObject 和 Render 树的概念跟浏览器就基本差不多了，连命名都一样。从抽象层次和主要功能来说，RenderObject 跟其他 UI Toolkit 里面的 Widget 和 View 这些基础 UI 组件也比较接近。</p>
+<h3 id="Composited-Layer"><a href="#Composited-Layer" class="headerlink" title="Composited Layer"></a>Composited Layer</h3><p>Flutter 使用 Composited Layer 来对 RenderObject 的绘制进行组织，通常一个 Composited Layer 对应一棵 RenderObject 子树，Composited Layer 的 Display List 记录了这棵 RenderObject 子树的绘制指令，这跟浏览器里面的 RenderObject 和 Composited Layer 基本是一样的。</p>
+<p>不同的 UI Toolkit 对图层的处理方式并不一样，Android 没有一个完整的图层概念，只是间接地允许应用指定为特定的 View 子树生成图层，并且这个图层的概念跟 Flutter 里面的图层相比，Flutter 具备更高的抽象层次，它是绘制指令的一种组织方式，并不一定就需要分配额外的缓存做间接光栅化，Flutter 内部采用一个重复绘制次数阈值来控制是否为图层分配额外的缓存，通过这种方式来平衡内存占用和重复光栅化的性能损失。iOS 有比较完整的图层概念，跟 Flutter 更接近，并允许应用自己控制。</p>
+<h3 id="Flutter-光栅化和合成"><a href="#Flutter-光栅化和合成" class="headerlink" title="Flutter 光栅化和合成"></a>Flutter 光栅化和合成</h3><p>Flutter 光栅化和合成的流水线设计对比浏览器就简单的多了，跟其他 UI Toolkit 基本一样，只需要在 GPU 线程完成全部的光栅化和合成，并且全部由 GPU 实现。Android HWUI 的光栅化和合成将来应该也会改用 Skia 的实现，所以长远来看，Android 和 Flutter，另外也包括 Chrome， 在光栅化和合成的实现上应该会是使用同样的代码。</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
+<li><p>移动技术发展由原生阶段-&gt;Hybird 阶段-&gt;RN 或小程序的跨平台支持方案-&gt;Flutter 阶段；</p>
+</li>
+<li><p>Flutter 高性能的优势在于采用 Dart，其具有基于 JIT 的快速开发周期发布阶段和基于 AOT 的发布包来提高我们的开发效率和发布的应用的性能；</p>
+</li>
+<li><p>Flutter 的另一大优势在于使用一套高性能渲染引擎 Skia 通过 GL 进行 UI 渲染，来达到跨平台代码复用和兼容性问题，达到 UI 平台一致性。</p>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">s1p21</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://s1p21.github.io/2022/11/03/yi-dong-ji-zhu-fa-zhan-he-flutter-jian-jie/">https://s1p21.github.io/2022/11/03/yi-dong-ji-zhu-fa-zhan-he-flutter-jian-jie/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">s1p21</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/flutter/">
+                                    <span class="chip bg-color">flutter</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/11/03/flutter-kua-zu-jian-tong-xin/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/5.jpg" class="responsive-img" alt="flutter跨组件通信">
+                        
+                        <span class="card-title">flutter跨组件通信</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/flutter/">
+                        <span class="chip bg-color">flutter</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/11/03/yi-dong-ji-zhu-fa-zhan-he-flutter-jian-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/9.jpg" class="responsive-img" alt="移动技术发展&amp;flutter简介">
+                        
+                        <span class="card-title">移动技术发展&amp;flutter简介</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/flutter/">
+                        <span class="chip bg-color">flutter</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">s1p21</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/s1p21" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:269438272@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/s1p21" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/s1p21" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://twitter.com/s1p21" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/s1p21" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=269438272" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 269438272" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/2689712123" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/2689712123" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://weixin.qq.com/" class="tooltipped" target="_blank" data-tooltip="微信搜索: s1p21wt" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/whitbytao" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/whitbytao" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "89660989"
+        });
+        daovoice('update');
+    </script>
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
