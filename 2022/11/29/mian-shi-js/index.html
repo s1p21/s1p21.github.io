@@ -727,6 +727,7 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
 <h4 id="23-泛型位置"><a href="#23-泛型位置" class="headerlink" title="23 泛型位置"></a>23 泛型位置</h4><p>// 定义callback遍历方法 两种方式 应该采用哪一种？<br><code>type Callback = &lt;T&gt;(item: T) =&gt; void</code><br>// 第二种声明方式<br><code>type Callback&lt;T&gt; = (item: T) =&gt; void;</code></p>
 <p>当泛型出现在内部时，比接口本身并不具备任何泛型定义。而接口代表的函数则会接受一个泛型定义。换句话说接口本身不需要泛型，而在实现使用接口代表的函数类型时需要声明该函数接受一个泛型参数。</p>
 <p>当泛型出现在接口中时，比如Callback<t> 代表的是使用接口时需要传入泛型的类型.</t></p>
+<h4 id="24-箭头函数"><a href="#24-箭头函数" class="headerlink" title="24 箭头函数"></a>24 箭头函数</h4><p>this的作用域<br>但是没有prototype属性没有构造器特性，所以也就没有所谓的constructor，就不能作为构造器使用。<br>箭头函数的作用域不能通过.call、.apply、.bind等语法来改变，这使得箭头函数的上下文将永久不变<br>箭头函数不能使用关键字arguments来访问，只能通过定义的命名参数来访问。</p>
 
                 
             </div>
