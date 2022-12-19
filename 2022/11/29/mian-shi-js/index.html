@@ -568,7 +568,8 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="13-虚拟-DOM-和真实-DOM-的转换"><a href="#13-虚拟-DOM-和真实-DOM-的转换" class="headerlink" title="13. 虚拟 DOM 和真实 DOM 的转换"></a>13. 虚拟 DOM 和真实 DOM 的转换</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">VDom</span> <span class="token punctuation">{</span>
+<h4 id="13-虚拟-DOM-和真实-DOM-的转换"><a href="#13-虚拟-DOM-和真实-DOM-的转换" class="headerlink" title="13. 虚拟 DOM 和真实 DOM 的转换"></a>13. 虚拟 DOM 和真实 DOM 的转换</h4><p>虚拟DOM缺点：在首次渲染时，多了一层虚拟DOM的计算，影响性能</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">VDom</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span>tag<span class="token punctuation">,</span> data<span class="token punctuation">,</span> value<span class="token punctuation">,</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>tag <span class="token operator">=</span> tag <span class="token operator">&amp;&amp;</span> tag<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 节点名</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 属性</span>
@@ -728,6 +729,136 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
 <p>当泛型出现在内部时，比接口本身并不具备任何泛型定义。而接口代表的函数则会接受一个泛型定义。换句话说接口本身不需要泛型，而在实现使用接口代表的函数类型时需要声明该函数接受一个泛型参数。</p>
 <p>当泛型出现在接口中时，比如Callback<t> 代表的是使用接口时需要传入泛型的类型.</t></p>
 <h4 id="24-箭头函数"><a href="#24-箭头函数" class="headerlink" title="24 箭头函数"></a>24 箭头函数</h4><p>this的作用域<br>但是没有prototype属性没有构造器特性，所以也就没有所谓的constructor，就不能作为构造器使用。<br>箭头函数的作用域不能通过.call、.apply、.bind等语法来改变，这使得箭头函数的上下文将永久不变<br>箭头函数不能使用关键字arguments来访问，只能通过定义的命名参数来访问。</p>
+<h4 id="25-JS-设计模式"><a href="#25-JS-设计模式" class="headerlink" title="25 JS 设计模式"></a>25 JS 设计模式</h4><ul>
+<li>单例模式</li>
+<li>工厂模式</li>
+<li>装饰器模式</li>
+<li>观察者模式</li>
+<li>发布-订阅者模式</li>
+<li>策略模式</li>
+<li>访问者模式（bable插件）</li>
+</ul>
+<p>装饰器模式<br>在不改变对象自身的基础上，动态地给某个对象添加一些额外的职责</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fuc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+Function<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>before <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>beFn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    beFn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 先执行插入到前面的方法，类似于二叉树的前序遍历</span>
+    <span class="token keyword">return</span> self<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 后执行当前的方法</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+Function<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>after <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>afFn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    self<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 先执行当前的方法</span>
+    <span class="token keyword">return</span> afFn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 后执行插入到后面的方法</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">fuc1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">fuc3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">fuc4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+fuc <span class="token operator">=</span> fuc<span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span>fuc1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span>fuc4<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">after</span><span class="token punctuation">(</span>fuc3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">fuc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>访问者模式<br>在不改变该对象的前提下访问其结构中元素的新方法</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 元素类</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> chinese<span class="token punctuation">,</span> math<span class="token punctuation">,</span> english<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>chinese <span class="token operator">=</span> chinese<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>math <span class="token operator">=</span> math<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>english <span class="token operator">=</span> english<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">accept</span><span class="token punctuation">(</span>visitor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    visitor<span class="token punctuation">.</span><span class="token function">visit</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 访问者类</span>
+<span class="token keyword">class</span> <span class="token class-name">ChineseTeacher</span> <span class="token punctuation">{</span>
+  <span class="token function">visit</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`语文 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>student<span class="token punctuation">.</span>chinese<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MathTeacher</span> <span class="token punctuation">{</span>
+  <span class="token function">visit</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`数学 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>student<span class="token punctuation">.</span>math<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">EnglishTeacher</span> <span class="token punctuation">{</span>
+  <span class="token function">visit</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`英语 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>student<span class="token punctuation">.</span>english<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 实例化元素类</span>
+<span class="token keyword">const</span> student <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 实例化访问者类</span>
+<span class="token keyword">const</span> chineseTeacher <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ChineseTeacher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> mathTeacher <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MathTeacher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> englishTeacher <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EnglishTeacher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 接受访问</span>
+student<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>chineseTeacher<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 语文90</span>
+student<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>mathTeacher<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 数学80</span>
+student<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>englishTeacher<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 英语60</span>
+</code></pre>
+<h3 id="async-await"><a href="#async-await" class="headerlink" title="async await"></a>async await</h3><p>作用：用同步方式，执行异步操作</p>
+<p>总结</p>
+<p>1）async函数是generator（迭代函数）的语法糖</p>
+<p>2）async函数返回的是一个Promise对象，有无值看有无return值</p>
+<p>3）await关键字只能放在async函数内部，await关键字的作用 就是获取Promise中返回的resolve或者reject的值</p>
+<p>4）async、await要结合try/catch使用，防止意外的错误</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">generatorToAsync</span><span class="token punctuation">(</span>generatorFn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> gen <span class="token operator">=</span> generatorFn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// gen有可能传参</span>
+
+    <span class="token comment" spellcheck="true">// 返回一个Promise</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+
+      <span class="token keyword">function</span> <span class="token function">go</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> arg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> res
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+          res <span class="token operator">=</span> gen<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 这里有可能会执行返回reject状态的Promise</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 报错的话会走catch，直接reject</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// 解构获得value和done</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> value<span class="token punctuation">,</span> done <span class="token punctuation">}</span> <span class="token operator">=</span> res
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>done<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// 如果done为true，说明走完了，进行resolve(value)</span>
+          <span class="token keyword">return</span> <span class="token function">resolve</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// 如果done为false，说明没走完，还得继续走</span>
+
+          <span class="token comment" spellcheck="true">// value有可能是：常量，Promise，Promise有可能是成功或者失败</span>
+          <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>val <span class="token operator">=</span><span class="token operator">></span> <span class="token function">go</span><span class="token punctuation">(</span><span class="token string">'next'</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">,</span> err <span class="token operator">=</span><span class="token operator">></span> <span class="token function">go</span><span class="token punctuation">(</span><span class="token string">'throw'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token function">go</span><span class="token punctuation">(</span><span class="token string">"next"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 第一次执行</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> asyncFn <span class="token operator">=</span> <span class="token function">generatorToAsync</span><span class="token punctuation">(</span>gen<span class="token punctuation">)</span>
+
+<span class="token function">asyncFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="实现一个批量请求函数-能够限制并发量为3"><a href="#实现一个批量请求函数-能够限制并发量为3" class="headerlink" title="实现一个批量请求函数, 能够限制并发量为3"></a>实现一个批量请求函数, 能够限制并发量为3</h4><p>async function run(){<br>    for (let i=0;i&lt;idArray.length;i++){<br>        let promise = request(idArray[i]);<br>        promise.then((res)=&gt;{<br>            console.log(<code>id${res}的请求已经处理完毕,当前并发为${pool.length}</code>);<br>            pool.splice(pool.indexOf(promise),1);<br>        })<br>        pool.push(promise);<br>        //这里是重点，当满了就阻塞<br>        if (pool.length==max){<br>            await Promise.race(pool);<br>        }<br>    }<br>}<br>run();</p>
 
                 
             </div>

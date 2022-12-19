@@ -447,7 +447,10 @@ writ">
 <h4 id="浏览器回退、切换会触发vue的哪些生命周期"><a href="#浏览器回退、切换会触发vue的哪些生命周期" class="headerlink" title="浏览器回退、切换会触发vue的哪些生命周期"></a>浏览器回退、切换会触发vue的哪些生命周期</h4><p>页面刷新时, vue执行的生命周期钩子<br>依次执行当前页面vue组件的beforeCreate, created, beforeMount, mounted, beforUpdate, updated</p>
 <p>页面后退时, vue执行的生命周期钩子<br>假设从b页面后退到a页面<br>依次执行a页面vue组件的beforeCreate, created, beforeMount, 然后是b页面组件的beforeDestroy, destroyed, 最后是执行a页面vue组件的mounted, beforUpdate, updated</p>
 <p>页面前进时, vue执行的生命周期钩子<br>假设从a页面到b页面<br>依次执行b页面vue组件的beforeCreate, created, beforeMount, 然后是a页面组件的beforeDestroy, destroyed, 最后是执行b页面vue组件的mounted, beforUpdate, updated</p>
-<h4 id="vue-中的diff"><a href="#vue-中的diff" class="headerlink" title="vue 中的diff"></a>vue 中的diff</h4><p>在vue1.0 中，通过watch来实现数据和视图的响应式更新，通过发布-订阅者模式<br>在vue2.x中，因为还是无法解决响应式数据过多而引起的卡顿的问题，vue2.x 引入了虚拟DOM，对于 Vue 2 来说，组件之间的变化，可以通过响应式来通知更新。组件内部的数据变化，则通过虚拟DOM去更新页面。这样就把响应式的监听器，控制在了组件级别，而虚拟DOM的量级，也控制在了组件的大小。</p>
+<h4 id="vue-中的diff"><a href="#vue-中的diff" class="headerlink" title="vue 中的diff"></a>vue 中的diff</h4><p>在vue1.0 中，通过watch来实现数据和视图的响应式更新，通过观察者模式<br>在vue2.x中，因为还是无法解决响应式数据过多而引起的卡顿的问题，vue2.x 引入了虚拟DOM，对于 Vue 2 来说，组件之间的变化，可以通过响应式来通知更新。组件内部的数据变化，则通过虚拟DOM去更新页面。这样就把响应式的监听器，控制在了组件级别，而虚拟DOM的量级，也控制在了组件的大小。</p>
+<p>如果没有绑定key，对于DOM的顺序发生变化，比如直接插入，会导致后面的数据不变的组件重新渲染</p>
+<h4 id="vue-的keep-alive的作用是什么？怎么实现的？如何刷新的"><a href="#vue-的keep-alive的作用是什么？怎么实现的？如何刷新的" class="headerlink" title="vue 的keep-alive的作用是什么？怎么实现的？如何刷新的?"></a>vue 的keep-alive的作用是什么？怎么实现的？如何刷新的?</h4><p>保持组件不被销毁，组件挂载的数据还存在，所以状态就可以保留。<br>在首次加载被包裹组建时，由keep-alive.js中的render函数可知，vnode.componentInstance的值是undfined，keepAlive的值是true，因为keep-alive组件作为父组件，它的render函数会先于被包裹组件执行；那么只执行到i(vnode,false)，后面的逻辑不执行；<br>再次访问被包裹组件时，vnode.componentInstance的值就是已经缓存的组件实例，那么会执行insert(parentElm, vnode.elm, refElm)逻辑，这样就直接把上一次的DOM插入到父元素中。</p>
+<p>在patch的阶段，最后会执行invokeInsertHook函数，而这个函数就是去调用组件实例（VNode）自身的insert钩子：<br>在insert这个钩子里面，调用了activateChildComponent函数递归地去执行所有子组件的activated钩子函数：<br>相反地，deactivated钩子函数也是一样的原理，在组件实例（VNode）的destroy钩子函数中调用deactivateChildComponent函数。</p>
 
                 
             </div>
