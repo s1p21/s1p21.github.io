@@ -64,8 +64,8 @@ c">
 
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -421,6 +421,20 @@ c">
 <p>304 Not Modified：表示客户端发送附带条件的请求（GET方法请求报文中的IF…）时，条件不满足。返回304时，不包含任何响应主体。虽然304被划分在3XX，但和重定向一毛钱关系都没有</p>
 <p>400 Bad Request：客户端请求有语法错误，服务器无法理解。<br>401 Unauthorized：请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用。<br>403 Forbidden：服务器收到请求，但是拒绝提供服务<br>404 Not Found：请求资源不存在。比如，输入了错误的url<br>415 Unsupported media type：不支持的媒体类型</p>
 <p>500 Internal Server Error：服务器发生不可预期的错误。<br>502 网关错误<br>503 Server Unavailable：服务器当前不能处理客户端的请求，一段时间后可能恢复正常<br>504 网关超时<br>505 HTTP版本未被支持</p>
+<h4 id="webscoket的连接原理"><a href="#webscoket的连接原理" class="headerlink" title="webscoket的连接原理"></a>webscoket的连接原理</h4><p>轮询<br>客户端通过一定的时间间隔以频繁请求的方式向服务器发送请求，来保持客户端和服务器端的数据同步。问题很明显，当客户端以固定频率向服务器端发送请求时，服务器端的数据可能并没有更新，带来很多无谓请求，浪费带宽，效率低下。</p>
+<p>从上文可以看出，传统 Web 模式在处理高并发及实时性需求的时候，会遇到难以逾越的瓶颈，我们需要一种高效节能的双向通信机制来保证数据的实时传输。在此背景下，基于 HTML5 规范的、有 Web TCP 之称的 WebSocket 应运而生。</p>
+<p>WebSocket 是 HTML5 一种新的协议。它实现了浏览器与服务器全双工通信，能更好的节省服务器资源和带宽并达到实时通讯，它建立在 TCP 之上，同 HTTP 一样通过 TCP 来传输数据，但是它和 HTTP 最大不同是：</p>
+<p>WebSocket 是一种双向通信协议，在建立连接后，WebSocket 服务器和 Browser/Client Agent 都能主动的向对方发送或接收数据，就像 Socket 一样；<br>WebSocket 需要类似 TCP 的客户端和服务器端通过握手连接，连接成功后才能相互通信。</p>
+<h4 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h4><p>跨域是指一个域下的文档或脚本试图去请求另一个域下的资源</p>
+<p>什么是同源策略？<br>同源策略/SOP（Same origin policy）是一种约定，由Netscape公司1995年引入浏览器，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。所谓同源是指”协议+域名+端口”三者相同，即便两个不同的域名指向同一个ip地址，也非同源。<br>同源策略限制以下几种行为：<br>1.) Cookie、LocalStorage 和 IndexDB 无法读取<br>2.) DOM 和 Js对象无法获得<br>3.) AJAX 请求不能发送</p>
+<p>跨域解决方案<br>1、 通过jsonp跨域<br>2、 document.domain + iframe跨域<br>3、 location.hash + iframe<br>4、 window.name + iframe跨域<br>5、 postMessage跨域<br>6、 跨域资源共享（CORS）<br>7、 nginx代理跨域<br>8、 nodejs中间件代理跨域<br>9、 WebSocket协议跨域</p>
+<h3 id="CSP"><a href="#CSP" class="headerlink" title="CSP"></a>CSP</h3><p>该安全策略的实现基于一个称作 Content-Security-Policy的 HTTP 首部。<br>可以移步MDN，有更加规范的解释。我在这里就是梳理一下吧。<br>CSP，即浏览器中的内容安全策略，它的核心思想大概就是服务器决定浏览器加载哪些资源，具体来说有几个功能</p>
+<ul>
+<li>限制加载其他域下的资源文件，这样即使黑客插入了一个 JavaScript 文件，这个 JavaScript 文件也是无法被加载的；</li>
+<li>禁止向第三方域提交数据，这样用户数据也不会外泄；</li>
+<li>提供上报机制，能帮助我们及时发现 XSS 攻击。</li>
+<li>禁止执行内联脚本和未授权的脚本；</li>
+</ul>
 
                 
             </div>
@@ -569,17 +583,18 @@ c">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/12/16/suan-fa-quan/">
+                <a href="/2022/12/05/mian-shi-http/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/9.jpg" class="responsive-img" alt="算法-全">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/22.jpg" class="responsive-img" alt="面试-http">
                         
-                        <span class="card-title">算法-全</span>
+                        <span class="card-title">面试-http</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -589,9 +604,9 @@ c">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -599,6 +614,19 @@ c">
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/tags/http/">
+                        <span class="chip bg-color">http</span>
+                    </a>
+                    
                 </div>
                 
             </div>
