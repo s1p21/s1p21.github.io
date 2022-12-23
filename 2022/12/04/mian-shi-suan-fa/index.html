@@ -763,6 +763,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>4）当子序列的和大于目标值，small向右移动，子序列的和小于目标值，big向右移动</p>
 <p>function FindContinuousSequence(sum) {<br>  let result = [];<br>  // 记录当前的结果<br>  let child = [1, 2];<br>  let small = 1; // 初始值1<br>  let big = 2; //<br>  let currentSum = 3; // 当前数字之和<br>  while (big &lt; sum) {<br>    // big等于sum时，child中只剩一个数，不满足连续正数序列的要求，结束循环<br>    while (currentSum &lt; sum &amp;&amp; big &lt; sum) {<br>      child.push(++big);<br>      // currentSum为当前child的和<br>      currentSum += big;<br>    }<br>    while (currentSum &gt; sum &amp;&amp; small &lt; big) {<br>      child.shift();<br>      // 因为删除了最小值，所以small也要响应变化，增加1<br>      currentSum -= small++;<br>    }<br>    if (currentSum === sum &amp;&amp; child.length &gt; 1) {<br>      // child.length大于1，剔除一个数等于sum的情况<br>      // child.slice返回一个新的数组<br>      result.push(child.slice());<br>      child.push(++big);<br>      currentSum += big;<br>    }<br>  }<br>  return result;<br>}</p>
 <p>console.log(FindContinuousSequence(15)); // [1, 2, 3, 4, 5] [4, 5, 6] [7, 8]</p>
+<h4 id="递归-斐波拉契数列"><a href="#递归-斐波拉契数列" class="headerlink" title="递归 斐波拉契数列"></a>递归 斐波拉契数列</h4><p>```<br>function feibo(n, sum1 = 1, sum2 = 1) {<br>  if (n === 1 || n === 2) return sum2;<br>  return feibo(n - 1, sum2, sum1 + sum2);<br>}</p>
 
                 
             </div>

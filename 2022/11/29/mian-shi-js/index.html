@@ -401,6 +401,10 @@
 <p>原型: 在 JS 中，每当定义一个对象（函数也是对象）时，对象中都会包含一些预定义的属性。其中每个函数对象都有一个 prototype 属性，这个属性指向函数的原型对象。</p>
 <p>原型链：函数的原型链对象 constructor 默认指向函数本身，原型对象除了有原型属性外，为了实现继承，还有一个原型链指针<strong>proto</strong>,该指针是指向上一层的原型对象，而上一层的原型对象的结构依然类似。因此可以利用<strong>proto</strong>一直指向 Object 的原型对象上，而 Object 原型对象用 Object.prototype.** proto** = null 表示原型链顶端。如此形成了 js 的原型链继承。同时所有的 js 对象都有 Object 的基本防范</p>
 <p>特点: JavaScript 对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。</p>
+<h5 id="ES5与ES6继承的区别"><a href="#ES5与ES6继承的区别" class="headerlink" title="ES5与ES6继承的区别"></a>ES5与ES6继承的区别</h5><p>ES5的继承是先创建子类的实例, 然后再创建父类的方法添加到this上.</p>
+<p>ES6的继承是先创建父类的实例对象this(必须先调用super方法), 再调用子类的构造函数修改this.</p>
+<p>通过关键字class定义类, extends关键字实现继承. 子类必须在constructor方法中调用super方法否则创建实例报错. 因为子类没有this对象, 而是使用父类的this, 然后对其进行加工</p>
+<p>super关键字指代父类的this, 在子类的构造函数中, 必须先调用super, 然后才能使用this</p>
 <h4 id="4-介绍节流防抖原理、区别以及应用"><a href="#4-介绍节流防抖原理、区别以及应用" class="headerlink" title="4.介绍节流防抖原理、区别以及应用"></a>4.介绍节流防抖原理、区别以及应用</h4><p>节流：事件触发后，规定时间内，事件处理函数不能再次被调用。也就是说在规定的时间内，函数只能被调用一次，且是最先被触发调用的那次。</p>
 <p>防抖：多次触发事件，事件处理函数只能执行一次，并且是在触发操作结束时执行。也就是说，当一个事件被触发准备执行事件函数前，会等待一定的时间（这时间是码农自己去定义的，比如 1 秒），如果没有再次被触发，那么就执行，如果被触发了，那就本次作废，重新从新触发的时间开始计算，并再次等待 1 秒，直到能最终执行！</p>
 <p>使用场景：<br>节流：滚动加载更多、搜索框搜的索联想功能、高频点击、表单重复提交……<br>防抖：搜索框搜索输入，并在输入完以后自动搜索、手机号，邮箱验证输入检测、窗口大小 resize 变化后，再重新渲染。</p>
@@ -631,43 +635,6 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
   <span class="token keyword">return</span> rdom<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="14-广度优先和深度优先"><a href="#14-广度优先和深度优先" class="headerlink" title="14. 广度优先和深度优先"></a>14. 广度优先和深度优先</h4><p>深度优先采用堆栈的形式，即先进后出<br>广度优先采用队列的形式，先进先出</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>   name<span class="token punctuation">:</span> <span class="token string">'a2'</span><span class="token punctuation">,</span>
-        children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-            <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'b2'</span><span class="token punctuation">,</span> children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'e2'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'c2'</span><span class="token punctuation">,</span> children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'f2'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'d2'</span><span class="token punctuation">,</span> children<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'g2'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">]</span>
-<span class="token comment" spellcheck="true">// 深度</span>
-<span class="token keyword">function</span> <span class="token function">getNames</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    data<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>item<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-        <span class="token function">dfs</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token keyword">const</span>  dfs <span class="token operator">=</span> data <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        data<span class="token punctuation">.</span>children <span class="token operator">&amp;&amp;</span> data<span class="token punctuation">.</span>children<span class="token punctuation">.</span><span class="token function">foreach</span><span class="token punctuation">(</span>child<span class="token operator">=</span><span class="token operator">></span><span class="token function">dfs</span><span class="token punctuation">(</span>child<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment" spellcheck="true">// 广度遍历</span>
-<span class="token keyword">function</span> <span class="token function">getNames</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token keyword">let</span> queue <span class="token operator">=</span> data
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>queue<span class="token punctuation">.</span>length<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">[</span><span class="token operator">...</span>queue<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>child<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-            queue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-            result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>childName<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            child<span class="token punctuation">.</span>children <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">...</span>chuld<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-</code></pre>
 <h4 id="15-node-的eventloop"><a href="#15-node-的eventloop" class="headerlink" title="15. node 的eventloop"></a>15. node 的eventloop</h4><p> node的 事件循环有times, pending callbacks(I/o callbacks, idle prepare), poll,check,close callbacks</p>
 <ul>
 <li>times 执行setTimeOut 和setTimeInterval</li>
@@ -723,9 +690,9 @@ Function<span class="token punctuation">.</span>prototype<span class="token punc
 <li>DNS 解析时间</li>
 <li>TCP 连接时间</li>
 </ul>
-<h4 id="22-interface-和-type的区别"><a href="#22-interface-和-type的区别" class="headerlink" title="22. interface 和 type的区别"></a>22. interface 和 type的区别</h4><p>interface 只能定义对象类型。type声明可以声明任何类型。</p>
+<h4 id="22-interface-和-type-、-泛型位置"><a href="#22-interface-和-type-、-泛型位置" class="headerlink" title="22. interface 和 type 、 泛型位置"></a>22. interface 和 type 、 泛型位置</h4><p>interface 只能定义对象类型。type声明可以声明任何类型。</p>
 <p>interface 能够声明合并，两个相同接口会合并。Type声明合并会报错<br>type可以类型推导</p>
-<h4 id="23-泛型位置"><a href="#23-泛型位置" class="headerlink" title="23 泛型位置"></a>23 泛型位置</h4><p>// 定义callback遍历方法 两种方式 应该采用哪一种？<br><code>type Callback = &lt;T&gt;(item: T) =&gt; void</code><br>// 第二种声明方式<br><code>type Callback&lt;T&gt; = (item: T) =&gt; void;</code></p>
+<p>// 定义callback遍历方法 两种方式 应该采用哪一种？<br><code>type Callback = &lt;T&gt;(item: T) =&gt; void</code><br>// 第二种声明方式<br><code>type Callback&lt;T&gt; = (item: T) =&gt; void;</code></p>
 <p>当泛型出现在内部时，比接口本身并不具备任何泛型定义。而接口代表的函数则会接受一个泛型定义。换句话说接口本身不需要泛型，而在实现使用接口代表的函数类型时需要声明该函数接受一个泛型参数。</p>
 <p>当泛型出现在接口中时，比如Callback<t> 代表的是使用接口时需要传入泛型的类型.</t></p>
 <h4 id="24-箭头函数"><a href="#24-箭头函数" class="headerlink" title="24 箭头函数"></a>24 箭头函数</h4><p>this的作用域<br>但是没有prototype属性没有构造器特性，所以也就没有所谓的constructor，就不能作为构造器使用。<br>箭头函数的作用域不能通过.call、.apply、.bind等语法来改变，这使得箭头函数的上下文将永久不变<br>箭头函数不能使用关键字arguments来访问，只能通过定义的命名参数来访问。</p>
