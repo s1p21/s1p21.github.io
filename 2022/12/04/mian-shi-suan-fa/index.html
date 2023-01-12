@@ -761,9 +761,56 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>2）记录子序列的开头元素small和末尾元素big</p>
 <p>3）big向右移动子序列末尾增加一个数；small向右移动子序列开头减少一个数</p>
 <p>4）当子序列的和大于目标值，small向右移动，子序列的和小于目标值，big向右移动</p>
-<p>function FindContinuousSequence(sum) {<br>  let result = [];<br>  // 记录当前的结果<br>  let child = [1, 2];<br>  let small = 1; // 初始值1<br>  let big = 2; //<br>  let currentSum = 3; // 当前数字之和<br>  while (big &lt; sum) {<br>    // big等于sum时，child中只剩一个数，不满足连续正数序列的要求，结束循环<br>    while (currentSum &lt; sum &amp;&amp; big &lt; sum) {<br>      child.push(++big);<br>      // currentSum为当前child的和<br>      currentSum += big;<br>    }<br>    while (currentSum &gt; sum &amp;&amp; small &lt; big) {<br>      child.shift();<br>      // 因为删除了最小值，所以small也要响应变化，增加1<br>      currentSum -= small++;<br>    }<br>    if (currentSum === sum &amp;&amp; child.length &gt; 1) {<br>      // child.length大于1，剔除一个数等于sum的情况<br>      // child.slice返回一个新的数组<br>      result.push(child.slice());<br>      child.push(++big);<br>      currentSum += big;<br>    }<br>  }<br>  return result;<br>}</p>
-<p>console.log(FindContinuousSequence(15)); // [1, 2, 3, 4, 5] [4, 5, 6] [7, 8]</p>
-<h4 id="递归-斐波拉契数列"><a href="#递归-斐波拉契数列" class="headerlink" title="递归 斐波拉契数列"></a>递归 斐波拉契数列</h4><p>```<br>function feibo(n, sum1 = 1, sum2 = 1) {<br>  if (n === 1 || n === 2) return sum2;<br>  return feibo(n - 1, sum2, sum1 + sum2);<br>}</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">FindContinuousSequence</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 记录当前的结果</span>
+  <span class="token keyword">let</span> child <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> small <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 初始值1</span>
+  <span class="token keyword">let</span> big <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//</span>
+  <span class="token keyword">let</span> currentSum <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 当前数字之和</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>big <span class="token operator">&lt;</span> sum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// big等于sum时，child中只剩一个数，不满足连续正数序列的要求，结束循环</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>currentSum <span class="token operator">&lt;</span> sum <span class="token operator">&amp;&amp;</span> big <span class="token operator">&lt;</span> sum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      child<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">++</span>big<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// currentSum为当前child的和</span>
+      currentSum <span class="token operator">+</span><span class="token operator">=</span> big<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>currentSum <span class="token operator">></span> sum <span class="token operator">&amp;&amp;</span> small <span class="token operator">&lt;</span> big<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      child<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// 因为删除了最小值，所以small也要响应变化，增加1</span>
+      currentSum <span class="token operator">-</span><span class="token operator">=</span> small<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>currentSum <span class="token operator">===</span> sum <span class="token operator">&amp;&amp;</span> child<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// child.length大于1，剔除一个数等于sum的情况</span>
+      <span class="token comment" spellcheck="true">// child.slice返回一个新的数组</span>
+      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      child<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">++</span>big<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      currentSum <span class="token operator">+</span><span class="token operator">=</span> big<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">FindContinuousSequence</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// [1, 2, 3, 4, 5] [4, 5, 6] [7, 8]</span>
+</code></pre>
+<h4 id="递归-斐波拉契数列"><a href="#递归-斐波拉契数列" class="headerlink" title="递归 斐波拉契数列"></a>递归 斐波拉契数列</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">feibo</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> sum1 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> sum2 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">||</span> n <span class="token operator">===</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> sum2<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">feibo</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> sum2<span class="token punctuation">,</span> sum1 <span class="token operator">+</span> sum2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="模版替换"><a href="#模版替换" class="headerlink" title="模版替换"></a>模版替换</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// var reg=/\${(\w+)}/g</span>
+<span class="token comment" spellcheck="true">// var regNew = /\$\{(.+?)\}/</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">"wt"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">"${name}sss${name}"</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// var keyArr = str.match(/\$\{(.+?)\}/)[1];</span>
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> reg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">"\\${"</span> <span class="token operator">+</span> item <span class="token operator">+</span> <span class="token string">"}"</span><span class="token punctuation">,</span> <span class="token string">"g"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>reg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  str <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>reg<span class="token punctuation">,</span> obj<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 
                 
             </div>
@@ -916,13 +963,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/12/04/mian-shi-webpack/">
+                <a href="/2022/12/04/mian-shi-webpack-he-node/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/5.jpg" class="responsive-img" alt="面试-webpack">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/13.jpg" class="responsive-img" alt="面试-webpack和Node">
                         
-                        <span class="card-title">面试-webpack</span>
+                        <span class="card-title">面试-webpack和Node</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -952,6 +999,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     
                     <a href="/tags/webpack/">
                         <span class="chip bg-color">webpack</span>
+                    </a>
+                    
+                    <a href="/tags/Node/">
+                        <span class="chip bg-color">Node</span>
                     </a>
                     
                 </div>
@@ -1186,7 +1237,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <a href="/about" target="_blank">s1p21</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>

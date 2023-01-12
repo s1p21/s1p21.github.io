@@ -5,12 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="面试-CSS, 前端 vue js ts react node">
-    <meta name="description" content="1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
+    <meta name="description" content="1.定位、布局不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
 
  #main{
   background-color:aqua;
   width:100%;
-  ">
+  f">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -368,7 +368,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-定位、布局-不同定位的区别，两栏布局、三栏布局，flex布局必会"><a href="#1-定位、布局-不同定位的区别，两栏布局、三栏布局，flex布局必会" class="headerlink" title="1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会"></a>1.定位、布局:不同定位的区别，两栏布局、三栏布局，flex布局必会</h4><p> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
+                <h4 id="1-定位、布局"><a href="#1-定位、布局" class="headerlink" title="1.定位、布局"></a>1.定位、布局</h4><p>不同定位的区别，两栏布局、三栏布局，flex布局必会<br> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
 <pre class=" language-css"><code class="language-css">
  <span class="token selector"><span class="token id">#main</span></span><span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span>aqua<span class="token punctuation">;</span>
@@ -403,6 +403,14 @@
 &lt;div id = <span class="token string">"right"</span>>
 &lt;/div>
 </code></pre>
+<p>CSS三列布局</p>
+<ul>
+<li>float布局：左边左浮动，右边右浮动，中间margin：0 100px;</li>
+<li>Position布局: 左边left：0; 右边right：0; 中间left: 100px; right: 100px;</li>
+<li>table布局: 父元素 display: table; 左右 width: 100px; 三个元素display: table-cell;</li>
+<li>弹性(flex)布局:父元素 display: flex; 左右 width: 100px;</li>
+<li>网格（gird）布局：</li>
+</ul>
 <h4 id="2-对于一些常见css的书写-比如文本溢出显示省略号"><a href="#2-对于一些常见css的书写-比如文本溢出显示省略号" class="headerlink" title="2. 对于一些常见css的书写:比如文本溢出显示省略号"></a>2. 对于一些常见css的书写:比如文本溢出显示省略号</h4><pre class=" language-css"><code class="language-css">
 <span class="token property">text-overflow</span><span class="token punctuation">:</span>ellipsis
 
@@ -429,6 +437,20 @@
 <li>表示flex-grow 为0 flex-shrink 为1 flex basis为auto</li>
 <li>align-self</li>
 </ul>
+<h4 id="5-垂直居中和水平居中"><a href="#5-垂直居中和水平居中" class="headerlink" title="5.垂直居中和水平居中"></a>5.垂直居中和水平居中</h4><ul>
+<li>line-height</li>
+<li>absolute+ margin(负值)</li>
+<li>absolute + margin auto</li>
+<li>absolute + translate</li>
+<li>Flex + align-items</li>
+<li>Flex + margin auto</li>
+<li>Flex + align-self</li>
+<li>grid +align-items</li>
+<li>calc</li>
+</ul>
+<h4 id="6-BFC"><a href="#6-BFC" class="headerlink" title="6. BFC"></a>6. BFC</h4><p>BFC（Block formatting context），即块级格式化上下文，它作为HTML页面上的一个独立渲染区域，只有区域内元素参与渲染，且不会影响其外部元素。简单来说，可以将 BFC 看做是一个“围城”，外面的元素进不来，里面的元素出不去<br>形成BFC的条件:</p>
+<p>1、浮动元素，float 除 none 以外的值；<br>2、定位元素，position（absolute，fixed）；<br>3、display 为以下其中之一的值 inline-block，table-cell，table-caption；<br>4、overflow 除了 visible 以外的值（hidden，auto，scroll）；</p>
+<p>BFC 一般用来解决以下几个问题<br>边距重叠问题<br>消除浮动问题<br>自适应布局问题</p>
 
                 
             </div>
@@ -851,7 +873,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <a href="/about" target="_blank">s1p21</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>

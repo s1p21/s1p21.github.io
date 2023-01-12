@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面试-webpack, 前端 vue js ts react node">
+    <meta name="keywords" content="面试-webpack和Node, 前端 vue js ts react node">
     <meta name="description" content="loader 和plugin的区别loader即为文件加载器，操作的是文件，将文件A通过loader转换成文件B，是一个单纯的文件转化过程。plugin即为插件，是一个扩展器，丰富webpack本身，增强功能 ，针对的是在loader结束之">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面试-webpack | s1p21的blog</title>
+    <title>面试-webpack和Node | s1p21的blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
     
 
@@ -293,12 +293,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面试-webpack</h1>
+                    <h1 class="description center-align post-title">面试-webpack和Node</h1>
                 </div>
             </div>
         </div>
@@ -328,6 +328,10 @@
                         
                             <a href="/tags/webpack/">
                                 <span class="chip bg-color">webpack</span>
+                            </a>
+                        
+                            <a href="/tags/Node/">
+                                <span class="chip bg-color">Node</span>
                             </a>
                         
                     </div>
@@ -436,7 +440,7 @@
 <li>对于不常用的变更抽离出去 ，一种是使用webpack-dll-plugin,在首次构建时候将这些静态依赖打包，另外一种是使用Externals，将这些不常用的静态资源抽离，并用cdn方式引用他们</li>
 <li>compression-webpack-plugin 压缩js和css代码</li>
 </ul>
-<h4 id="什么是Tree-Shark"><a href="#什么是Tree-Shark" class="headerlink" title="什么是Tree-Shark"></a>什么是Tree-Shark</h4><p>摇树优化 (Tree-shaking)，这是一种形象比喻。我们把打包后的代码比喻成一棵树，这里其实表示的就 是，通过工具 “摇” 我们打包后的 js 代码，将没有使用到的无用代码 “摇” 下来 (删除)。即 消除那些被 引用了但未被使用 的模块代码。<br>原理: 由于是在编译时优化，因此最基本的前提就是语法的静态分析，ES6的模块机制 提供了这种可能性。不需要运行时，便可进行代码字面上的静态分析，确定相应的依赖关系。<br>问题: 具有副作用的函数无法被 tree-shaking。 在引用一些第三方库，需要去观察其引入的代码 量是不是符合预期; 尽量写纯函数，减少函数的副作用; 可使用 webpack-deep-scope-plugin， 可以进行作用域分析，减少此类情况的发生，但仍需要注意;</p>
+<h4 id="什么是Tree-Shark"><a href="#什么是Tree-Shark" class="headerlink" title="什么是Tree-Shark"></a>什么是Tree-Shark</h4><p>摇树优化 (Tree-shaking)，这是一种形象比喻。我们把打包后的代码比喻成一棵树，这里其实表示的就 是，通过工具 “摇” 我们打包后的 js 代码，将没有使用到的无用代码 “摇” 下来 (删除)。即 消除那些被 引用了但未被使用 的模块代码。<br>原理: 由于是在编译时优化，因此最基本的前提就是语法的静态分析，ES6的模块机制提供了这种可能性。不需要运行时，便可进行代码字面上的静态分析，确定相应的依赖关系。<br>问题: 具有副作用的函数无法被 tree-shaking。 在引用一些第三方库，需要去观察其引入的代码 量是不是符合预期; 尽量写纯函数，减少函数的副作用; 可使用 webpack-deep-scope-plugin， 可以进行作用域分析，减少此类情况的发生，但仍需要注意;</p>
 <h4 id="performance-对象api"><a href="#performance-对象api" class="headerlink" title="performance 对象api"></a>performance 对象api</h4><p>属性</p>
 <ul>
 <li>memory</li>
@@ -489,6 +493,18 @@
   <span class="token string">"sourceType"</span><span class="token punctuation">:</span> <span class="token string">"module"</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<h3 id="koa和express的区别"><a href="#koa和express的区别" class="headerlink" title="koa和express的区别"></a>koa和express的区别</h3><p>express框架是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，主要基于 Connect 中间件，并且自身封装了路由、视图处理等功能。</p>
+<p>koa是 Express 原班人马基于 ES6 新特性重新开发的框架，主要基于 co 中间件，框架自身不包含任何中间件，很多功能需要借助第三方中间件解决，但是由于其基于 ES6 generator 特性的异步流程控制，解决了 “callback hell” 和麻烦的错误处理问题。</p>
+<p>相同点<br>两个框架都对http进行了封装。相关的api都差不多，同一批人所写。</p>
+<p>不同点<br>express内置了许多中间件可供使用，而koa没有。</p>
+<p>express包含路由，视图渲染等特性，而koa只有http模块。</p>
+<p>express的中间件模型为线型，而koa的中间件模型为U型，也可称为洋葱模型构造中间件。</p>
+<p>express通过回调实现异步函数，在多个回调、多个中间件中写起来容易逻辑混乱。</p>
+<h3 id="node的错误监控"><a href="#node的错误监控" class="headerlink" title="node的错误监控"></a>node的错误监控</h3><p>try catch 通常用于捕获throw抛出的错误</p>
+<p>callback(err, result)回调函数处理</p>
+<p>Emitter.on的回调函数 on注册了事件和回调函数， 并且在emit触发事件后会执行回调函数，以达到捕获错误的解决方式。</p>
+<p>process.on(“error”, function(err){})<br>错误异常有两种场景的出现：</p>
+<p>一种是代码运行中throw new error没有被捕获，另一种是Promise的失败回调函数，没有对应的reject回调函数处理，针对这两种情况Nodejs都有默认的统一处理方式，就是给整个进程process对象监听相应的错误事件。<br>process.on(‘uncaughtException’,function(err){}) //监听未捕获的异常<br>process.on(‘unhandledRejection’,function(err,promise){}) //监听Promise没有被捕获的失败函数</p>
 
                 
             </div>
@@ -515,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://s1p21.github.io/2022/12/04/mian-shi-webpack/">https://s1p21.github.io/2022/12/04/mian-shi-webpack/</a>
+                    <a href="https://s1p21.github.io/2022/12/04/mian-shi-webpack-he-node/">https://s1p21.github.io/2022/12/04/mian-shi-webpack-he-node/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -559,6 +575,10 @@
                             
                                 <a href="/tags/webpack/">
                                     <span class="chip bg-color">webpack</span>
+                                </a>
+                            
+                                <a href="/tags/Node/">
+                                    <span class="chip bg-color">Node</span>
                                 </a>
                             
                         </div>
@@ -911,7 +931,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <a href="/about" target="_blank">s1p21</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
