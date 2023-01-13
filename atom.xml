@@ -6,7 +6,7 @@
   <link href="https://s1p21.github.io/atom.xml" rel="self"/>
   
   <link href="https://s1p21.github.io/"/>
-  <updated>2023-01-12T09:11:29.600Z</updated>
+  <updated>2023-01-12T11:16:08.006Z</updated>
   <id>https://s1p21.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RxJS与Promise的区别</title>
+    <link href="https://s1p21.github.io/2023/01/12/rxjs-yu-promise-de-qu-bie/"/>
+    <id>https://s1p21.github.io/2023/01/12/rxjs-yu-promise-de-qu-bie/</id>
+    <published>2023-01-12T11:15:13.000Z</published>
+    <updated>2023-01-12T11:16:08.006Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;RxJS 是 ReactiveX 项目的 JavaScript 实现。ReactiveX 项目旨在为不同编程语言的异步编程提供 API。&lt;br&gt;ReactiveX 的基本概念是 Gang of Four 的 Observer pattern (ReactiveX</summary>
+        
+      
+    
+    
+    
+    
+    <category term="RxJS" scheme="https://s1p21.github.io/tags/RxJS/"/>
+    
+    <category term="Promise" scheme="https://s1p21.github.io/tags/Promise/"/>
+    
+  </entry>
   
   <entry>
     <title>常见机器学习算法</title>
@@ -187,9 +212,9 @@
     
     
     
-    <category term="React" scheme="https://s1p21.github.io/tags/React/"/>
-    
     <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="React" scheme="https://s1p21.github.io/tags/React/"/>
     
   </entry>
   
@@ -473,29 +498,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;flutter-跨组件通信&quot;&gt;&lt;a href=&quot;#flutter-跨组件通信&quot; class=&quot;headerlink&quot; title=&quot;flutter 跨组件通信&quot;&gt;&lt;/a&gt;flutter</summary>
-        
-      
-    
-    
-    
-    
-    <category term="flutter" scheme="https://s1p21.github.io/tags/flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>移动技术发展&amp;flutter简介</title>
-    <link href="https://s1p21.github.io/2022/11/03/yi-dong-ji-zhu-fa-zhan-he-flutter-jian-jie/"/>
-    <id>https://s1p21.github.io/2022/11/03/yi-dong-ji-zhu-fa-zhan-he-flutter-jian-jie/</id>
-    <published>2022-11-03T08:18:02.000Z</published>
-    <updated>2022-12-02T01:17:11.359Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;移动技术发展及-flutter-简介&quot;&gt;&lt;a href=&quot;#移动技术发展及-flutter-简介&quot; class=&quot;headerlink&quot; title=&quot;移动技术发展及 flutter 简介&quot;&gt;&lt;/a&gt;移动技术发展及 flutter 简介&lt;/h1&gt;&lt;h2</summary>
         
       
     
