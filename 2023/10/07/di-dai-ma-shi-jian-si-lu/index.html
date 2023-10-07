@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于, 前端 vue js ts react node">
-    <meta name="description" content="前端技术栈 微信公众号：前端技术宅博客">
+    <meta name="keywords" content="低代码实践思路, 前端 vue js ts react node">
+    <meta name="description" content="一、前端研发复杂度背景做中后台前端开发，会经常碰到复杂交互和复杂逻辑问题：
+你负责的业务中，规则是不是很多？是不是会不自觉的试图用if…else解决一切问题，逻辑是不是在迭代过程中变得越来越乱？最后彻底变成一个看不懂改不动的黑盒子，没有人能">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于 | s1p21的blog</title>
+    <title>低代码实践思路 | s1p21的blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
     
 
@@ -289,698 +290,493 @@
 
 </header>
 
-    <style type="text/css">
-    /* don't remove. */
-    .about-cover {
-        height: 75vh;
-    }
-</style>
+    
 
-<div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                s1p21
-                
-            </div>
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "求知若饥，虚心若愚",
-                            
-                                "Stay hungry，Stay foolish",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">低代码实践思路</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
+<main class="post-container content">
 
-<main class="content">
-
-    <div id="aboutme" class="container about-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="row">
-                    <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
                         
-<div class="statis">
-    <span class="count"><a href="/">24</a></span>
-    <span class="name">文章</span>
-</div>
-
-
-
-
-
-<div class="statis">
-    <span class="count"><a href="/tags">26</a></span>
-    <span class="name">标签</span>
-</div>
-
-
+                            <a href="/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/">
+                                <span class="chip bg-color">低代码</span>
+                            </a>
+                        
                     </div>
-                    <div class="col s12 m12 l4">
-                        <div class="profile center-align">
-                            <div class="avatar">
-                                <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/avatar.jpg" alt="s1p21"
-                                     class="circle responsive-img avatar-img">
-                            </div>
-                            <div class="author">
-                                <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
-                                    
-<div class="statis">
-    <span class="count"><a href="/">24</a></span>
-    <span class="name">文章</span>
-</div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-10-07
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="一、前端研发复杂度背景"><a href="#一、前端研发复杂度背景" class="headerlink" title="一、前端研发复杂度背景"></a>一、前端研发复杂度背景</h3><p>做中后台前端开发，会经常碰到复杂交互和复杂逻辑问题：</p>
+<p>你负责的业务中，规则是不是很多？是不是会不自觉的试图用if…else解决一切问题，逻辑是不是在迭代过程中变得越来越乱？最后彻底变成一个看不懂改不动的黑盒子，没有人能搞清楚黑盒子里面到底发生了什么。</p>
+<p>现实中，业务场景多，迭代频繁，变化快到跟不上，规则可能由多人掌握，无法通过一个人了解全貌；</p>
+<p>还有业务所在行业固有的复杂度和历史包袱，这些问题都会让我们感到痛苦。</p>
+<p>除了逻辑问题，我们还关注易用性交互开发的问题。</p>
+<p>试想，在中后台系统中，没有说明、没有指引，那该有多难用？所以通过内容运营，增加指引提升易用性是十分必要的，但对于前端开发来说，又像是下了一道魔咒。为什么这么说呢？</p>
+<p>易用性交互的形式很多，不但会放大整体功能开发难度，而且很容易干扰到业务功能，让本来已经很复杂的开发工作更加复杂，加速了整体腐化。</p>
+<p>本身排期就已经低于功能需求了，再加上这些问题，导致大家都不爱去做，长此下去，平台越来越难用。</p>
+<p>那么问题逐渐显现，如何面对中后台复杂场景中最深刻的两个问题：即复杂交互、复杂逻辑：</p>
+<h3 id="二、复杂交互解法"><a href="#二、复杂交互解法" class="headerlink" title="二、复杂交互解法"></a>二、复杂交互解法</h3><ol>
+<li>思路</li>
+</ol>
+<p>首先是使用动态标注生成交互界面，来解决复杂交互问题：</p>
+<p><img src="/images/low-code/1.png"></p>
+<p>这是一个典型的后台功能配置页：这里面有列表有详情，加入了很多指引。这里相当一部分交互的繁琐编码工作，其实是以一种简洁高效的低代码方式去解决的。</p>
+<p><img src="/images/low-code/2.png"></p>
+<p>首先我们需要把页面划分为业务功能交互以及辅助内容交互，所谓业务功能交互，即脱离了这部分交互业务就不再完整了，而辅助内容交互则是没有这部分交互系统也能用，但是可能会很难用。</p>
+<p>那么我们方案的核心目标就是：将业务功能交互，还是由前端通过procode开发完成，而这些辅助内容交互，就可以由低代码配置去完成了。</p>
+<p>想法比较直接，那么真实的效果如何呢？</p>
+<p><img src="/images/low-code/3.png"></p>
+<p>这是一个比较复杂的配置页，使用了大量引导类交互，有点击出现弹窗、查看文档、还有各种加下划线气泡、stepbystep引导、还有更过分的要加复杂流程图、这是SVG做的，图里面还要带有气泡按钮解释的，等等，像这种交互在系统中有近400个，如果把这些写在代码里面，是一个非常大的负担，而这些，我们都是通过低代码配置化去解决的。</p>
+<ol start="2">
+<li>实践</li>
+</ol>
+<p><img src="/images/low-code/3.png"><br>第一步，我们要找到辅助类的交互，哪些是必须要procode的业务关键能力，哪些是非必须的。在我们的实践经验中，像这些辅助类交互都是可以抽象成组件复用的。</p>
+<p><img src="/images/low-code/4.png"></p>
+<p>第二步，我们将这些组件，通过动态标注的方式，渲染到界面上。</p>
+<p>关键流程可以描述为，首先捕捉用户的行为，如元素点击、移入移出，或是节点生成、销毁、或是URL改变了等等。</p>
+<p>当匹配这些行为时，找到组件插入或更新的位置，然后渲染出来，这个时候组件会按预设的规则动态的标注到页面指定位置上。</p>
+<p>比如，当用户进入某个页面时（行为是URL改变），我们给指定区域（可能是一个选择器指定的），插入一张流程图。</p>
+<p><img src="/images/low-code/5.png"></p>
+<p>第三步，这些组件可能互相之间是有交互的，比如点击问号按钮的时候出现弹窗，点击好用不好用的时候要感谢反馈等等，这个我们是通过一种自定义协议的url来完成的，这里给出了一些例子来展示下我们正在使用的动作，如：</p>
+<p>向机器人提问、提交工单、显示消息、打开弹窗、复制内容等等</p>
+<p>通过给组件配置url来完成不同的动作</p>
+<p>这样就完成整个易用性交互的标注和动作过程。</p>
+<ol start="3">
+<li>相关问题</li>
+</ol>
+<p>那么问题来了，现在都是一些动态渲染技术，状态变了那么页面结构可能也变了呀，那组件也丢失了。没有关系，当DOM变化的时候，我们仍然是在监听的，只要检测到DOM树变化或关键属性变化，我们就重新执行一次渲染。</p>
+<p>第二个问题是，这些规则都太专业了，CSS选择器、XPath，这些对于非技术同学来说使用成本非常高，而且可能因为一个很小的页面改动就会导致配置失效。</p>
+<p>这类问题我们的实践方案是，可以通过视觉特征的相似度去做模糊匹配，使用者只要去勾选出相应的特征和偏差范围，就可以自动生成脚本去做匹配，这里我们是通过扩展了XQuery形成了自己的模糊查询方式。</p>
+<p><img src="/images/low-code/6.png"></p>
+<ol start="4">
+<li>复杂交互动作</li>
+</ol>
+<p>标注的问题解决了，但是复杂的交互动作怎么做呢？这里有个例子说明一下：</p>
+<p>试想一个场景，一个系统，对于新用户、老用户，需要有不同的引导方式，这些都是在每个环节中，我们都是通过url来产生动作，但是怎么串起来呢？</p>
+<p>在我们的定义中，url可以被串联顺序执行，也可以加上@if，条件执行，还可以加上@delay延时执行，这样就可以将所有一系列的url组织成一个url，并在两种场景去分别触发。</p>
+<h3 id="三-复杂逻辑解法"><a href="#三-复杂逻辑解法" class="headerlink" title="三. 复杂逻辑解法"></a>三. 复杂逻辑解法</h3><p>接下来要面对更难的一个问题，复杂逻辑，通过策略编排生成逻辑代码。</p>
+<p>方案的核心目标，是将所有的交互逻辑从ProCode开发，转为低/无代码配置，但这个核心目标的前提并不是要用低代码来替代procode，而是因为procode写复杂逻辑很难，所以要使用简单的低代码实现。</p>
+<p>在我们实际业务的实践中有一例典型的高复杂度表单，一个表单三种场景，每种场景的各个字段都有联系，一共有33个状态，82条逻辑规则。当时是以procode开发，到第5个工作日时就因为各种错漏返工无法继续了，而转用策略编排，我们用了近2个工作日就解决了这些逻辑写作问题。</p>
+<p>这听起来有些不可思议，但是这种方案其实是可以高效的替代常规编码的。</p>
+<p><img src="/images/low-code/8.png"></p>
+<p>复杂逻辑带来的是高验证成本、高研发成本、逻辑黑盒以及返工风险等。</p>
+<p>而问题的本质和解法有三点：</p>
+<ol>
+<li><p>状态多难以预测和验证<br>我们的解法是，要确定状态的来源，明确状态为什么改变了，还要能快速验证这个状态的来龙去脉。</p>
+</li>
+<li><p>联动多 / 条件多<br>我们需要一个高效的方法论指导，可以管理每个状态的联动及条件</p>
+</li>
+<li><p>技术更迭，代码腐化问题<br>如果代码是由规则生产出来的，那就没有问题了</p>
+</li>
+</ol>
+<p>综上，复杂交互逻辑的问题，已经被转变为了复杂条件、复杂联动下的状态管理问题</p>
+<h3 id="四-总结"><a href="#四-总结" class="headerlink" title="四  总结"></a>四  总结</h3><p>再回头去看两个方案，一个是面向复杂交互，另一个是面向复杂逻辑，其实这两个问题每个都能单独拿出来深入去聊，联系并不那么紧密，而在实践上也确是被分为两个平台去单独求解，割裂感比较重，无法为同一个业务提供统一的解决方案。所以接下来，我们打算是寻求一种方式能够将两种方案结合起来，作为一个整体去服务同一个业务。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">s1p21</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://s1p21.github.io/2023/10/07/di-dai-ma-shi-jian-si-lu/">https://s1p21.github.io/2023/10/07/di-dai-ma-shi-jian-si-lu/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">s1p21</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
 
 
 
-
-
-<div class="statis">
-    <span class="count"><a href="/tags">26</a></span>
-    <span class="name">标签</span>
-</div>
-
-
-                                </div>
-                                <div class="title">s1p21</div>
-                                <div class="career">Software Engineer</div>
-                                <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
-                                    
-    <a href="https://github.com/s1p21" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:269438272@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="https://www.facebook.com/s1p21" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/s1p21" data-position="top" data-delay="50">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-
-
-    <a href="https://twitter.com/s1p21" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/s1p21" data-position="top" data-delay="50">
-        <i class="fab fa-twitter"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=269438272" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 269438272" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-    <a href="https://weibo.com/u/2689712123" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/2689712123" data-position="top" data-delay="50">
-        <i class="fab fa-weibo"></i>
-    </a>
-
-
-
-    <a href="https://weixin.qq.com/" class="tooltipped" target="_blank" data-tooltip="微信搜索: s1p21wt" data-position="top" data-delay="50">
-        <i class="fab fa-weixin"></i>
-    </a>
-
-
-
-    <a href="https://www.zhihu.com/people/whitbytao" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/whitbytao" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
-                        <div class="social-link">
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
                             
-    <a href="https://github.com/s1p21" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:269438272@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="https://www.facebook.com/s1p21" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/s1p21" data-position="top" data-delay="50">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-
-
-    <a href="https://twitter.com/s1p21" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/s1p21" data-position="top" data-delay="50">
-        <i class="fab fa-twitter"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=269438272" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 269438272" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-    <a href="https://weibo.com/u/2689712123" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/2689712123" data-position="top" data-delay="50">
-        <i class="fab fa-weibo"></i>
-    </a>
-
-
-
-    <a href="https://weixin.qq.com/" class="tooltipped" target="_blank" data-tooltip="微信搜索: s1p21wt" data-position="top" data-delay="50">
-        <i class="fab fa-weixin"></i>
-    </a>
-
-
-
-    <a href="https://www.zhihu.com/people/whitbytao" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/whitbytao" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-
+                                <a href="/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/">
+                                    <span class="chip bg-color">低代码</span>
+                                </a>
+                            
                         </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
-
-                <div class="introduction center-align" data-aos="fade-up">If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.</div>
-
-                <style type="text/css">
-    #posts-chart,
-    #categories-chart,
-    #tags-chart {
-        width: 100%;
-        height: 300px;
-        margin: 0.5rem auto;
-        padding: 0.5rem;
-    }
-</style>
-
-<div id="postCharts" class="post-charts">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="far fa-bar-chart"></i>&nbsp;&nbsp;文章统计图
-    </div>
-    <div class="row">
-        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
-            <div id="posts-chart"></div>
-        </div>
-
-        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
-            <div id="categories-chart"></div>
-        </div>
-
-        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
-            <div id="tags-chart"></div>
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/echarts/echarts.min.js"></script>
-<script>
-    let postsChart = echarts.init(document.getElementById('posts-chart'));
-    let categoriesChart = echarts.init(document.getElementById('categories-chart'));
-    let tagsChart = echarts.init(document.getElementById('tags-chart'));
-
-    
-
-    let postsOption = {
-        title: {
-            text: '文章发布统计图',
-            top: -5,
-            x: 'center'
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        xAxis: {
-            type: 'category',
-            data: ["2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10"]
-        },
-        yAxis: {
-            type: 'value',
-        },
-        series: [
-            {
-                name: '文章篇数',
-                type: 'line',
-                color: ['#6772e5'],
-                data: [0,15,4,3,0,0,0,0,0,0,0,0,2],
-                markPoint: {
-                    symbolSize: 45,
-                    color: ['#fa755a','#3ecf8e','#82d3f4'],
-                    data: [{
-                        type: 'max',
-                        itemStyle: {color: ['#3ecf8e']},
-                        name: '最大值'
-                    }, {
-                        type: 'min',
-                        itemStyle: {color: ['#fa755a']},
-                        name: '最小值'
-                    }]
-                },
-                markLine: {
-                    itemStyle: {color: ['#ab47bc']},
-                    data: [
-                        {type: 'average', name: '平均值'}
-                    ]
-                }
-            }
-        ]
-    };
-
-    
-
-    let categoriesOption = {
-        title: {
-            text: '文章分类统计图',
-            top: -4,
-            x: 'center'
-        },
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        series: [
-            {
-                name: '分类',
-                type: 'pie',
-                radius: '50%',
-                color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
-                itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                }
-            }
-        ]
-    };
-
-    
-
-    let tagsOption = {
-        title: {
-            text: 'TOP10 标签统计图',
-            top: -5,
-            x: 'center'
-        },
-        tooltip: {},
-        xAxis: [
-            {
-                type: 'category',
-                data: ["面试","flutter","React","webpack","react","DDD","RxJS","react-native","RN","spa"]
-            }
-        ],
-        yAxis: [
-            {
-                type: 'value'
-            }
-        ],
-        series: [
-            {
-                type: 'bar',
-                color: ['#82d3f4'],
-                barWidth : 18,
-                data: [9,2,2,2,2,2,2,1,1,1],
-                markPoint: {
-                    symbolSize: 45,
-                    data: [{
-                        type: 'max',
-                        itemStyle: {color: ['#3ecf8e']},
-                        name: '最大值'
-                    }, {
-                        type: 'min',
-                        itemStyle: {color: ['#fa755a']},
-                        name: '最小值'
-                    }],
-                },
-                markLine: {
-                    itemStyle: {color: ['#ab47bc']},
-                    data: [
-                        {type: 'average', name: '平均值'}
-                    ]
-                }
-            }
-        ]
-    };
-
-    // render the charts
-    postsChart.setOption(postsOption);
-    categoriesChart.setOption(categoriesOption);
-    tagsChart.setOption(tagsOption);
-</script>
-
-
-                
-
-                
-                
-<div class="my-skills">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="fas fa-wrench"></i>&nbsp;&nbsp;我的技能
-    </div>
-    <div class="row">
-        
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 85%">
-                    <span>Node</span>
-                </div>
-                <div class="skill-bar-percent">85%</div>
             </div>
         </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 80%">
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-bar-percent">80%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 80%">
-                    <span>HTML5</span>
-                </div>
-                <div class="skill-bar-percent">80%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
-                    <span>CSS</span>
-                </div>
-                <div class="skill-bar-percent">70%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 60%">
-                    <span>SQL</span>
-                </div>
-                <div class="skill-bar-percent">60%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 75%">
-                    <span>程序设计</span>
-                </div>
-                <div class="skill-bar-percent">75%</div>
-            </div>
-        </div>
-        
-        
-    </div>
-
-    
-
-    
-    <div class="other-skills chip-container" data-aos="zoom-in-up">
-        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
-        <div class="tag-chips center-align">
-            
-            
-            <a href="/tags/flutter/">
-                <span class="chip center-align waves-effect waves-light chip-default">flutter</span>
-            </a>
-            
-            
-            
-            <a href="/tags/react-native/">
-                <span class="chip center-align waves-effect waves-light chip-default">react-native</span>
-            </a>
-            
-            
-            
-            <a href="/tags/RN/">
-                <span class="chip center-align waves-effect waves-light chip-default">RN</span>
-            </a>
-            
-            
-            
-            <a href="/tags/spa/">
-                <span class="chip center-align waves-effect waves-light chip-default">spa</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                <span class="chip center-align waves-effect waves-light chip-default">机器学习</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                <span class="chip center-align waves-effect waves-light chip-default">面试</span>
-            </a>
-            
-            
-            
-            <a href="/tags/promise/">
-                <span class="chip center-align waves-effect waves-light chip-default">promise</span>
-            </a>
-            
-            
-            
-            <a href="/tags/css/">
-                <span class="chip center-align waves-effect waves-light chip-default">css</span>
-            </a>
-            
-            
-            
-            <a href="/tags/vue3/">
-                <span class="chip center-align waves-effect waves-light chip-default">vue3</span>
-            </a>
-            
-            
-            
-            <a href="/tags/composition-API/">
-                <span class="chip center-align waves-effect waves-light chip-default">composition API</span>
-            </a>
-            
-            
-            
-            <a href="/tags/React/">
-                <span class="chip center-align waves-effect waves-light chip-default">React</span>
-            </a>
-            
-            
-            
-            <a href="/tags/http/">
-                <span class="chip center-align waves-effect waves-light chip-default">http</span>
-            </a>
-            
-            
-            
-            <a href="/tags/bff/">
-                <span class="chip center-align waves-effect waves-light chip-default">bff</span>
-            </a>
-            
-            
-            
-            <a href="/tags/vue/">
-                <span class="chip center-align waves-effect waves-light chip-default">vue</span>
-            </a>
-            
-            
-            
-            <a href="/tags/webpack/">
-                <span class="chip center-align waves-effect waves-light chip-default">webpack</span>
-            </a>
-            
-            
-            
-            
-            
-            <a href="/tags/%E7%AE%97%E6%B3%95/">
-                <span class="chip center-align waves-effect waves-light chip-default">算法</span>
-            </a>
-            
-            
-            
-            <a href="/tags/react/">
-                <span class="chip center-align waves-effect waves-light chip-default">react</span>
-            </a>
-            
-            
-            
-            <a href="/tags/TS/">
-                <span class="chip center-align waves-effect waves-light chip-default">TS</span>
-            </a>
-            
-            
-            
-            <a href="/tags/DDD/">
-                <span class="chip center-align waves-effect waves-light chip-default">DDD</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/">
-                <span class="chip center-align waves-effect waves-light chip-default">领域驱动设计</span>
-            </a>
-            
-            
-            
-            <a href="/tags/RxJS/">
-                <span class="chip center-align waves-effect waves-light chip-default">RxJS</span>
-            </a>
-            
-            
-            
-            <a href="/tags/JS/">
-                <span class="chip center-align waves-effect waves-light chip-default">JS</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Promise/">
-                <span class="chip center-align waves-effect waves-light chip-default">Promise</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84/">
-                <span class="chip center-align waves-effect waves-light chip-default">前端架构</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/">
-                <span class="chip center-align waves-effect waves-light chip-default">低代码</span>
-            </a>
-            
-            
-        </div>
-    </div>
-    
-
-</div>
-
-                
-
-                
-                
-<div id="myGallery" class="my-gallery">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="far fa-image"></i>&nbsp;&nbsp;相册
-    </div>
-    <div class="row">
-        
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/0.jpg">
-                <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/0.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/1.jpg">
-                <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/1.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/2.jpg">
-                <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/2.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        
     </div>
 </div>
 
 <script>
     $(function () {
-        let animateClass = 'animated pulse';
-        $('#myGallery .photo').hover(function () {
-            $(this).addClass(animateClass);
-        }, function () {
-            $(this).removeClass(animateClass);
-        });
+        $('.tabs').tabs();
     });
 </script>
 
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/10/07/di-dai-ma-shi-jian-si-lu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/19.jpg" class="responsive-img" alt="低代码实践思路">
+                        
+                        <span class="card-title">低代码实践思路</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
+
                 
-                
-                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/">
+                        <span class="chip bg-color">低代码</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/10/07/ling-yu-qu-dong-she-ji-ddd/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/6.jpg" class="responsive-img" alt="领域驱动设计-DDD">
+                        
+                        <span class="card-title">领域驱动设计-DDD</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/DDD/">
+                        <span class="chip bg-color">DDD</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84/">
+                        <span class="chip bg-color">前端架构</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

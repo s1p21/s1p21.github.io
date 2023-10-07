@@ -6,7 +6,7 @@
   <link href="https://s1p21.github.io/atom.xml" rel="self"/>
   
   <link href="https://s1p21.github.io/"/>
-  <updated>2023-10-07T03:36:57.817Z</updated>
+  <updated>2023-10-07T09:02:23.225Z</updated>
   <id>https://s1p21.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>低代码实践思路</title>
+    <link href="https://s1p21.github.io/2023/10/07/di-dai-ma-shi-jian-si-lu/"/>
+    <id>https://s1p21.github.io/2023/10/07/di-dai-ma-shi-jian-si-lu/</id>
+    <published>2023-10-07T03:44:46.000Z</published>
+    <updated>2023-10-07T09:02:23.225Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、前端研发复杂度背景&quot;&gt;&lt;a href=&quot;#一、前端研发复杂度背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="低代码" scheme="https://s1p21.github.io/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>领域驱动设计-DDD</title>
@@ -484,29 +507,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;React&quot;&gt;&lt;a href=&quot;#React&quot; class=&quot;headerlink&quot; title=&quot;React&quot;&gt;&lt;/a&gt;React&lt;/h2&gt;&lt;h3 id=&quot;React-初识&quot;&gt;&lt;a href=&quot;#React-初识&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react" scheme="https://s1p21.github.io/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>dva&amp;umi&amp;redux</title>
-    <link href="https://s1p21.github.io/2022/11/04/dva-umi-redux/"/>
-    <id>https://s1p21.github.io/2022/11/04/dva-umi-redux/</id>
-    <published>2022-11-04T02:55:50.000Z</published>
-    <updated>2022-12-02T05:03:27.603Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;dva 首先是一个基于 redux 和 redux-saga 的数据流方案，然后为了简化开发体验，dva 还额外内置了</summary>
         
       
     
