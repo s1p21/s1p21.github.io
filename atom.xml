@@ -6,7 +6,7 @@
   <link href="https://s1p21.github.io/atom.xml" rel="self"/>
   
   <link href="https://s1p21.github.io/"/>
-  <updated>2023-01-19T03:27:53.340Z</updated>
+  <updated>2023-10-07T03:36:57.817Z</updated>
   <id>https://s1p21.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>领域驱动设计-DDD</title>
+    <link href="https://s1p21.github.io/2023/10/07/ling-yu-qu-dong-she-ji-ddd/"/>
+    <id>https://s1p21.github.io/2023/10/07/ling-yu-qu-dong-she-ji-ddd/</id>
+    <published>2023-10-07T03:23:21.000Z</published>
+    <updated>2023-10-07T03:36:57.817Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-为什么需要DDD&quot;&gt;&lt;a href=&quot;#1-为什么需要DDD&quot; class=&quot;headerlink&quot; title=&quot;1. 为什么需要DDD&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DDD" scheme="https://s1p21.github.io/tags/DDD/"/>
+    
+    <category term="前端架构" scheme="https://s1p21.github.io/tags/%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>webpack 优化实践</title>
@@ -489,29 +514,6 @@
     
     
     <category term="react" scheme="https://s1p21.github.io/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单页应用路由原理</title>
-    <link href="https://s1p21.github.io/2022/11/04/dan-ye-ying-yong-lu-you-yuan-li/"/>
-    <id>https://s1p21.github.io/2022/11/04/dan-ye-ying-yong-lu-you-yuan-li/</id>
-    <published>2022-11-04T02:53:43.000Z</published>
-    <updated>2022-12-07T08:49:31.461Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;补充知识：window-location&quot;&gt;&lt;a href=&quot;#补充知识：window-location&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="spa" scheme="https://s1p21.github.io/tags/spa/"/>
     
   </entry>
   
