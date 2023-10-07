@@ -4,13 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面试-CSS, 前端 vue js ts react node">
-    <meta name="description" content="1.定位、布局不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
-
- #main{
-  background-color:aqua;
-  width:100%;
-  f">
+    <meta name="keywords" content="面试-webpack和Node, 前端 vue js ts react node">
+    <meta name="description" content="loader 和plugin的区别loader即为文件加载器，操作的是文件，将文件A通过loader转换成文件B，是一个单纯的文件转化过程。plugin即为插件，是一个扩展器，丰富webpack本身，增强功能 ，针对的是在loader结束之">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面试-CSS | s1p21的blog</title>
+    <title>面试-webpack和Node | s1p21的blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
     
 
@@ -298,12 +293,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面试-CSS</h1>
+                    <h1 class="description center-align post-title">面试-webpack和Node</h1>
                 </div>
             </div>
         </div>
@@ -331,8 +326,12 @@
                                 <span class="chip bg-color">面试</span>
                             </a>
                         
-                            <a href="/tags/css/">
-                                <span class="chip bg-color">css</span>
+                            <a href="/tags/webpack/">
+                                <span class="chip bg-color">webpack</span>
+                            </a>
+                        
+                            <a href="/tags/Node/">
+                                <span class="chip bg-color">Node</span>
                             </a>
                         
                     </div>
@@ -347,7 +346,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-29
+                    2022-12-04
                 </div>
                 
 
@@ -368,89 +367,144 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-定位、布局"><a href="#1-定位、布局" class="headerlink" title="1.定位、布局"></a>1.定位、布局</h4><p>不同定位的区别，两栏布局、三栏布局，flex布局必会<br> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
-<pre class=" language-css"><code class="language-css">
- <span class="token selector"><span class="token id">#main</span></span><span class="token punctuation">{</span>
-  <span class="token property">background-color</span><span class="token punctuation">:</span>aqua<span class="token punctuation">;</span>
-  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100%</span><span class="token punctuation">;</span>
-  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector"><span class="token id">#left</span></span><span class="token punctuation">{</span>
-  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
-  <span class="token property">background-color</span><span class="token punctuation">:</span>yellow<span class="token punctuation">;</span>
-  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
-  <span class="token property">margin-left</span><span class="token punctuation">:</span>-<span class="token number">100%</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector"><span class="token id">#right</span></span><span class="token punctuation">{</span>
-  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">300</span>px<span class="token punctuation">;</span>
-  <span class="token property">background-color</span><span class="token punctuation">:</span>orange<span class="token punctuation">;</span>
-  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
-  <span class="token property">margin-left</span><span class="token punctuation">:</span>-<span class="token number">300</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector"><span class="token id">#content</span></span><span class="token punctuation">{</span>
-  <span class="token property">margin-left</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
-  <span class="token property">margin-right</span><span class="token punctuation">:</span><span class="token number">300</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
- 
- &lt;!--中间栏写在最前面-->
-&lt;div id = <span class="token string">"main"</span>>
-  &lt;div id=<span class="token string">"content"</span>>&lt;/div>
-&lt;/div>
-&lt;div id = <span class="token string">"left"</span>>
-&lt;/div>
-
-&lt;div id = <span class="token string">"right"</span>>
-&lt;/div>
-</code></pre>
-<p>CSS三列布局</p>
+                <h4 id="loader-和plugin的区别"><a href="#loader-和plugin的区别" class="headerlink" title="loader 和plugin的区别"></a>loader 和plugin的区别</h4><p>loader即为文件加载器，操作的是文件，将文件A通过loader转换成文件B，是一个单纯的文件转化过程。<br>plugin即为插件，是一个扩展器，丰富webpack本身，增强功能 ，针对的是在loader结束之后，webpack打包的整个过程，他并不直接操作文件，而是基于事件机制工作，监听webpack打包过程中的某些节点，执行广泛的任务。</p>
 <ul>
-<li>float布局：左边左浮动，右边右浮动，中间margin：0 100px;</li>
-<li>Position布局: 左边left：0; 右边right：0; 中间left: 100px; right: 100px;</li>
-<li>table布局: 父元素 display: table; 左右 width: 100px; 三个元素display: table-cell;</li>
-<li>弹性(flex)布局:父元素 display: flex; 左右 width: 100px;</li>
-<li>网格（gird）布局：</li>
+<li>Loader 特性:</li>
 </ul>
-<h4 id="2-对于一些常见css的书写-比如文本溢出显示省略号"><a href="#2-对于一些常见css的书写-比如文本溢出显示省略号" class="headerlink" title="2. 对于一些常见css的书写:比如文本溢出显示省略号"></a>2. 对于一些常见css的书写:比如文本溢出显示省略号</h4><pre class=" language-css"><code class="language-css">
-<span class="token property">text-overflow</span><span class="token punctuation">:</span>ellipsis
-
-#多行
-<span class="token property">display</span><span class="token punctuation">:</span>-webkit-box
-<span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">;</span>
-</code></pre>
-<h4 id="3-link和-import的区别"><a href="#3-link和-import的区别" class="headerlink" title="3. link和@import的区别"></a>3. link和@import的区别</h4><ul>
-<li>link的功能比较多，可以定义RSS、Rel等作用，而@import只能用于加载css</li>
-<li>解析到link时，同步加载引到的css，而@import引到的css等到页面加载完成后才被加载</li>
-<li>@import 需要ES5 以上</li>
-<li>link可以js动态导入，@import不行</li>
-</ul>
-<h4 id="4-flex"><a href="#4-flex" class="headerlink" title="4. flex"></a>4. flex</h4><ul>
-<li>flex-direction</li>
-<li>justify-content</li>
-<li>align-items</li>
-<li>align-content (多轴线的对齐方式)</li>
-<li>flex-wrap</li>
-</ul>
-<p>子 </p>
 <ul>
-<li>flex： 0 1 auto</li>
-<li>表示flex-grow 为0 flex-shrink 为1 flex basis为auto</li>
-<li>align-self</li>
+<li>链式传递，按照配置时相反的顺序链式执行;</li>
+<li>基于 Node 环境，拥有 较高权限，比如文件的增删查改; 可同步也可异步;</li>
 </ul>
-<h4 id="5-垂直居中和水平居中"><a href="#5-垂直居中和水平居中" class="headerlink" title="5.垂直居中和水平居中"></a>5.垂直居中和水平居中</h4><ul>
-<li>line-height</li>
-<li>absolute+ margin(负值)</li>
-<li>absolute + margin auto</li>
-<li>absolute + translate</li>
-<li>Flex + align-items</li>
-<li>Flex + margin auto</li>
-<li>Flex + align-self</li>
-<li>grid +align-items</li>
-<li>calc</li>
+<ul>
+<li>编写原则:</li>
 </ul>
-<h4 id="6-BFC"><a href="#6-BFC" class="headerlink" title="6. BFC"></a>6. BFC</h4><p>BFC（Block formatting context），即块级格式化上下文，它作为HTML页面上的一个独立渲染区域，只有区域内元素参与渲染，且不会影响其外部元素。简单来说，可以将 BFC 看做是一个“围城”，外面的元素进不来，里面的元素出不去<br>形成BFC的条件:</p>
-<p>1、浮动元素，float 除 none 以外的值；<br>2、定位元素，position（absolute，fixed）；<br>3、display 为以下其中之一的值 inline-block，table-cell，table-caption；<br>4、overflow 除了 visible 以外的值（hidden，auto，scroll）；</p>
-<p>BFC 一般用来解决以下几个问题<br>边距重叠问题<br>消除浮动问题<br>自适应布局问题</p>
+<ul>
+<li>单一原则: 每个 Loader 只做一件事;</li>
+<li>链式调用: Webpack 会按顺序链式调用每个 Loader;</li>
+<li>统一原则: 遵循 Webpack 制定的设计规则和结构，输入与输出均为字符串，各个 Loader 完全独立，即插即用;</li>
+</ul>
+<ul>
+<li>plugin<br>在编译的整个生命周期中，Webpack 会触发许多事件钩子， Plugin 可以监听这些事件，根据需求在相应的时间点对打包内容进行定向的修改。</li>
+</ul>
+<p>Plugin的组成部分<br>1）Plugin的本质是一个 node 模块，这个模块导出一个JavaScript 类<br>2）它的原型上需要定义一个apply 的方法<br>3）通过compiler获取webpack内部的钩子，获取webpack打包过程中的各个阶段<br>钩子分为同步和异步的钩子，异步钩子必须执行对应的回调<br>4）通过compilation操作webpack内部实例特定数据<br>5）功能完成后，执行webpack提供的cb回调</p>
+<ul>
+<li>事件流机制<br>Webpack 就像工厂中的一条产品流水线。原材料经过 Loader 与 Plugin 的一道道处理，最后输出结果。</li>
+</ul>
+<ul>
+<li>通过链式调用，按顺序串起一个个 Loader;</li>
+<li>通过事件流机制，让 Plugin 可以插入到整个生产过程中的每个步骤中;</li>
+</ul>
+<p>Webpack 事件流编程范式的核心是基础类<code> Tapable</code> ，是一种 观察者模式 的实现事件的订阅与广播:<br>Webpack 中两个最重要的类 <code>Compiler</code> 与 <code>Compilation</code> 便是继承于 Tapable，也拥有这样的事件流机制。</p>
+<ul>
+<li>Compiler: 可以简单的理解为 Webpack 实例，它包含了当前 Webpack 中的所有配置信息，如 options， loaders, plugins 等信息，全局唯一，只在启动时完成初始化创建，随着生命周期逐一传递; </li>
+<li>Compilation: 可以称为 编译实例。当监听到文件发生改变时，Webpack 会创建一个新的 Compilation 对象，开始一次新的编译。它包含了当前的输入资源，输出资源，变化的文件等，同时通过它提供的 api，可 以监听每次编译过程中触发的事件钩子;</li>
+</ul>
+<p>区别:</p>
+<ul>
+<li>Compiler 全局唯一，且从启动生存到结束;</li>
+<li>Compilation 对应每次编译，每轮编译循环均会重新创建;</li>
+</ul>
+<h5 id="常用-Plugin"><a href="#常用-Plugin" class="headerlink" title="常用 Plugin:"></a>常用 Plugin:</h5><ul>
+<li>UglifyJsPlugin: 压缩、混淆代码;</li>
+<li>Optimization.splitChunks: 代码分割;</li>
+<li>ProvidePlugin: 自动加载模块;</li>
+<li>html-webpack-plugin: 加载 html 文件，并引入 css / js 文件; </li>
+<li>extract-text-webpack-plugin / mini-css-extract-plugin: 抽离样式，生成 css 文件; </li>
+<li>DefinePlugin: 定义全局变量;</li>
+<li>optimize-css-assets-webpack-plugin: CSS 代码去重; </li>
+<li>webpack-bundle-analyzer: 代码分析;</li>
+<li>compression-webpack-plugin: 使用 gzip 压缩 js 和 css; </li>
+<li>happypack: 使用多进程，加速代码构建; </li>
+<li>EnvironmentPlugin: 定义环境变量;</li>
+</ul>
+<h4 id="优化技巧"><a href="#优化技巧" class="headerlink" title="优化技巧"></a>优化技巧</h4><p>缓存、加快打包速度、缩小打包体积</p>
+<ol>
+<li>缓存，比如bable-loader 添加cacheDirectory为true来开启缓存</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
+    test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+    loader<span class="token punctuation">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span>
+    options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      cacheDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<p>cacheLoader</p>
+<ol start="2">
+<li>加快打包速度<br>多核打包，比如使用happyPack/Thread-loader/Parallel-Webpack<br>高效编译，对于JS的编译选用不同的编译器，比如ESBuild 基于Go语言开发的JavaScript Bundler 和SWC 基于Rust的JavaScript Compiler(其生态中也包含打包工具spack), 目前为Next.JS/Parcel/Deno等前端圈知名项目使用</li>
+</ol>
+<p>3、缩小打包体积</p>
+<ul>
+<li>使用Tree-shaking、减少打包代码</li>
+<li>对于大的模块引入thread-loader</li>
+<li>对于不常用的变更抽离出去 ，一种是使用webpack-dll-plugin,在首次构建时候将这些静态依赖打包，另外一种是使用Externals，将这些不常用的静态资源抽离，并用cdn方式引用他们</li>
+<li>compression-webpack-plugin 压缩js和css代码</li>
+</ul>
+<h4 id="什么是Tree-Shark"><a href="#什么是Tree-Shark" class="headerlink" title="什么是Tree-Shark"></a>什么是Tree-Shark</h4><p>摇树优化 (Tree-shaking)，这是一种形象比喻。我们把打包后的代码比喻成一棵树，这里其实表示的就 是，通过工具 “摇” 我们打包后的 js 代码，将没有使用到的无用代码 “摇” 下来 (删除)。即 消除那些被 引用了但未被使用 的模块代码。<br>原理: 由于是在编译时优化，因此最基本的前提就是语法的静态分析，ES6的模块机制提供了这种可能性。不需要运行时，便可进行代码字面上的静态分析，确定相应的依赖关系。<br>问题: 具有副作用的函数无法被 tree-shaking。 在引用一些第三方库，需要去观察其引入的代码 量是不是符合预期; 尽量写纯函数，减少函数的副作用; 可使用 webpack-deep-scope-plugin， 可以进行作用域分析，减少此类情况的发生，但仍需要注意;</p>
+<h4 id="performance-对象api"><a href="#performance-对象api" class="headerlink" title="performance 对象api"></a>performance 对象api</h4><p>属性</p>
+<ul>
+<li>memory</li>
+<li>navigation </li>
+<li>timing<br><img src="https://img-blog.csdnimg.cn/20200717141446763.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0ODE0MDU=,size_16,color_FFFFFF,t_70"></li>
+</ul>
+<p>方法</p>
+<ul>
+<li>getEntries() 这个函数返回的将是一个数组，包含了页面中所有的 HTTP 请求</li>
+<li>now()  输出的是相对于 performance.timing.navigationStart(页面初始化) 的时间, Date.now() 输出的是 UNIX 时间，即距离 1970 的时间 </li>
+<li>mark()  performance.mark() 标记各种时间戳（就像在地图上打点），保存为各种测量值（测量地图上的点之间的距离），便可以批量地分析这些数据了。</li>
+</ul>
+<p>后来 window.performance.timing 被废弃，通过 PerformanceObserver 旧的 api，返回的是一个 UNIX 类型的绝对时间，和用户的系统时间相关，分析的时候需要再次计算。而新的 api，返回的是一个相对时间，可以直接用来分析</p>
+<h3 id="热更新"><a href="#热更新" class="headerlink" title="热更新"></a>热更新</h3><p>开发过程中，代码发生变动后，webpack会重新编译，编译后浏览器替换修改的模块，局部更新，无需刷新整个页面</p>
+<p>主要是通过websocket实现，建立本地服务和浏览器的双向通信。当代码变化，重新编译后，通知浏览器请求更新的模块，替换原有的模块<br>1） 通过webpack-dev-server开启server服务，本地server启动之后，再去启动websocket服务，建立本地服务和浏览器的双向通信<br>2） webpack每次编译后，会生成一个Hash值，Hash代表每一次编译的标识。本次输出的Hash值会编译新生成的文件标识，被作为下次热更新的标识<br>3）webpack监听文件变化（主要是通过文件的生成时间判断是否有变化），当文件变化后，重新编译<br>4）编译结束后，通知浏览器请求变化的资源，同时将新生成的hash值传给浏览器，用于下次热更新使用<br>5）浏览器拿到更新后的模块后，用新模块替换掉旧的模块，从而实现了局部刷新</p>
+<h3 id="模块联邦"><a href="#模块联邦" class="headerlink" title="模块联邦"></a>模块联邦</h3><p>webpack5 模块联邦(Module Federation) 使 JavaScript应用，得以从另一个 JavaScript应用中动态的加载代码，实现共享依赖，用于前端的微服务化<br>比如项目A和项目B，公用项目C组件，以往这种情况，可以将C组件发布到npm上，然后A和B再具体引入。当C组件发生变化后，需要重新发布到npm上，A和B也需要重新下载安装<br>使用模块联邦后，可以在远程模块的Webpack配置中，将C组件模块暴露出去，项目A和项目B就可以远程进行依赖引用。当C组件发生变化后，A和B无需重新引用<br>模块联邦利用webpack5内置的ModuleFederationPlugin插件，实现了项目中间相互引用的按需热插拔</p>
+<h3 id="一个简单的AST示例"><a href="#一个简单的AST示例" class="headerlink" title="一个简单的AST示例"></a>一个简单的AST示例</h3><p>let a = 1，转化成AST的结果</p>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"Program"</span><span class="token punctuation">,</span>
+  <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+  <span class="token string">"body"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"VariableDeclaration"</span><span class="token punctuation">,</span>
+      <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+      <span class="token string">"declarations"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"VariableDeclarator"</span><span class="token punctuation">,</span>
+          <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+          <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+          <span class="token string">"id"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"Identifier"</span><span class="token punctuation">,</span>
+            <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+            <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+            <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"a"</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">"init"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"Literal"</span><span class="token punctuation">,</span>
+            <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+            <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+            <span class="token string">"value"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token string">"raw"</span><span class="token punctuation">:</span> <span class="token string">"1"</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"let"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"sourceType"</span><span class="token punctuation">:</span> <span class="token string">"module"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="koa和express的区别"><a href="#koa和express的区别" class="headerlink" title="koa和express的区别"></a>koa和express的区别</h3><p>express框架是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，主要基于 Connect 中间件，并且自身封装了路由、视图处理等功能。</p>
+<p>koa是 Express 原班人马基于 ES6 新特性重新开发的框架，主要基于 co 中间件，框架自身不包含任何中间件，很多功能需要借助第三方中间件解决，但是由于其基于 ES6 generator 特性的异步流程控制，解决了 “callback hell” 和麻烦的错误处理问题。</p>
+<p>相同点<br>两个框架都对http进行了封装。相关的api都差不多，同一批人所写。</p>
+<p>不同点<br>express内置了许多中间件可供使用，而koa没有。</p>
+<p>express包含路由，视图渲染等特性，而koa只有http模块。</p>
+<p>express的中间件模型为线型，而koa的中间件模型为U型，也可称为洋葱模型构造中间件。</p>
+<p>express通过回调实现异步函数，在多个回调、多个中间件中写起来容易逻辑混乱。</p>
+<h3 id="node的错误监控"><a href="#node的错误监控" class="headerlink" title="node的错误监控"></a>node的错误监控</h3><p>try catch 通常用于捕获throw抛出的错误</p>
+<p>callback(err, result)回调函数处理</p>
+<p>Emitter.on的回调函数 on注册了事件和回调函数， 并且在emit触发事件后会执行回调函数，以达到捕获错误的解决方式。</p>
+<p>process.on(“error”, function(err){})<br>错误异常有两种场景的出现：</p>
+<p>一种是代码运行中throw new error没有被捕获，另一种是Promise的失败回调函数，没有对应的reject回调函数处理，针对这两种情况Nodejs都有默认的统一处理方式，就是给整个进程process对象监听相应的错误事件。<br>process.on(‘uncaughtException’,function(err){}) //监听未捕获的异常<br>process.on(‘unhandledRejection’,function(err,promise){}) //监听Promise没有被捕获的失败函数</p>
 
                 
             </div>
@@ -477,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://s1p21.github.io/2022/11/29/mian-shi-css/">https://s1p21.github.io/2022/11/29/mian-shi-css/</a>
+                    <a href="https://s1p21.github.io/2022/12/04/webpack-he-node/">https://s1p21.github.io/2022/12/04/webpack-he-node/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -519,8 +573,12 @@
                                     <span class="chip bg-color">面试</span>
                                 </a>
                             
-                                <a href="/tags/css/">
-                                    <span class="chip bg-color">css</span>
+                                <a href="/tags/webpack/">
+                                    <span class="chip bg-color">webpack</span>
+                                </a>
+                            
+                                <a href="/tags/Node/">
+                                    <span class="chip bg-color">Node</span>
                                 </a>
                             
                         </div>
@@ -603,13 +661,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/11/29/mian-shi-js/">
+                <a href="/2022/12/05/http/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/13.jpg" class="responsive-img" alt="面试-JS">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/22.jpg" class="responsive-img" alt="面试-http">
                         
-                        <span class="card-title">面试-JS</span>
+                        <span class="card-title">面试-http</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -620,7 +678,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-29
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-05
                         </span>
                         <span class="publish-author">
                             
@@ -637,8 +695,8 @@
                         <span class="chip bg-color">面试</span>
                     </a>
                     
-                    <a href="/tags/JS/">
-                        <span class="chip bg-color">JS</span>
+                    <a href="/tags/http/">
+                        <span class="chip bg-color">http</span>
                     </a>
                     
                 </div>
@@ -652,13 +710,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/18/shen-ru-liao-jie-composition-api-he-watch-yuan-ma-fen-xi/">
+                <a href="/2022/12/04/suan-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/3.jpg" class="responsive-img" alt="深入了解Composition API和 watch 源码分析">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/16.jpg" class="responsive-img" alt="面试-算法">
                         
-                        <span class="card-title">深入了解Composition API和 watch 源码分析</span>
+                        <span class="card-title">面试-算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -669,7 +727,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-04
                             </span>
                         <span class="publish-author">
                             
@@ -682,12 +740,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vue3/">
-                        <span class="chip bg-color">vue3</span>
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
-                    <a href="/tags/composition-API/">
-                        <span class="chip bg-color">composition API</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
                 </div>
