@@ -1,0 +1,1249 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="从Prompt到论文：打造高效科研写作流程的实用指南, 前端 vue js ts react node">
+    <meta name="description" content="随着人工智能技术的进步，Prompt（提示词）作为一种新兴工具，正在逐渐改变学术写作的方式。
+Prompt不仅仅是一个简单的起点或灵感来源，更是一个系统化的写作引导工具。它能够帮助研究人员快速组织思路，生成有逻辑的段落，甚至优化语言表达，从">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>从Prompt到论文：打造高效科研写作流程的实用指南 | s1p21的blog</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/matery.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/my.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//css/reward.css">
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="s1p21的blog" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">s1p21的blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">s1p21的blog</div>
+        <div class="logo-desc">
+            
+            前端技术栈 微信公众号：前端技术宅博客
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/s1p21/hexo" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/s1p21/hexo" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">从Prompt到论文：打造高效科研写作流程的实用指南</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Prompt/">
+                                <span class="chip bg-color">Prompt</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">论文</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-05-17
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>随着人工智能技术的进步，Prompt（提示词）作为一种新兴工具，正在逐渐改变学术写作的方式。</p>
+<p>Prompt不仅仅是一个简单的起点或灵感来源，更是一个系统化的写作引导工具。它能够帮助研究人员快速组织思路，生成有逻辑的段落，甚至优化语言表达，从而大幅提升写作效率和质量。通过智能Prompt，学者们可以更轻松地将研究成果转化为清晰、有力的学术论文。</p>
+<p>我们将介绍Prompt的基本原理、应用技巧，并结合实际案例，提供一系列实用指南，帮助研究人员充分利用Prompt提升写作效率和论文质量。无论你是刚刚踏入学术领域的新手，还是经验丰富的资深学者，这篇博客都将为你提供有价值的参考和指导。</p>
+<h2 id="一、提示产生创意"><a href="#一、提示产生创意" class="headerlink" title="一、提示产生创意"></a>一、提示产生创意</h2><p>如果您陷入困境或不确定从哪里开始， 可以帮助您集思广益，为您的论文、论文或论文集思广益。</p>
+<ol>
+<li><p>为学术论文提出一些关于[您更广泛的主题或主题]的潜在主题。</p>
+</li>
+<li><p>建议[您更广泛的主题]领域内与[特定兴趣或主题]相关的一些潜在主题。</p>
+</li>
+<li><p>我正在探索[更广泛的主题，例如“心理学”]领域。您能否建议一些与[特定兴趣，例如“儿童发展”]交叉并且与[特定背景或地区，例如“亚洲城市环境”]相关的主题？</p>
+</li>
+<li><p>在[更广泛的主题，例如“哲学”]领域内，我对[特定的兴趣，例如“存在主义”]很感兴趣。您能否推荐在[特定地区或时代，例如“21世纪欧洲”]背景下将其与[另一个领域或主题，例如“现代技术”]联系起来的主题？</p>
+</li>
+<li><p>充当我的头脑风暴伙伴。我正在研究[您更广泛的主题或主题]。哪些主题可能与学术论文相关？</p>
+</li>
+<li><p>暂时充当我的头脑风暴伙伴。鉴于[学科，例如“社会学”]的更广泛主题，您能否帮助产生与[特定主题或兴趣，例如“社交媒体”]交织在一起的想法，并迎合主要来自[地区或人口统计，例如， ‘东南亚’]？</p>
+</li>
+</ol>
+<h2 id="二、-提示构建内容"><a href="#二、-提示构建内容" class="headerlink" title="二、 提示构建内容"></a>二、 提示构建内容</h2><p>该模型可以提供有关如何组织内容的建议，包括潜在的节标题、参数的逻辑流等。</p>
+<ol>
+<li><p>我应该如何构建关于[您的特定主题]的论文？提供大纲或潜在的章节标题。</p>
+</li>
+<li><p>我正在写一篇关于[您的特定主题]的论文。我应该如何构建它以及我应该在[所选部分，例如“文献评论”]中涵盖哪些子主题？</p>
+</li>
+<li><p>对于一篇讨论[特定主题，例如“气候变化”]的论文，我应该如何构建[所选部分，例如“文献综述”]并整合[特定十年或时期，例如“2010年代”]的研究？</p>
+</li>
+<li><p>我正在编写一篇关于[特定主题，例如“生物多样性丧失”]的论文。我应该如何安排[所选部分，例如“讨论”]以纳入[特定学科，例如“社会经济学”]的观点和[特定区域或生态系统，例如“热带雨林”]的发现？</p>
+</li>
+<li><p>暂时担任编辑。根据一篇关于[您的特定主题]的论文，您建议我如何构建它？我应该包含哪些关键部分或元素？</p>
+</li>
+<li><p>担任我的论文[主题，例如“量子物理学”]的结构顾问。您能否建议一个逻辑流程和潜在的章节标题，特别是当我的目标是涵盖[特定元素，例如“量子纠缠和隐形传态”]等方面时？</p>
+</li>
+<li><p>充当我的编辑指南。对于一篇专注于[特定主题，例如“量子计算”]的论文，我如何构建我的[所选部分，例如“发现”]？尤其是在整合[特定学科，例如“软件工程”]的观点和[特定地区，例如“东亚”]的案例研究时？</p>
+</li>
+</ol>
+<h2 id="三、提示校对"><a href="#三、提示校对" class="headerlink" title="三、提示校对"></a>三、提示校对</h2><p>虽然 可能无法取代人工校对，但它可以帮助您识别写作中的语法错误、尴尬的措辞或不一致之处。</p>
+<ol>
+<li><p>检查此段落是否存在语法或文体错误：[将您的文本粘贴到此处]。</p>
+</li>
+<li><p>检查我的[文档类型，例如“论文”]中的这一段是否存在语法或文体错误：[将您的文本粘贴到此处]。</p>
+</li>
+<li><p>请检查我的[文档类型，例如“论文”]关于[特定主题，例如“可再生能源”]的这段文字，以查找潜在的语法或文体错误：[将您的文本粘贴到此处]。</p>
+</li>
+<li><p>请仔细阅读我的[文档类型，例如“期刊文章”]中关于[特定主题，例如“深海探索”]的这一段。突出显示任何语言或结构错误，并建议如何更好地适合[目标出版物或受众，例如“自然杂志”]：[在此处粘贴您的文本]。</p>
+</li>
+<li><p>充当我的校对员。在这段文字中：[将您的文字粘贴到此处]，是否有我应该注意的语法或文体错误？</p>
+</li>
+<li><p>担任我的初步校对者。我为我的[文件类型，例如“研究提案”]起草了一个关于[特定主题，例如“纳米技术”]的部分。我很重视语法、连贯性以及与[目标出版物或风格，例如“IEEE 标准”] 的一致性方面的反馈：[在此处粘贴您的文本]。</p>
+</li>
+</ol>
+<h2 id="四、提示引文指导"><a href="#四、提示引文指导" class="headerlink" title="四、提示引文指导"></a>四、提示引文指导</h2><p>需要帮助格式化引文或了解不同引文风格（如 APA、MLA、芝加哥）的细微差别？ChatGPT 可以为您提供指导。</p>
+<ol>
+<li><p>如何以[所需的风格，例如 APA、MLA] 格式化此引文？这是来源：[在此处粘贴来源详细信息]。</p>
+</li>
+<li><p>我在我的文档中引用了由[作者姓名]撰写的[来源类型，例如“会议论文”]。我应该如何以[所需的样式，例如“芝加哥”]样式格式化此引文？</p>
+</li>
+<li><p>充当引文指南。我需要为我的工作引用[来源类型，例如“期刊文章”]。我应该如何使用[引用样式，例如“APA”]方法来格式化它？</p>
+</li>
+<li><p>充当我的引文助理。我从[作者姓名]中获取了[年份，例如“2018”]发布的[来源类型，例如“网络文章”]。我应该如何以[所需的风格，例如“MLA”]格式呈现此内容？</p>
+</li>
+</ol>
+<h2 id="五、提示释义"><a href="#五、提示释义" class="headerlink" title="五、提示释义"></a>五、提示释义</h2><p>如果您试图在不抄袭的情况下传达来自来源的信息，该模型可以帮助重新措辞内容。</p>
+<ol>
+<li><p>你能帮我解释一下这句话吗？[在此处粘贴您的原始声明]。</p>
+</li>
+<li><p>帮助我用我自己的话传达[来源作者姓名]的以下想法：[在此处粘贴原始陈述]。</p>
+</li>
+<li><p>我想引用[来源作者姓名]关于[特定主题，例如“量子物理学”]的工作中的一个想法。你能帮我在不失去其本质的情况下解释一下这句话吗：[在此处粘贴原始陈述]？</p>
+</li>
+<li><p>充当文字大师。我想要此声明的改写版本，但又不失其本质：[在此处粘贴您的原始声明]。</p>
+</li>
+<li><p>充当我的改写者。以下是[作者姓名]关于[主题，例如“认知发展”]的工作的声明：[在此处粘贴原始声明]。我怎样才能在不抄袭的情况下传达这一点？</p>
+</li>
+<li><p>充当我的防止抄袭的辅助工具。我想包括[来源作者姓名]对[特定主题，例如“太阳能”]的研究的见解。请帮助我用自己的话表达这一点，同时保持我的[工作类型，例如“博士论文”]的语气：[在此处粘贴原始陈述]。</p>
+</li>
+</ol>
+<h2 id="六、提示增强词汇量"><a href="#六、提示增强词汇量" class="headerlink" title="六、提示增强词汇量"></a>六、提示增强词汇量</h2><p>如果您正在寻找更复杂或特定主题的术语，ChatGPT 可以建议同义词或替代措辞。</p>
+<ol>
+<li><p>我想要一种更学术或更复杂的方式来表达这一点：[在此处粘贴您的句子或短语]。</p>
+</li>
+<li><p>在[特定领域或主题]的背景下，您能否建议一种更学术的方式来表达这个短语：[在此处粘贴您的短语]？</p>
+</li>
+<li><p>我正在写一篇[特定学科，例如“生物信息学”]领域的论文。我怎样才能更学术地表达这个想法：[在这里粘贴你的短语]？</p>
+</li>
+<li><p>在[特定学科，例如“天体物理学”]的范围内，我希望加强这一主张：[将您的短语粘贴到此处]。哪些术语或措辞更能引起精通[相关领域或主题，例如“恒星演化”]的观众的共鸣？</p>
+</li>
+<li><p>充当我的同义词库。对于这个短语：[在此处粘贴您的句子或短语]，我可以使用更学术或更复杂的术语或短语吗？</p>
+</li>
+<li><p>担任[领域，例如”神经科学”]的词汇专家。我怎样才能更恰当地表达这个想法：[在此处粘贴您的短语]？</p>
+</li>
+</ol>
+<h2 id="七、提示澄清概念"><a href="#七、提示澄清概念" class="headerlink" title="七、提示澄清概念"></a>七、提示澄清概念</h2><p>如果您工作的领域不是您的主要专业领域，该模型可以为不熟悉的术语或概念提供解释或定义。</p>
+<ol>
+<li><p>您能在学术研究的背景下解释一下[特定术语或概念]的概念吗？</p>
+</li>
+<li><p>在[特定领域，例如“社会学”]中，[特定术语或概念]是什么意思？它与[另一个术语或概念]有何关系？</p>
+</li>
+<li><p>在[特定学科，例如“神经科学”]领域，您如何定义[术语或概念A]，以及它与[术语或概念B]有何区别？</p>
+</li>
+<li><p>充当我的导师。我对[特定术语或概念]的概念有点迷失。您能在[特定学术领域]的背景下为我解释一下吗？</p>
+</li>
+<li><p>暂时充当我的学术导师。我在[特定学科，例如“形而上学”]中遇到了一些具有挑战性的术语。您能否阐明[术语A]、[术语B]和[术语C]之间的区别，特别是在[特定背景或理论，例如“康德哲学”]中应用时？</p>
+</li>
+</ol>
+<h2 id="八、提示草稿审核"><a href="#八、提示草稿审核" class="headerlink" title="八、提示草稿审核"></a>八、提示草稿审核</h2><p>您可以分享草稿的部分或摘录，可以提供一般反馈或考虑要点。</p>
+<ol>
+<li><p>请针对我的草稿摘录提供反馈：[在此处粘贴摘录]。</p>
+</li>
+<li><p>您能否审阅我的[文件类型，例如“研究提案”]的这段摘录，并就[特定方面，例如“清晰度和连贯性”]提供反馈：[在此处粘贴摘录]？</p>
+</li>
+<li><p>我非常感谢我的[文件类型，例如“政策分析”]对这个片段的反馈，该片段以[特定主题，例如“可再生能源采用”]为中心。具体来说，我正在寻找有关其[特定方面，例如“论证流程”]以及它如何迎合[目标受众，例如“东南亚政策制定者”]的指导：[在此处粘贴摘录]。</p>
+</li>
+<li><p>担任我提交的期刊的审稿人。您能否批评我草稿的这一部分：[在此处粘贴摘录]？</p>
+</li>
+<li><p>充当我的批评伙伴。我已经为我的[文档类型，例如“文献评论”]写了一个关于[特定主题，例如“认知偏见”]的片段。您能否评估其[具体质量，例如“客观性”]，特别是考虑到它对[目标受众或应用程序，例如“临床心理学家”]的重要性：[在此处粘贴摘录]。</p>
+</li>
+</ol>
+<h2 id="九、提示输入参考指针"><a href="#九、提示输入参考指针" class="headerlink" title="九、提示输入参考指针"></a>九、提示输入参考指针</h2><p>如果您正在寻找有关某个主题的其他来源或文献，ChatGPT 可以为您指出关键论文、作者或研究（尽管其知识截至 2022 年，因此不会有最新出版物）。</p>
+<ol>
+<li><p>您能推荐与[您的主题或研究问题]相关的关键论文或研究吗？</p>
+</li>
+<li><p>我需要在[您的主题领域]更广泛的领域内与[特定主题]相关的参考资料。您能推荐关键论文或作者吗？</p>
+</li>
+<li><p>我正在研究[特定主题，例如“医疗保健中的机器学习”]。您能否推荐[您的一般领域，例如“计算机科学”]更广泛领域内[特定十年，例如“2000年代”]的开创性著作？</p>
+</li>
+<li><p>我的研究围绕[特定主题，例如“教育中的增强现实”]。我特别热衷于了解它在[特定时间范围内，例如“2010 年代末”] 的演变。您能否指导我查看[您的总体领域，例如“教育技术”]内的基础论文或图表？</p>
+</li>
+<li><p>充当文学指南。我正在深入研究[你的主题或研究问题]。您对开创性论文或必读研究有什么建议吗？</p>
+</li>
+<li><p>充当我的文学向导。我的工作围绕[特定主题，例如“教育学中的虚拟现实”]。我希望得到来自[特定时代，例如“2000 年代初”]的关键文本或专家的指导，特别是那些强调[特定环境，例如“高等教育机构”]应用的文献或专家。</p>
+</li>
+</ol>
+<h2 id="十、提示书写提示"><a href="#十、提示书写提示" class="headerlink" title="十、提示书写提示"></a>十、提示书写提示</h2><p>对于那些面临写作障碍的人，可以生成提示或问题，以帮助您批判性地思考您的主题并激发您的写作。</p>
+<ol>
+<li><p>我在[你的主题]上遇到了写作障碍。你能给我一些提示或问题来激发我的思考吗？</p>
+</li>
+<li><p>我正在[更广泛的主题或问题]的背景下撰写[特定主题]。你能提出一些问题来加强我的讨论吗？</p>
+</li>
+<li><p>我正在讨论与[特定地区或国家，例如“拉丁美洲”]的[另一个主题，例如“可持续发展”]相关的[特定主题，例如“城市规划”]。你能提供一些发人深省的提示吗？</p>
+</li>
+<li><p>充当我的缪斯女神。我正在努力解决[你的主题]。您能否生成一些提示或引导问题来帮助指导我的写作？</p>
+</li>
+<li><p>充当我写作障碍的缪斯女神。鉴于[主题A，例如“气候变化”]的主题及其对[主题B，例如“海洋生态系统”]的影响，您能否生成发人深省的提示？</p>
+</li>
+</ol>
+<h2 id="十一、提示论文陈述"><a href="#十一、提示论文陈述" class="headerlink" title="十一、提示论文陈述"></a>十一、提示论文陈述</h2><ol>
+<li><p>帮助我完善这篇论文陈述，使其清晰并具有影响力：[在此处粘贴您的论文陈述]。</p>
+</li>
+<li><p>这是我关于[特定主题]的论文的论文陈述草稿：[粘贴你的论文陈述]。怎样才能让它更有说服力呢？</p>
+</li>
+<li><p>我正在为我在[特定区域，例如“欧洲市场”]背景下的[特定主题，例如“加密货币采用”]的研究起草一份声明。这是我的尝试：[粘贴你的论文陈述]。有什么增强建议吗？</p>
+</li>
+<li><p>担任我的论文导师。我正在就[主题，例如“金融中的区块链”]制定一份声明。这是我的草稿：[粘贴你的论文陈述]。如何进一步磨练它？</p>
+</li>
+</ol>
+<h2 id="十二、提示输入摘要和总结"><a href="#十二、提示输入摘要和总结" class="headerlink" title="十二、提示输入摘要和总结"></a>十二、提示输入摘要和总结</h2><p>该模型可以帮助起草、完善或总结论文摘要。</p>
+<ol>
+<li><p>你能帮我根据这些内容起草/总结一份摘要吗？[在此处粘贴要点或简要内容]。</p>
+</li>
+<li><p>我正在向[特定会议或期刊]提交一篇论文。您能帮我将[粘贴主要内容或要点]中的发现总结为简洁的摘要吗？</p>
+</li>
+<li><p>我的目标是将我对[特定主题，例如“基因治疗”]的发现从[来源或数据集，例如“最近的临床试验”]浓缩为[特定事件，例如“生物技术会议”]的摘要。你能帮忙吗？</p>
+</li>
+<li><p>充当抽象服务。根据以下内容：[在此处粘贴要点或简要内容]，您将如何起草或总结摘要？</p>
+</li>
+<li><p>担任我的编辑助理。我从我的研究中汇编了关于[主题，例如“基因改造”]的发现。帮助我制作或完善适合[活动或出版物，例如“国际生物学会议”]的简明摘要</p>
+</li>
+</ol>
+<h2 id="十三、提示方法协助"><a href="#十三、提示方法协助" class="headerlink" title="十三、提示方法协助"></a>十三、提示方法协助</h2><p>如果您不确定论文的方法部分， 可以提供有关各种研究方法的见解或解释。</p>
+<ol>
+<li><p>我正在使用[特定的研究方法，例如定性访谈]来研究[您的主题]。您能提供见解或潜在的陷阱吗？</p>
+</li>
+<li><p>对于[特定主题]的研究，我正在考虑使用[特定研究方法]。您能解释一下它在这种情况下的应用和潜在的挑战吗？</p>
+</li>
+<li><p>我正在考虑使用[研究方法，例如“民族志研究”]对[特定主题，例如“消费者行为”]进行研究。鉴于[目标群体，例如“城市环境中的千禧一代”]的人口统计，方法上可能存在哪些挑战？</p>
+</li>
+<li><p>我对[特定主题，例如“消费者情绪”]的探索部署了[研究方法，例如“混合方法分析”]。鉴于我的目标人群为[特定群体，例如“18-25岁的在线购物者”]，[特定环境或平台，例如“电子商务平台”]中潜在的方法挑战和最佳实践是什么？</p>
+</li>
+<li><p>充当方法论顾问。我正在使用[研究技术，例如“定性访谈”]探索[主题，例如“消费者行为模式”]。考虑到[特定背景或数据集，例如“在线零售平台”]的范围，您可以提供哪些见解？</p>
+</li>
+</ol>
+<h2 id="十四、提示语言翻译"><a href="#十四、提示语言翻译" class="headerlink" title="十四、提示语言翻译"></a>十四、提示语言翻译</h2><p>虽然并不完美，但 ChatGPT 可以帮助将内容翻译成各种语言或从各种语言翻译出内容，这对于非英语母语人士或在处理其他语言的来源时可能会有所帮助。</p>
+<ol>
+<li><p>请将这段文字翻译为[所需语言]：[在此处粘贴您的文字]。</p>
+</li>
+<li><p>我正在为我的研究整合一段文章[特定主题，例如“中美洲文明”]。您能否协助将此内容从[源语言，例如“纳瓦特尔语”] 翻译为[目标语言，例如“英语”]，同时保持学术严谨性：[将您的文本粘贴到此处]？</p>
+</li>
+<li><p>担任我的翻译助理。我有一段关于[主题，例如“欧洲历史”]的[源语言，例如“法语”]：[在此处粘贴您的文本]。您能否在保持学术诚信的同时用[目标语言，例如“英语”]呈现它？</p>
+</li>
+</ol>
+<h2 id="十五、提示道德考虑"><a href="#十五、提示道德考虑" class="headerlink" title="十五、提示道德考虑"></a>十五、提示道德考虑</h2><p>可以提供研究中伦理考虑的总体概述，但具体指导应来自机构审查委员会或伦理委员会。</p>
+<ol>
+<li><p>在对[特定主题或人群]进行研究时，有哪些一般道德考虑因素？</p>
+</li>
+<li><p>我正在进行涉及[特定群体或方法，例如“未成年人”或“在线调查”]的研究。在[特定学科或领域]的背景下我应该注意哪些关键的道德考虑因素？</p>
+</li>
+<li><p>我的研究涵盖[目标种群或生物体，例如“植物物种”]的[特定方法或技术，例如“基因组编辑”]。当我在[特定机构或机构，例如“联合国教科文组织指导方针”]的框架内运作时，我应该强调哪些道德要求，特别是在考虑对[更广泛的背景，例如“全球粮食安全”]的影响时？</p>
+</li>
+<li><p>担任道德委员会成员。我正在对[特定主题或人群]进行研究。您能否概述一下我应该牢记的关键道德考虑因素？</p>
+</li>
+<li><p>充当道德概述指南。我的研究涉及[特定学科，例如“医学研究”]领域的[特定技术或方法，例如“活体人体试验”]。哪些一般道德考虑可能是最重要的，特别是在针对[特定人群或群体，例如“青少年”]时？</p>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">s1p21</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://s1p21.github.io/2024/05/17/cong-prompt-dao-lun-wen-da-zao-gao-xiao-ke-yan-xie-zuo-liu-cheng-de-shi-yong-zhi-nan/">https://s1p21.github.io/2024/05/17/cong-prompt-dao-lun-wen-da-zao-gao-xiao-ke-yan-xie-zuo-liu-cheng-de-shi-yong-zhi-nan/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">s1p21</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Prompt/">
+                                    <span class="chip bg-color">Prompt</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">论文</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/05/17/cong-prompt-dao-lun-wen-da-zao-gao-xiao-ke-yan-xie-zuo-liu-cheng-de-shi-yong-zhi-nan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/2.jpg" class="responsive-img" alt="从Prompt到论文：打造高效科研写作流程的实用指南">
+                        
+                        <span class="card-title">从Prompt到论文：打造高效科研写作流程的实用指南</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Prompt/">
+                        <span class="chip bg-color">Prompt</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/01/19/dian-chi-cai-liao-shu-ju-ku-ping-tai/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/6.jpg" class="responsive-img" alt="电池材料数据库平台">
+                        
+                        <span class="card-title">电池材料数据库平台</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            s1p21
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%94%B5%E6%B1%A0/">
+                        <span class="chip bg-color">电池</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            <a href="/about" target="_blank">s1p21</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/s1p21" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:269438272@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/s1p21" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/s1p21" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://twitter.com/s1p21" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/s1p21" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=269438272" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 269438272" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/2689712123" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/2689712123" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://weixin.qq.com/" class="tooltipped" target="_blank" data-tooltip="微信搜索: s1p21wt" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/whitbytao" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/whitbytao" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "89660989"
+        });
+        daovoice('update');
+    </script>
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

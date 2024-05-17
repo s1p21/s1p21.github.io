@@ -6,7 +6,7 @@
   <link href="https://s1p21.github.io/atom.xml" rel="self"/>
   
   <link href="https://s1p21.github.io/"/>
-  <updated>2023-10-07T09:02:23.225Z</updated>
+  <updated>2024-05-17T09:13:12.058Z</updated>
   <id>https://s1p21.github.io/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从Prompt到论文：打造高效科研写作流程的实用指南</title>
+    <link href="https://s1p21.github.io/2024/05/17/cong-prompt-dao-lun-wen-da-zao-gao-xiao-ke-yan-xie-zuo-liu-cheng-de-shi-yong-zhi-nan/"/>
+    <id>https://s1p21.github.io/2024/05/17/cong-prompt-dao-lun-wen-da-zao-gao-xiao-ke-yan-xie-zuo-liu-cheng-de-shi-yong-zhi-nan/</id>
+    <published>2024-05-17T09:00:40.000Z</published>
+    <updated>2024-05-17T09:13:12.058Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;随着人工智能技术的进步，Prompt（提示词）作为一种新兴工具，正在逐渐改变学术写作的方式。&lt;/p&gt;
+&lt;p&gt;Prompt不仅仅是一个简单的起点或灵感来源，更是一个系统化的写作引导工具。它能够帮助研究人员快速组织思路，生成有逻辑的段落，甚至优化语言表达，从而大幅提升写作效率和</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Prompt" scheme="https://s1p21.github.io/tags/Prompt/"/>
+    
+    <category term="论文" scheme="https://s1p21.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电池材料数据库平台</title>
+    <link href="https://s1p21.github.io/2024/01/19/dian-chi-cai-liao-shu-ju-ku-ping-tai/"/>
+    <id>https://s1p21.github.io/2024/01/19/dian-chi-cai-liao-shu-ju-ku-ping-tai/</id>
+    <published>2024-01-19T09:05:51.000Z</published>
+    <updated>2024-05-17T09:18:35.532Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;电池材料数据库的发展与应用及对于Material-project的调研及讨论&quot;&gt;&lt;a href=&quot;#电池材料数据库的发展与应用及对于Material-project的调研及讨论&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="电池" scheme="https://s1p21.github.io/tags/%E7%94%B5%E6%B1%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>低代码实践思路</title>
@@ -250,7 +299,7 @@
     <link href="https://s1p21.github.io/2022/11/30/vue/"/>
     <id>https://s1p21.github.io/2022/11/30/vue/</id>
     <published>2022-11-30T07:00:39.000Z</published>
-    <updated>2023-10-07T09:34:58.432Z</updated>
+    <updated>2023-10-07T09:41:14.106Z</updated>
     
     
       
@@ -326,7 +375,7 @@
     <link href="https://s1p21.github.io/2022/11/29/js/"/>
     <id>https://s1p21.github.io/2022/11/29/js/</id>
     <published>2022-11-29T09:13:37.000Z</published>
-    <updated>2022-12-28T02:11:29.712Z</updated>
+    <updated>2023-10-08T03:04:06.566Z</updated>
     
     
       
@@ -468,52 +517,6 @@
     <category term="react-native" scheme="https://s1p21.github.io/tags/react-native/"/>
     
     <category term="RN" scheme="https://s1p21.github.io/tags/RN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typescript学习</title>
-    <link href="https://s1p21.github.io/2022/11/04/typescript-xue-xi/"/>
-    <id>https://s1p21.github.io/2022/11/04/typescript-xue-xi/</id>
-    <published>2022-11-04T02:57:21.000Z</published>
-    <updated>2022-11-18T11:56:37.159Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;一、TS-的优势&quot;&gt;&lt;a href=&quot;#一、TS-的优势&quot; class=&quot;headerlink&quot; title=&quot;一、TS 的优势&quot;&gt;&lt;/a&gt;一、TS</summary>
-        
-      
-    
-    
-    
-    
-    <category term="TS" scheme="https://s1p21.github.io/tags/TS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react&amp;react-router</title>
-    <link href="https://s1p21.github.io/2022/11/04/react-he-react-router/"/>
-    <id>https://s1p21.github.io/2022/11/04/react-he-react-router/</id>
-    <published>2022-11-04T02:57:21.000Z</published>
-    <updated>2022-12-06T07:41:30.486Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;React&quot;&gt;&lt;a href=&quot;#React&quot; class=&quot;headerlink&quot; title=&quot;React&quot;&gt;&lt;/a&gt;React&lt;/h2&gt;&lt;h3 id=&quot;React-初识&quot;&gt;&lt;a href=&quot;#React-初识&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="react" scheme="https://s1p21.github.io/tags/react/"/>
     
   </entry>
   
