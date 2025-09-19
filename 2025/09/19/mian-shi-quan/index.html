@@ -5,12 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="面试-全, 前端 vue js ts react node">
-    <meta name="description" content="css1.定位、布局不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
+    <meta name="description" content="一、css1.定位、布局不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
 
  #main{
   background-color:aqua;
-  width:100%;
-">
+  width:100%">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -364,7 +363,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><h4 id="1-定位、布局"><a href="#1-定位、布局" class="headerlink" title="1.定位、布局"></a>1.定位、布局</h4><p>不同定位的区别，两栏布局、三栏布局，flex布局必会<br> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
+                <h3 id="一、css"><a href="#一、css" class="headerlink" title="一、css"></a>一、css</h3><h4 id="1-定位、布局"><a href="#1-定位、布局" class="headerlink" title="1.定位、布局"></a>1.定位、布局</h4><p>不同定位的区别，两栏布局、三栏布局，flex布局必会<br> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
 <pre class=" language-css"><code class="language-css">
  <span class="token selector"><span class="token id">#main</span></span><span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span>aqua<span class="token punctuation">;</span>
@@ -447,7 +446,7 @@
 <h4 id="6-BFC"><a href="#6-BFC" class="headerlink" title="6. BFC"></a>6. BFC</h4><p>BFC（Block formatting context），即块级格式化上下文，它作为HTML页面上的一个独立渲染区域，只有区域内元素参与渲染，且不会影响其外部元素。简单来说，可以将 BFC 看做是一个“围城”，外面的元素进不来，里面的元素出不去<br>形成BFC的条件:</p>
 <p>1、浮动元素，float 除 none 以外的值；<br>2、定位元素，position（absolute，fixed）；<br>3、display 为以下其中之一的值 inline-block，table-cell，table-caption；<br>4、overflow 除了 visible 以外的值（hidden，auto，scroll）；</p>
 <p>BFC 一般用来解决以下几个问题<br>边距重叠问题<br>消除浮动问题<br>自适应布局问题</p>
-<h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><hr>
+<h3 id="二、-js"><a href="#二、-js" class="headerlink" title="二、 js"></a>二、 js</h3><hr>
 <p>title: 面试-JS<br>date: 2022-11-29 17:13:37<br>tags: [面试, JS]</p>
 <hr>
 <h4 id="1-js-垃圾回收机制"><a href="#1-js-垃圾回收机制" class="headerlink" title="1.  js 垃圾回收机制"></a>1.  js 垃圾回收机制</h4><p>答:js 的内存泄漏可以通过三个:闭包、全局变量、对象属性循环使用、DOM 节点删除时未解绑事件、计时器引用未及时删除</p>
@@ -1175,7 +1174,7 @@ window<span class="token punctuation">.</span><span class="token function">addEv
 <h3 id="promise和async-x2F-await-的区别"><a href="#promise和async-x2F-await-的区别" class="headerlink" title="promise和async/await 的区别"></a>promise和async/await 的区别</h3><p>唯一的区别在于 <code>promise</code> 和 <code>async/await</code> 的执行上下文。</p>
 <p>当创建 Promise 并启动异步操作时，创建 Promise 后的代码会继续同步执行。当 Promise 被解析或拒绝时，附加的回调函数会被添加到微任务队列中。微任务队列会在当前任务完成后，但在下一个任务从任务队列中处理出来之前进行处理。这意味着在创建 Promise 之后的任何代码都将在执行附加到 Promise 的回调函数之前执行。</p>
 <p>另一方面，在使用 async/await 时， await 关键字会使 JavaScript 引擎暂停执行 async 函数，直到 Promise 解析或被拒绝。当 async 函数等待 Promise 解析时，它不会阻塞调用栈，因此可以执行任何其他同步代码。一旦 Promise 解析完毕， async 函数将继续执行，并返回 Promise 的结果。如果被拒绝，则会抛出一个错误值。</p>
-<h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><h4 id="loader-和plugin的区别"><a href="#loader-和plugin的区别" class="headerlink" title="loader 和plugin的区别"></a>loader 和plugin的区别</h4><p>loader即为文件加载器，操作的是文件，将文件A通过loader转换成文件B，是一个单纯的文件转化过程。<br>plugin即为插件，是一个扩展器，丰富webpack本身，增强功能 ，针对的是在loader结束之后，webpack打包的整个过程，他并不直接操作文件，而是基于事件机制工作，监听webpack打包过程中的某些节点，执行广泛的任务。</p>
+<h3 id="三、webpack"><a href="#三、webpack" class="headerlink" title="三、webpack"></a>三、webpack</h3><h4 id="loader-和plugin的区别"><a href="#loader-和plugin的区别" class="headerlink" title="loader 和plugin的区别"></a>loader 和plugin的区别</h4><p>loader即为文件加载器，操作的是文件，将文件A通过loader转换成文件B，是一个单纯的文件转化过程。<br>plugin即为插件，是一个扩展器，丰富webpack本身，增强功能 ，针对的是在loader结束之后，webpack打包的整个过程，他并不直接操作文件，而是基于事件机制工作，监听webpack打包过程中的某些节点，执行广泛的任务。</p>
 <ul>
 <li>Loader 特性:</li>
 </ul>
@@ -1313,7 +1312,7 @@ window<span class="token punctuation">.</span><span class="token function">addEv
 <p>Emitter.on的回调函数 on注册了事件和回调函数， 并且在emit触发事件后会执行回调函数，以达到捕获错误的解决方式。</p>
 <p>process.on(“error”, function(err){})<br>错误异常有两种场景的出现：</p>
 <p>一种是代码运行中throw new error没有被捕获，另一种是Promise的失败回调函数，没有对应的reject回调函数处理，针对这两种情况Nodejs都有默认的统一处理方式，就是给整个进程process对象监听相应的错误事件。<br>process.on(‘uncaughtException’,function(err){}) //监听未捕获的异常<br>process.on(‘unhandledRejection’,function(err,promise){}) //监听Promise没有被捕获的失败函数</p>
-<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h4><p>应用层、表示层、会话层、传输层、网络层、数据链路层、物理层</p>
+<h3 id="四、网络"><a href="#四、网络" class="headerlink" title="四、网络"></a>四、网络</h3><h4 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h4><p>应用层、表示层、会话层、传输层、网络层、数据链路层、物理层</p>
 <h4 id="http的请求报文和返回报文"><a href="#http的请求报文和返回报文" class="headerlink" title="http的请求报文和返回报文"></a>http的请求报文和返回报文</h4><ul>
 <li>请求报文：</li>
 </ul>
@@ -1384,7 +1383,7 @@ window<span class="token punctuation">.</span><span class="token function">addEv
 <li>提供上报机制，能帮助我们及时发现 XSS 攻击。</li>
 <li>禁止执行内联脚本和未授权的脚本；</li>
 </ul>
-<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><h4 id="react生命周期"><a href="#react生命周期" class="headerlink" title="react生命周期"></a>react生命周期</h4><ul>
+<h3 id="五、React"><a href="#五、React" class="headerlink" title="五、React"></a>五、React</h3><h4 id="react生命周期"><a href="#react生命周期" class="headerlink" title="react生命周期"></a>react生命周期</h4><ul>
 <li>constructor（并不属于生命周期 - 初始化 state，初始化参数）</li>
 <li>static getDerivedStateFormPorps - 组件 props 变化时更新 state</li>
 <li>componentDidMount - 网络请求，添加监听事件等</li>
