@@ -4,9 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面试-JS, 前端 vue js ts react node">
-    <meta name="description" content="1.  js 垃圾回收机制答:js 的内存泄漏可以通过三个:闭包、全局变量、对象属性循环使用、DOM 节点删除时未解绑事件、计时器引用未及时删除
-垃圾回收机制:手动回收和自动回收、自动回收分为对调用栈的数据回收、对调用堆的数据回收、调用栈的">
+    <meta name="keywords" content="面试-全, 前端 vue js ts react node">
+    <meta name="description" content="css1.定位、布局不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
+
+ #main{
+  background-color:aqua;
+  width:100%;
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面试-JS | s1p21的blog</title>
+    <title>面试-全 | s1p21的blog</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//favicon.png">
     
 
@@ -294,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面试-JS</h1>
+                    <h1 class="description center-align post-title">面试-全</h1>
                 </div>
             </div>
         </div>
@@ -327,10 +331,6 @@
                                 <span class="chip bg-color">面试</span>
                             </a>
                         
-                            <a href="/tags/JS/">
-                                <span class="chip bg-color">JS</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -343,7 +343,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-29
+                    2025-09-19
                 </div>
                 
 
@@ -364,7 +364,93 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-js-垃圾回收机制"><a href="#1-js-垃圾回收机制" class="headerlink" title="1.  js 垃圾回收机制"></a>1.  js 垃圾回收机制</h4><p>答:js 的内存泄漏可以通过三个:闭包、全局变量、对象属性循环使用、DOM 节点删除时未解绑事件、计时器引用未及时删除</p>
+                <h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><h4 id="1-定位、布局"><a href="#1-定位、布局" class="headerlink" title="1.定位、布局"></a>1.定位、布局</h4><p>不同定位的区别，两栏布局、三栏布局，flex布局必会<br> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
+<pre class=" language-css"><code class="language-css">
+ <span class="token selector"><span class="token id">#main</span></span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span>aqua<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token id">#left</span></span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span>yellow<span class="token punctuation">;</span>
+  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span>-<span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token id">#right</span></span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">300</span>px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span>orange<span class="token punctuation">;</span>
+  <span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span>-<span class="token number">300</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token id">#content</span></span><span class="token punctuation">{</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span><span class="token number">200</span>px<span class="token punctuation">;</span>
+  <span class="token property">margin-right</span><span class="token punctuation">:</span><span class="token number">300</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+ 
+ &lt;!--中间栏写在最前面-->
+&lt;div id = <span class="token string">"main"</span>>
+  &lt;div id=<span class="token string">"content"</span>>&lt;/div>
+&lt;/div>
+&lt;div id = <span class="token string">"left"</span>>
+&lt;/div>
+
+&lt;div id = <span class="token string">"right"</span>>
+&lt;/div>
+</code></pre>
+<p>CSS三列布局</p>
+<ul>
+<li>float布局：左边左浮动，右边右浮动，中间margin：0 100px;</li>
+<li>Position布局: 左边left：0; 右边right：0; 中间left: 100px; right: 100px;</li>
+<li>table布局: 父元素 display: table; 左右 width: 100px; 三个元素display: table-cell;</li>
+<li>弹性(flex)布局:父元素 display: flex; 左右 width: 100px;</li>
+<li>网格（gird）布局：</li>
+</ul>
+<h4 id="2-对于一些常见css的书写-比如文本溢出显示省略号"><a href="#2-对于一些常见css的书写-比如文本溢出显示省略号" class="headerlink" title="2. 对于一些常见css的书写:比如文本溢出显示省略号"></a>2. 对于一些常见css的书写:比如文本溢出显示省略号</h4><pre class=" language-css"><code class="language-css">
+<span class="token property">text-overflow</span><span class="token punctuation">:</span>ellipsis
+
+#多行
+<span class="token property">display</span><span class="token punctuation">:</span>-webkit-box
+<span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="3-link和-import的区别"><a href="#3-link和-import的区别" class="headerlink" title="3. link和@import的区别"></a>3. link和@import的区别</h4><ul>
+<li>link的功能比较多，可以定义RSS、Rel等作用，而@import只能用于加载css</li>
+<li>解析到link时，同步加载引到的css，而@import引到的css等到页面加载完成后才被加载</li>
+<li>@import 需要ES5 以上</li>
+<li>link可以js动态导入，@import不行</li>
+</ul>
+<h4 id="4-flex"><a href="#4-flex" class="headerlink" title="4. flex"></a>4. flex</h4><ul>
+<li>flex-direction</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content (多轴线的对齐方式)</li>
+<li>flex-wrap</li>
+</ul>
+<p>子 </p>
+<ul>
+<li>flex： 0 1 auto</li>
+<li>表示flex-grow 为0 flex-shrink 为1 flex basis为auto</li>
+<li>align-self</li>
+</ul>
+<h4 id="5-垂直居中和水平居中"><a href="#5-垂直居中和水平居中" class="headerlink" title="5.垂直居中和水平居中"></a>5.垂直居中和水平居中</h4><ul>
+<li>line-height</li>
+<li>absolute+ margin(负值)</li>
+<li>absolute + margin auto</li>
+<li>absolute + translate</li>
+<li>Flex + align-items</li>
+<li>Flex + margin auto</li>
+<li>Flex + align-self</li>
+<li>grid +align-items</li>
+<li>calc</li>
+</ul>
+<h4 id="6-BFC"><a href="#6-BFC" class="headerlink" title="6. BFC"></a>6. BFC</h4><p>BFC（Block formatting context），即块级格式化上下文，它作为HTML页面上的一个独立渲染区域，只有区域内元素参与渲染，且不会影响其外部元素。简单来说，可以将 BFC 看做是一个“围城”，外面的元素进不来，里面的元素出不去<br>形成BFC的条件:</p>
+<p>1、浮动元素，float 除 none 以外的值；<br>2、定位元素，position（absolute，fixed）；<br>3、display 为以下其中之一的值 inline-block，table-cell，table-caption；<br>4、overflow 除了 visible 以外的值（hidden，auto，scroll）；</p>
+<p>BFC 一般用来解决以下几个问题<br>边距重叠问题<br>消除浮动问题<br>自适应布局问题</p>
+<h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><hr>
+<p>title: 面试-JS<br>date: 2022-11-29 17:13:37<br>tags: [面试, JS]</p>
+<hr>
+<h4 id="1-js-垃圾回收机制"><a href="#1-js-垃圾回收机制" class="headerlink" title="1.  js 垃圾回收机制"></a>1.  js 垃圾回收机制</h4><p>答:js 的内存泄漏可以通过三个:闭包、全局变量、对象属性循环使用、DOM 节点删除时未解绑事件、计时器引用未及时删除</p>
 <p>垃圾回收机制:手动回收和自动回收、自动回收分为对调用栈的数据回收、对调用堆的数据回收、<br>调用栈的数据回收基于 ESP（记录当前执行状态的指针）来销毁保存在栈的执行上下文；<br>调用堆的数据回收:v8 把堆分为<code>新生代</code>和<code>老生代</code>,新生代存放的是生存时间短的对象，老生代存放生存时间长的对象<br>执行流程:</p>
 <ol>
 <li>标记活动对象和非活动对象</li>
@@ -1089,6 +1175,578 @@ window<span class="token punctuation">.</span><span class="token function">addEv
 <h3 id="promise和async-x2F-await-的区别"><a href="#promise和async-x2F-await-的区别" class="headerlink" title="promise和async/await 的区别"></a>promise和async/await 的区别</h3><p>唯一的区别在于 <code>promise</code> 和 <code>async/await</code> 的执行上下文。</p>
 <p>当创建 Promise 并启动异步操作时，创建 Promise 后的代码会继续同步执行。当 Promise 被解析或拒绝时，附加的回调函数会被添加到微任务队列中。微任务队列会在当前任务完成后，但在下一个任务从任务队列中处理出来之前进行处理。这意味着在创建 Promise 之后的任何代码都将在执行附加到 Promise 的回调函数之前执行。</p>
 <p>另一方面，在使用 async/await 时， await 关键字会使 JavaScript 引擎暂停执行 async 函数，直到 Promise 解析或被拒绝。当 async 函数等待 Promise 解析时，它不会阻塞调用栈，因此可以执行任何其他同步代码。一旦 Promise 解析完毕， async 函数将继续执行，并返回 Promise 的结果。如果被拒绝，则会抛出一个错误值。</p>
+<h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><h4 id="loader-和plugin的区别"><a href="#loader-和plugin的区别" class="headerlink" title="loader 和plugin的区别"></a>loader 和plugin的区别</h4><p>loader即为文件加载器，操作的是文件，将文件A通过loader转换成文件B，是一个单纯的文件转化过程。<br>plugin即为插件，是一个扩展器，丰富webpack本身，增强功能 ，针对的是在loader结束之后，webpack打包的整个过程，他并不直接操作文件，而是基于事件机制工作，监听webpack打包过程中的某些节点，执行广泛的任务。</p>
+<ul>
+<li>Loader 特性:</li>
+</ul>
+<ul>
+<li>链式传递，按照配置时相反的顺序链式执行;</li>
+<li>基于 Node 环境，拥有 较高权限，比如文件的增删查改; 可同步也可异步;</li>
+</ul>
+<ul>
+<li>编写原则:</li>
+</ul>
+<ul>
+<li>单一原则: 每个 Loader 只做一件事;</li>
+<li>链式调用: Webpack 会按顺序链式调用每个 Loader;</li>
+<li>统一原则: 遵循 Webpack 制定的设计规则和结构，输入与输出均为字符串，各个 Loader 完全独立，即插即用;</li>
+</ul>
+<ul>
+<li>plugin<br>在编译的整个生命周期中，Webpack 会触发许多事件钩子， Plugin 可以监听这些事件，根据需求在相应的时间点对打包内容进行定向的修改。</li>
+</ul>
+<p>Plugin的组成部分<br>1）Plugin的本质是一个 node 模块，这个模块导出一个JavaScript 类<br>2）它的原型上需要定义一个apply 的方法<br>3）通过compiler获取webpack内部的钩子，获取webpack打包过程中的各个阶段<br>钩子分为同步和异步的钩子，异步钩子必须执行对应的回调<br>4）通过compilation操作webpack内部实例特定数据<br>5）功能完成后，执行webpack提供的cb回调</p>
+<ul>
+<li>事件流机制<br>Webpack 就像工厂中的一条产品流水线。原材料经过 Loader 与 Plugin 的一道道处理，最后输出结果。</li>
+</ul>
+<ul>
+<li>通过链式调用，按顺序串起一个个 Loader;</li>
+<li>通过事件流机制，让 Plugin 可以插入到整个生产过程中的每个步骤中;</li>
+</ul>
+<p>Webpack 事件流编程范式的核心是基础类<code> Tapable</code> ，是一种 观察者模式 的实现事件的订阅与广播:<br>Webpack 中两个最重要的类 <code>Compiler</code> 与 <code>Compilation</code> 便是继承于 Tapable，也拥有这样的事件流机制。</p>
+<ul>
+<li>Compiler: 可以简单的理解为 Webpack 实例，它包含了当前 Webpack 中的所有配置信息，如 options， loaders, plugins 等信息，全局唯一，只在启动时完成初始化创建，随着生命周期逐一传递; </li>
+<li>Compilation: 可以称为 编译实例。当监听到文件发生改变时，Webpack 会创建一个新的 Compilation 对象，开始一次新的编译。它包含了当前的输入资源，输出资源，变化的文件等，同时通过它提供的 api，可 以监听每次编译过程中触发的事件钩子;</li>
+</ul>
+<p>区别:</p>
+<ul>
+<li>Compiler 全局唯一，且从启动生存到结束;</li>
+<li>Compilation 对应每次编译，每轮编译循环均会重新创建;</li>
+</ul>
+<h5 id="常用-Plugin"><a href="#常用-Plugin" class="headerlink" title="常用 Plugin:"></a>常用 Plugin:</h5><ul>
+<li>UglifyJsPlugin: 压缩、混淆代码;</li>
+<li>Optimization.splitChunks: 代码分割;</li>
+<li>ProvidePlugin: 自动加载模块;</li>
+<li>html-webpack-plugin: 加载 html 文件，并引入 css / js 文件; </li>
+<li>extract-text-webpack-plugin / mini-css-extract-plugin: 抽离样式，生成 css 文件; </li>
+<li>DefinePlugin: 定义全局变量;</li>
+<li>optimize-css-assets-webpack-plugin: CSS 代码去重; </li>
+<li>webpack-bundle-analyzer: 代码分析;</li>
+<li>compression-webpack-plugin: 使用 gzip 压缩 js 和 css; </li>
+<li>happypack: 使用多进程，加速代码构建; </li>
+<li>EnvironmentPlugin: 定义环境变量;</li>
+</ul>
+<h4 id="优化技巧"><a href="#优化技巧" class="headerlink" title="优化技巧"></a>优化技巧</h4><p>缓存、加快打包速度、缩小打包体积</p>
+<ol>
+<li>缓存，比如bable-loader 添加cacheDirectory为true来开启缓存</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
+    test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+    loader<span class="token punctuation">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span>
+    options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      cacheDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre>
+<p>cacheLoader</p>
+<ol start="2">
+<li>加快打包速度<br>多核打包，比如使用happyPack/Thread-loader/Parallel-Webpack<br>高效编译，对于JS的编译选用不同的编译器，比如ESBuild 基于Go语言开发的JavaScript Bundler 和SWC 基于Rust的JavaScript Compiler(其生态中也包含打包工具spack), 目前为Next.JS/Parcel/Deno等前端圈知名项目使用</li>
+</ol>
+<p>3、缩小打包体积</p>
+<ul>
+<li>使用Tree-shaking、减少打包代码</li>
+<li>对于大的模块引入thread-loader</li>
+<li>对于不常用的变更抽离出去 ，一种是使用webpack-dll-plugin,在首次构建时候将这些静态依赖打包，另外一种是使用Externals，将这些不常用的静态资源抽离，并用cdn方式引用他们</li>
+<li>compression-webpack-plugin 压缩js和css代码</li>
+</ul>
+<h4 id="什么是Tree-Shark"><a href="#什么是Tree-Shark" class="headerlink" title="什么是Tree-Shark"></a>什么是Tree-Shark</h4><p>摇树优化 (Tree-shaking)，这是一种形象比喻。我们把打包后的代码比喻成一棵树，这里其实表示的就 是，通过工具 “摇” 我们打包后的 js 代码，将没有使用到的无用代码 “摇” 下来 (删除)。即 消除那些被 引用了但未被使用 的模块代码。<br>原理: 由于是在编译时优化，因此最基本的前提就是语法的静态分析，ES6的模块机制提供了这种可能性。不需要运行时，便可进行代码字面上的静态分析，确定相应的依赖关系。<br>问题: 具有副作用的函数无法被 tree-shaking。 在引用一些第三方库，需要去观察其引入的代码 量是不是符合预期; 尽量写纯函数，减少函数的副作用; 可使用 webpack-deep-scope-plugin， 可以进行作用域分析，减少此类情况的发生，但仍需要注意;</p>
+<h4 id="performance-对象api"><a href="#performance-对象api" class="headerlink" title="performance 对象api"></a>performance 对象api</h4><p>属性</p>
+<ul>
+<li>memory</li>
+<li>navigation </li>
+<li>timing<br><img src="https://img-blog.csdnimg.cn/20200717141446763.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ0ODE0MDU=,size_16,color_FFFFFF,t_70"></li>
+</ul>
+<p>方法</p>
+<ul>
+<li>getEntries() 这个函数返回的将是一个数组，包含了页面中所有的 HTTP 请求</li>
+<li>now()  输出的是相对于 performance.timing.navigationStart(页面初始化) 的时间, Date.now() 输出的是 UNIX 时间，即距离 1970 的时间 </li>
+<li>mark()  performance.mark() 标记各种时间戳（就像在地图上打点），保存为各种测量值（测量地图上的点之间的距离），便可以批量地分析这些数据了。</li>
+</ul>
+<p>后来 window.performance.timing 被废弃，通过 PerformanceObserver 旧的 api，返回的是一个 UNIX 类型的绝对时间，和用户的系统时间相关，分析的时候需要再次计算。而新的 api，返回的是一个相对时间，可以直接用来分析</p>
+<h3 id="热更新"><a href="#热更新" class="headerlink" title="热更新"></a>热更新</h3><p>开发过程中，代码发生变动后，webpack会重新编译，编译后浏览器替换修改的模块，局部更新，无需刷新整个页面</p>
+<p>主要是通过websocket实现，建立本地服务和浏览器的双向通信。当代码变化，重新编译后，通知浏览器请求更新的模块，替换原有的模块<br>1） 通过webpack-dev-server开启server服务，本地server启动之后，再去启动websocket服务，建立本地服务和浏览器的双向通信<br>2） webpack每次编译后，会生成一个Hash值，Hash代表每一次编译的标识。本次输出的Hash值会编译新生成的文件标识，被作为下次热更新的标识<br>3）webpack监听文件变化（主要是通过文件的生成时间判断是否有变化），当文件变化后，重新编译<br>4）编译结束后，通知浏览器请求变化的资源，同时将新生成的hash值传给浏览器，用于下次热更新使用<br>5）浏览器拿到更新后的模块后，用新模块替换掉旧的模块，从而实现了局部刷新</p>
+<h3 id="模块联邦"><a href="#模块联邦" class="headerlink" title="模块联邦"></a>模块联邦</h3><p>webpack5 模块联邦(Module Federation) 使 JavaScript应用，得以从另一个 JavaScript应用中动态的加载代码，实现共享依赖，用于前端的微服务化<br>比如项目A和项目B，公用项目C组件，以往这种情况，可以将C组件发布到npm上，然后A和B再具体引入。当C组件发生变化后，需要重新发布到npm上，A和B也需要重新下载安装<br>使用模块联邦后，可以在远程模块的Webpack配置中，将C组件模块暴露出去，项目A和项目B就可以远程进行依赖引用。当C组件发生变化后，A和B无需重新引用<br>模块联邦利用webpack5内置的ModuleFederationPlugin插件，实现了项目中间相互引用的按需热插拔</p>
+<h3 id="一个简单的AST示例"><a href="#一个简单的AST示例" class="headerlink" title="一个简单的AST示例"></a>一个简单的AST示例</h3><p>let a = 1，转化成AST的结果</p>
+<pre class=" language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"Program"</span><span class="token punctuation">,</span>
+  <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+  <span class="token string">"body"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"VariableDeclaration"</span><span class="token punctuation">,</span>
+      <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+      <span class="token string">"declarations"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"VariableDeclarator"</span><span class="token punctuation">,</span>
+          <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+          <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+          <span class="token string">"id"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"Identifier"</span><span class="token punctuation">,</span>
+            <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+            <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+            <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"a"</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">"init"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"Literal"</span><span class="token punctuation">,</span>
+            <span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+            <span class="token string">"end"</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+            <span class="token string">"value"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token string">"raw"</span><span class="token punctuation">:</span> <span class="token string">"1"</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string">"kind"</span><span class="token punctuation">:</span> <span class="token string">"let"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"sourceType"</span><span class="token punctuation">:</span> <span class="token string">"module"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="koa和express的区别"><a href="#koa和express的区别" class="headerlink" title="koa和express的区别"></a>koa和express的区别</h3><p>express框架是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，主要基于 Connect 中间件，并且自身封装了路由、视图处理等功能。</p>
+<p>koa是 Express 原班人马基于 ES6 新特性重新开发的框架，主要基于 co 中间件，框架自身不包含任何中间件，很多功能需要借助第三方中间件解决，但是由于其基于 ES6 generator 特性的异步流程控制，解决了 “callback hell” 和麻烦的错误处理问题。</p>
+<p>相同点<br>两个框架都对http进行了封装。相关的api都差不多，同一批人所写。</p>
+<p>不同点<br>express内置了许多中间件可供使用，而koa没有。</p>
+<p>express包含路由，视图渲染等特性，而koa只有http模块。</p>
+<p>express的中间件模型为线型，而koa的中间件模型为U型，也可称为洋葱模型构造中间件。</p>
+<p>express通过回调实现异步函数，在多个回调、多个中间件中写起来容易逻辑混乱。</p>
+<h3 id="node的错误监控"><a href="#node的错误监控" class="headerlink" title="node的错误监控"></a>node的错误监控</h3><p>try catch 通常用于捕获throw抛出的错误</p>
+<p>callback(err, result)回调函数处理</p>
+<p>Emitter.on的回调函数 on注册了事件和回调函数， 并且在emit触发事件后会执行回调函数，以达到捕获错误的解决方式。</p>
+<p>process.on(“error”, function(err){})<br>错误异常有两种场景的出现：</p>
+<p>一种是代码运行中throw new error没有被捕获，另一种是Promise的失败回调函数，没有对应的reject回调函数处理，针对这两种情况Nodejs都有默认的统一处理方式，就是给整个进程process对象监听相应的错误事件。<br>process.on(‘uncaughtException’,function(err){}) //监听未捕获的异常<br>process.on(‘unhandledRejection’,function(err,promise){}) //监听Promise没有被捕获的失败函数</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h4><p>应用层、表示层、会话层、传输层、网络层、数据链路层、物理层</p>
+<h4 id="http的请求报文和返回报文"><a href="#http的请求报文和返回报文" class="headerlink" title="http的请求报文和返回报文"></a>http的请求报文和返回报文</h4><ul>
+<li>请求报文：</li>
+</ul>
+<ul>
+<li>accept-charset</li>
+<li>accept-encoding</li>
+<li>accept-language</li>
+<li>Host</li>
+<li>User-agent</li>
+<li>connection</li>
+<li>cookie</li>
+<li>If-Modified-Since</li>
+</ul>
+<ul>
+<li>返回报文</li>
+</ul>
+<ul>
+<li>server</li>
+<li>content-type</li>
+<li>content-encoding</li>
+<li>content-language</li>
+<li>keep-alive</li>
+<li>ETag</li>
+<li>cache-control</li>
+<li>Expires</li>
+<li>last-Modified</li>
+<li>access-control-allow-origin：</li>
+</ul>
+<h4 id="tcp和udp-的区别"><a href="#tcp和udp-的区别" class="headerlink" title="tcp和udp 的区别"></a>tcp和udp 的区别</h4><p>tcp：面向连接、传输可靠，可用于传输大量数据,速度慢，建立连接需要开销较多<br>udp: 面向非连接、传输不可靠、用于传输少量数据(数据包模式)、速度快 ,可能丢包</p>
+<h4 id="http和https的区别"><a href="#http和https的区别" class="headerlink" title="http和https的区别"></a>http和https的区别</h4><p>多了一层SSL加密，<br>客户端先向服务器端索要公钥，然后用公钥加密信息，服务器收到密文后，用自己的私钥解密。服务器公钥放在数字证书中。</p>
+<h4 id="http2-0-和http1-的区别"><a href="#http2-0-和http1-的区别" class="headerlink" title="http2.0 和http1 的区别"></a>http2.0 和http1 的区别</h4><ul>
+<li>多路复用：相同域名多个请求，共享同一个TCP连接，降低了延迟</li>
+<li>请求优先级：给每个request设置优先级</li>
+<li>服务端推送：可以主动向客户端发送消息。</li>
+<li>头部压缩：减少包的大小跟数量</li>
+</ul>
+<h4 id="tcp-三次握手"><a href="#tcp-三次握手" class="headerlink" title="tcp 三次握手"></a>tcp 三次握手</h4><p>客户端 发送SYN 包<br>服务端接受并发生SYN+ACK包<br>客户端接受ACK包并发送至服务端，建立连接</p>
+<h4 id="tcp-四次挥手"><a href="#tcp-四次挥手" class="headerlink" title="tcp 四次挥手"></a>tcp 四次挥手</h4><p>客户端发出FIN包，进入FIN-WAIT<br>服务端发出确认报文 ACK 进入 CLOSE-WAIT<br>服务端发送连接释放报文，进入LAST-ACK<br>客户端发出ACK，等待2*MSL（最长报文段寿命）进入closed状态</p>
+<h4 id="http-code"><a href="#http-code" class="headerlink" title="http code"></a>http code</h4><p>1xx：信息，请求收到，继续处理<br>2xx：成功，行为被成功地接受、理解和采纳<br>3xx：重定向，为了完成请求，必须进一步执行的动作<br>4xx：客户端错误，请求包含语法错误或者请求无法实现<br>5xx：服务器错误，服务器不能实现一种明显无效的请求 </p>
+<p>200 OK：客户端请求成功<br>201 用户新建或修改数据成功<br>202 一个请求已经进入后台<br>204 No Content：无内容。服务器成功处理，但未返回内容。一般用在只是客户端向服务器发送信息，而服务器不用向客户端返回什么信息的情况。不会刷新页面。<br>206 Partial Content：服务器已经完成了部分GET请求（客户端进行了范围请求）。响应报文中包含Content-Range指定范围的实体内容</p>
+<p>301 Moved Permanently：永久重定向，表示请求的资源已经永久的搬到了其他位置。</p>
+<p>302 Found：临时重定向，表示请求的资源临时搬到了其他位置</p>
+<p>303 See Other：临时重定向，应使用GET定向获取请求资源。303功能与302一样，区别只是303明确客户端应该使用GET访问</p>
+<p>307 Temporary Redirect：临时重定向，和302有着相同含义。POST不会变成GET</p>
+<p>304 Not Modified：表示客户端发送附带条件的请求（GET方法请求报文中的IF…）时，条件不满足。返回304时，不包含任何响应主体。虽然304被划分在3XX，但和重定向一毛钱关系都没有</p>
+<p>400 Bad Request：客户端请求有语法错误，服务器无法理解。<br>401 Unauthorized：请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用。<br>403 Forbidden：服务器收到请求，但是拒绝提供服务<br>404 Not Found：请求资源不存在。比如，输入了错误的url<br>415 Unsupported media type：不支持的媒体类型</p>
+<p>500 Internal Server Error：服务器发生不可预期的错误。<br>502 网关错误<br>503 Server Unavailable：服务器当前不能处理客户端的请求，一段时间后可能恢复正常<br>504 网关超时<br>505 HTTP版本未被支持</p>
+<h4 id="websocket的连接原理"><a href="#websocket的连接原理" class="headerlink" title="websocket的连接原理"></a>websocket的连接原理</h4><p>轮询<br>客户端通过一定的时间间隔以频繁请求的方式向服务器发送请求，来保持客户端和服务器端的数据同步。问题很明显，当客户端以固定频率向服务器端发送请求时，服务器端的数据可能并没有更新，带来很多无谓请求，浪费带宽，效率低下。</p>
+<p>从上文可以看出，传统 Web 模式在处理高并发及实时性需求的时候，会遇到难以逾越的瓶颈，我们需要一种高效节能的双向通信机制来保证数据的实时传输。在此背景下，基于 HTML5 规范的、有 Web TCP 之称的 WebSocket 应运而生。</p>
+<p>WebSocket 是 HTML5 一种新的协议。它实现了浏览器与服务器全双工通信，能更好的节省服务器资源和带宽并达到实时通讯，它建立在 TCP 之上，同 HTTP 一样通过 TCP 来传输数据，但是它和 HTTP 最大不同是：</p>
+<p>WebSocket 是一种双向通信协议，在建立连接后，WebSocket 服务器和 Browser/Client Agent 都能主动的向对方发送或接收数据，就像 Socket 一样；<br>WebSocket 需要类似 TCP 的客户端和服务器端通过握手连接，连接成功后才能相互通信。</p>
+<h4 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h4><p>跨域是指一个域下的文档或脚本试图去请求另一个域下的资源</p>
+<p>什么是同源策略？<br>同源策略/SOP（Same origin policy）是一种约定，由Netscape公司1995年引入浏览器，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSRF等攻击。所谓同源是指”协议+域名+端口”三者相同，即便两个不同的域名指向同一个ip地址，也非同源。<br>同源策略限制以下几种行为：</p>
+<ol>
+<li>Cookie、LocalStorage 和 IndexDB 无法读取</li>
+<li>DOM 和 Js对象无法获得</li>
+<li>AJAX 请求不能发送</li>
+</ol>
+<p>跨域解决方案<br>1、 通过jsonp跨域<br>2、 document.domain + iframe跨域<br>3、 location.hash + iframe<br>4、 window.name + iframe跨域<br>5、 postMessage跨域<br>6、 跨域资源共享（CORS）<br>7、 nginx代理跨域<br>8、 nodejs中间件代理跨域<br>9、 WebSocket协议跨域</p>
+<h4 id="预检请求"><a href="#预检请求" class="headerlink" title="预检请求"></a>预检请求</h4><p>预检请求是在进行跨域资源共享 CORS 时，由浏览器自动发起的一种 OPTIONS 请求。它的存在是为了保障安全，并允许服务器决定是否允许跨域请求。</p>
+<p>跨域请求是指在浏览器中向不同域名、不同端口或不同协议的资源发送请求。出于安全原因，浏览器默认禁止跨域请求，只允许同源策略。而当网页需要进行跨域请求时，浏览器会自动发送一个预检请求，以确定是否服务器允许实际的跨域请求。</p>
+<p>预检请求中包含了一些额外的头部信息，如 Origin 和 Access-Control-Request-Method 等，用于告知服务器实际请求的方法和来源。服务器收到预检请求后，可以根据这些头部信息，进行验证和授权判断。如果服务器认可该跨域请求，将返回一个包含 Access-Control-Allow-Origin 等头部信息的响应，浏览器才会继续发送实际的跨域请求。</p>
+<p>使用预检请求机制可以有效地防范跨域请求带来的安全风险，保护用户数据和隐私。</p>
+<h3 id="CSP"><a href="#CSP" class="headerlink" title="CSP"></a>CSP</h3><p>该安全策略的实现基于一个称作 Content-Security-Policy的 HTTP 首部。<br>可以移步MDN，有更加规范的解释。我在这里就是梳理一下吧。<br>CSP，即浏览器中的内容安全策略，它的核心思想大概就是服务器决定浏览器加载哪些资源，具体来说有几个功能</p>
+<ul>
+<li>限制加载其他域下的资源文件，这样即使黑客插入了一个 JavaScript 文件，这个 JavaScript 文件也是无法被加载的；</li>
+<li>禁止向第三方域提交数据，这样用户数据也不会外泄；</li>
+<li>提供上报机制，能帮助我们及时发现 XSS 攻击。</li>
+<li>禁止执行内联脚本和未授权的脚本；</li>
+</ul>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><h4 id="react生命周期"><a href="#react生命周期" class="headerlink" title="react生命周期"></a>react生命周期</h4><ul>
+<li>constructor（并不属于生命周期 - 初始化 state，初始化参数）</li>
+<li>static getDerivedStateFormPorps - 组件 props 变化时更新 state</li>
+<li>componentDidMount - 网络请求，添加监听事件等</li>
+<li>shouldComponentUpdate - 通过判断新传入的 props，优化性能，避免重复渲染</li>
+<li>static getSnapshopBeforeUpdate - 很少用，组件更新之前捕获一些信息（例如滚动位置）</li>
+<li>componentDidUpdate - 组件更新完成后的一些操作</li>
+<li>componentWillUnmount - 卸载监听事件，卸载计时器等</li>
+<li>componentDidUnmount()</li>
+</ul>
+<h4 id="react-Fiber"><a href="#react-Fiber" class="headerlink" title="react Fiber"></a>react Fiber</h4><p>React 的核心流程可以分为两个部分:</p>
+<p>reconciliation (调度算法，也可称为 render):</p>
+<p>更新 state 与 props；<br>调用生命周期钩子；<br>生成 virtual dom；</p>
+<p>这里应该称为 Fiber Tree 更为符合；</p>
+<p>通过新旧 vdom 进行 diff 算法，获取 vdom change；<br>确定是否需要重新渲染</p>
+<ul>
+<li>Render 阶段就是根据每个组件中的状态构建出一个新的 UI Tree，也叫WorkInProgress Tree，并为每一个结点对应的操作打上 EffectTag，即更新、删除、新增。全部构建完成后就进入下一阶段。</li>
+</ul>
+<p>commit:</p>
+<ul>
+<li>Commit 阶段就是将构建好的 WIP Tree 反应到浏览器中，即 React 为我们自动进行相应的 dom 操作，保持 UI 一致性。<br>如需要，则操作 dom 节点更新；</li>
+</ul>
+<p>要了解 Fiber，我们首先来看为什么需要它？</p>
+<p>问题: 随着应用变得越来越庞大，整个更新渲染的过程开始变得吃力，大量的组件渲染会导致主进程长时间被占用，导致一些动画或高频操作出现卡顿和掉帧的情况。而关键点，便是 同步阻塞。在之前的调度算法中，React 需要实例化每个类组件，生成一颗组件树，使用 同步递归 的方式进行遍历渲染，而这个过程最大的问题就是无法 暂停和恢复。</p>
+<p>解决方案: 解决同步阻塞的方法，通常有两种: 异步 与 任务分割。而 React Fiber 便是为了实现任务分割而诞生的。</p>
+<p>简述:</p>
+<p>在 React V16 将调度算法进行了重构， 将之前的 stack reconciler 重构成新版的 fiber reconciler，变成了具有链表和指针的 单链表树遍历算法。通过指针映射，每个单元都记录着遍历当下的上一步与下一步，从而使遍历变得可以被暂停和重启。<br>这里我理解为是一种 任务分割调度算法，主要是 将原先同步更新渲染的任务分割成一个个独立的 小任务单位，根据不同的优先级，将小任务分散到浏览器的空闲时间执行，充分利用主进程的事件循环机制。</p>
+<p>核心:</p>
+<p>Fiber 这里可以具象为一个 数据结构:</p>
+<pre class=" language-ts"><code class="language-ts"><span class="token keyword">class</span> <span class="token class-name">Fiber</span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span>instance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>instance <span class="token operator">=</span> instance
+        <span class="token comment" spellcheck="true">// 指向第一个 child 节点</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>child <span class="token operator">=</span> child
+        <span class="token comment" spellcheck="true">// 指向父节点</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token keyword">return</span> <span class="token operator">=</span> parent
+        <span class="token comment" spellcheck="true">// 指向第一个兄弟节点</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>sibling <span class="token operator">=</span> previous
+    <span class="token punctuation">}</span>	
+<span class="token punctuation">}</span>
+</code></pre>
+<p>链表树遍历算法: 通过 节点保存与映射，便能够随时地进行 停止和重启，这样便能达到实现任务分割的基本前提；</p>
+<p>1、首先通过不断遍历子节点，到树末尾；<br>2、开始通过 sibling 遍历兄弟节点；<br>3、return 返回父节点，继续执行2；<br>4、直到 root 节点后，跳出遍历；</p>
+<p>任务分割，React 中的渲染更新可以分成两个阶段:</p>
+<p>reconciliation 阶段: vdom 的数据对比，是个适合拆分的阶段，比如对比一部分树后，先暂停执行个动画调用，待完成后再回来继续比对。<br>Commit 阶段: 将 change list 更新到 dom 上，并不适合拆分，才能保持数据与 UI 的同步。否则可能由于阻塞 UI 更新，而导致数据更新和 UI 不一致的情况。</p>
+<p>分散执行: 任务分割后，就可以把小任务单元分散到浏览器的空闲期间去排队执行，而实现的关键是两个新API: <code>requestIdleCallback</code> 与 <code>requestAnimationFrame</code></p>
+<p>低优先级的任务交给<code>requestIdleCallback</code>处理，这是个浏览器提供的事件循环空闲期的回调函数，需要 pollyfill，而且拥有 deadline 参数，限制执行事件，以继续切分任务；<br>高优先级的任务交给<code>requestAnimationFrame</code>处理；</p>
+<pre class=" language-ts"><code class="language-ts"><span class="token comment" spellcheck="true">// 类似于这样的方式</span>
+<span class="token function">requestIdleCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span>deadline<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 当有空闲时间时，我们执行一个组件渲染；</span>
+    <span class="token comment" spellcheck="true">// 把任务塞到一个个碎片时间中去；</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>deadline<span class="token punctuation">.</span><span class="token function">timeRemaining</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">||</span> deadline<span class="token punctuation">.</span>didTimeout<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> nextComponent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        nextComponent <span class="token operator">=</span> <span class="token function">performWork</span><span class="token punctuation">(</span>nextComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>优先级策略: 文本框输入 &gt; 本次调度结束需完成的任务 &gt; 动画过渡 &gt; 交互反馈 &gt; 数据更新 &gt; 不会显示但以防将来会显示的任务</p>
+<p>Fiber 其实可以算是一种编程思想，在其它语言中也有许多应用(Ruby Fiber)。核心思想是 任务拆分和协同，主动把执行权交给主线程，使主线程有时间空挡处理其他高优先级任务。</p>
+<h4 id="react-优化"><a href="#react-优化" class="headerlink" title="react 优化"></a>react 优化</h4><p>pureComponent 浅比较<br>shouldComponentUpdate 深比较</p>
+<p>hooks优化<br>React.memo<br>react.<br>useMemo useMemo 是一种缓存机制提速，当它的依赖未发生改变时，就不会触发重新计算。<br>useCallback  针对传入子组件的为函数，进行优化使用，因为函数式组件每次发生渲染，都会从头执行，两次的callBack函数发生了改变，导致子组件渲染。useCallback 针对函数进行记忆，从而避免触发渲染。</p>
+<h4 id="setState-是异步还是同步的？"><a href="#setState-是异步还是同步的？" class="headerlink" title="setState 是异步还是同步的？"></a>setState 是异步还是同步的？</h4><p>在React管理的事件回调和生命周期中，是异步的，其他是同步的，因为来做批量更新，减少渲染。<br>但在函数式组件中不存在这个问题。因为函数组件中生成的函数是通过闭包引用了 state，而不是通过 this.state 的方式引用 state，所以函数组件的处理函数中 state 一定是旧值，不可能是新值。可以说函数组件已经将这个问题屏蔽掉了。</p>
+<h4 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h4><p>state<br>Action<br>reducer 处理state</p>
+<h4 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h4><p>纯函数<br>函数复合<br>数据不可变性<br>函数式编程其实是一种编程思想，它追求更细的粒度，将应用拆分成一组组极小的单元函数，组合调用操作数据流；<br>它提倡着 纯函数 / 函数复合 / 数据不可变， 谨慎对待函数内的 状态共享 / 依赖外部 / 副作用；</p>
+<h4 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h4><p>react 中的 HOC 高阶组件，就是一个函数，接受一个组件作为参数，返回一个新的组件<br>例如一个loading的高阶组件</p>
+<pre class=" language-ts"><code class="language-ts"><span class="token comment" spellcheck="true">// high order component</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">ILoaderState</span> <span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">,</span>
+  isLoading<span class="token punctuation">:</span> <span class="token keyword">boolean</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">ILoaderProps</span> <span class="token punctuation">{</span>
+  data<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> withLoader <span class="token operator">=</span> <span class="token operator">&lt;</span>P <span class="token keyword">extends</span> <span class="token class-name">ILoaderState</span><span class="token operator">></span><span class="token punctuation">(</span>WrappedComponent<span class="token punctuation">:</span> React<span class="token punctuation">.</span>ComponentType<span class="token operator">&lt;</span>P<span class="token operator">></span><span class="token punctuation">,</span> url<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">class</span> <span class="token class-name">LoaderComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token operator">&lt;</span>Partial<span class="token operator">&lt;</span>ILoaderProps<span class="token operator">></span><span class="token punctuation">,</span> ILoaderState<span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+        data<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        isLoading<span class="token punctuation">:</span> <span class="token keyword">false</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        isLoading<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>result <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          data<span class="token punctuation">:</span> result<span class="token punctuation">.</span>data<span class="token punctuation">,</span>
+          isLoading<span class="token punctuation">:</span> <span class="token keyword">false</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> isLoading <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span><span class="token operator">></span>
+          <span class="token punctuation">{</span> <span class="token punctuation">(</span>isLoading <span class="token operator">||</span> <span class="token operator">!</span>data<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token operator">&lt;</span>p<span class="token operator">></span>data is loading<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span> <span class="token punctuation">:</span>
+            <span class="token operator">&lt;</span>WrappedComponent <span class="token punctuation">{</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>props as P<span class="token punctuation">}</span> data<span class="token operator">=</span><span class="token punctuation">{</span>data<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> withLoader
+</code></pre>
+<p>使用实例：</p>
+<pre class=" language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">IShowResult</span><span class="token punctuation">{</span>
+    message<span class="token punctuation">:</span><span class="token keyword">string</span><span class="token punctuation">,</span>
+    status<span class="token punctuation">:</span><span class="token keyword">string</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//定义一个组件</span>
+<span class="token keyword">const</span> DogShow<span class="token punctuation">:</span>React<span class="token punctuation">.</span>FC<span class="token operator">&lt;</span><span class="token punctuation">{</span>data<span class="token punctuation">:</span>IShowResult<span class="token punctuation">}</span><span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>data<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>h2<span class="token operator">></span>show<span class="token punctuation">:</span><span class="token punctuation">{</span>data<span class="token punctuation">.</span>status<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+            <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token punctuation">{</span>data<span class="token punctuation">.</span>message<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> App<span class="token punctuation">:</span>React<span class="token punctuation">.</span>FC<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//高阶组件，将一个组件用参数形式传入，然后经过包裹后返回一个新的组件，达到公用包裹组件的功能</span>
+    <span class="token keyword">const</span> WrappedDogShow <span class="token operator">=</span> <span class="token function">withLoader</span><span class="token punctuation">(</span>DogShow<span class="token punctuation">,</span><span class="token string">'https://dog.ceo/api/breeds/image/random'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>WrappedDogShow<span class="token operator">/</span><span class="token operator">></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="React-hooks"><a href="#React-hooks" class="headerlink" title="React hooks"></a>React hooks</h4><p>其实，React hooks 的问题也有很多，比如：</p>
+<ul>
+<li>Hook 是一个链表的结构，在循环，条件或嵌套函数中调用 Hook，会引发一些问题。</li>
+<li>useEffect 的依赖容易造成心智负担，所有人阅读这段代码，都需要完整的阅读完这些依赖触发的地方</li>
+<li>由于闭包的原因，useEffect 等内部捕获的，都是过时的变量。</li>
+</ul>
+<p>对 React Hooks 而言，调用必须放在最前面，而且不能被包含在条件语句里，这是因为 React Hooks 采用下标方式寻找状态，一旦位置不对或者 Hooks 放在了条件中，就无法正确找到对应位置的值。<br>所有 Hooks 都在渲染闭包中执行，每次重渲染都有一定性能压力，而且频繁的渲染会带来许多闭包，虽然可以依赖 GC 机制回收，但会给 GC 带来不小的压力。<br>需要用useCallback、useMemo 来做性能优化，两者的区别在于一个存储函数的本身(useCallback) 一个存储函数返回的值（useMemo）</p>
+<p>useLayoutEffect<br>跟 useEffect 使用差不多，通过同步执行状态更新可解决一些特性场景下的页面闪烁问题<br>useLayoutEffect 会阻塞渲染，请谨慎使用</p>
+<ul>
+<li>DOM更新同步钩子。用法与useEffect类似，只是区别于执行时间点的不同。</li>
+<li>useEffect属于异步执行，并不会等待 DOM 真正渲染后执行，而useLayoutEffect则会真正渲染后才触发；</li>
+<li>可以获取更新后的 state；</li>
+</ul>
+<p>useReducer</p>
+<p>接收一个形如 (state, action) =&gt; newState 的 reducer，并返回当前的 state 以及与其配套的 dispatch 方法</p>
+<ul>
+<li>reducer 本质是一个纯函数，每次只返回一个值，那个值可以是数字，字符串，对象，数组或者对象，但是它总是一个值</li>
+<li>React 会确保 dispatch 函数的标识是稳定的，并且不会在组件重新渲染时改变</li>
+<li>useReducer 还能给那些会触发深更新的组件做性能优化，因为可以向子组件传递 dispatch 而不是回调函数</li>
+<li>reducer 更适合去处理比较复杂的 state，来维护组件的状态</li>
+</ul>
+<p>类似于 Redux 思想的实现，但其并不足以替代 Redux，可以理解成一个组件内部的 redux:</p>
+<ul>
+<li>并不是持久化存储，会随着组件被销毁而销毁；</li>
+<li>属于组件内部，各个组件是相互隔离的，单纯用它并无法共享数据；</li>
+<li>配合useContext的全局性，可以完成一个轻量级的 Redux；(easy-peasy)</li>
+</ul>
+<p>useContext</p>
+<ul>
+<li>接收一个 context 对象（React.createContext 的返回值）并返回该 context 的当前值</li>
+<li>useContext 的参数必须是 context 对象本身</li>
+<li>当前的 context 值由上层组件中距离当前组件最近的 &lt;MyContext.Provider&gt; 的 value prop 决定</li>
+<li>调用了 useContext 的组件总会在 context 值变化时重新渲染</li>
+</ul>
+<h4 id="React-diff"><a href="#React-diff" class="headerlink" title="React diff"></a>React diff</h4><p>要求：1、跨层级节点移动操作较少；2、相同类的两个组件会生成相似的树形结构；3、同一层的一组节点，通过唯一的key进行区分<br>树差异（Tree Diff）、组件差异（Component Diff）以及元素差异（Element Diff）<br>树差异 只比较同一层级，如果同一层级不同，直接先销毁再创建<br>组件差异 同一类型的组件，比较子树， 如果不是，直接替换<br>元素差异，直接通过唯一的key来辨别</p>
+<h4 id="umi-amp-dva"><a href="#umi-amp-dva" class="headerlink" title="umi &amp; dva"></a>umi &amp; dva</h4><p>umi 企业级的前端开发框架，Umi 以路由为基础的，同时支持配置式路由和约定式路由，保证路由的功能完备，并以此进行功能扩展。然后配以生命周期完善的插件体系，覆盖从源码到构建产物的每个生命周期，支持各种功能扩展和业务需求。</p>
+<p>特性：插件化、MFSU<br><img src="/images/umi.png"></p>
+<p>dva 是基于redux的前端数据流方案<br>特性：</p>
+<ul>
+<li>易学易用</li>
+</ul>
+<p>特点：<br>modal、namespace、state、effect、reducer、subscription</p>
+<ul>
+<li>effect:以 key/value 格式定义 effect。用于处理异步操作和业务逻辑，不直接修改 state</li>
+<li>reducer:以 key/value 格式定义 reducer。用于处理同步操作，唯一可以修改 state 的地方，由 action 触发</li>
+<li>subscription:以 key/value 格式定义 subscription。subscription 是订阅，用于订阅一个数据源，然后根据需要 dispatch 相应的 action。在 app.start() 时被执行，数据源可以是当前的时间、服务器的 websocket 连接、keyboard 输入、geolocation 变化、history 路由变化等等。</li>
+</ul>
+<h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><h4 id="vue-的双向绑定"><a href="#vue-的双向绑定" class="headerlink" title="vue 的双向绑定"></a>vue 的双向绑定</h4><p>vue2.x 中通过发布者-订阅者设计模式的方式实现，通过 get 和 set 方法，通过 Object.defineProperty() 实现数据劫持<br>有三个参数，对象，对象的属性，以及描述符对象<br>描述符对象： 数据属性：</p>
+<ul>
+<li>writable 可读写</li>
+<li>enumerable 可迭代，表示是否可用 for in 循环</li>
+<li>configurable 是否可删除</li>
+<li>value 值</li>
+</ul>
+<p>访问器属性</p>
+<ul>
+<li>get</li>
+<li>set</li>
+</ul>
+<p>同时需要遍历所有属性进行双向绑定</p>
+<p>缺点：对于新增的属性无法监听，需要通过 vm.$set 方法新增属性；</p>
+<p>vue3 中通过 proxy 的 api 来实现监听<br>proxy 有两个参数<br>target:要使用 Proxy 包装的目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）<br>handler:一个通常以函数作为属性的对象，各属性中的函数分别定义了在执行各种操作时代理 p 的行为。</p>
+<h4 id="vue-的生命周期"><a href="#vue-的生命周期" class="headerlink" title="vue 的生命周期"></a>vue 的生命周期</h4><p>vue2.x</p>
+<p>beforeCreate<br>created<br>beforeMount<br>mounted<br>beforeUpdate<br>updated<br>beforeDestory<br>destoryed</p>
+<p>加载渲染过程<br>父 beforeCreate -&gt; 父 created -&gt; 父 beforeMount-&gt; 子 beforeCreate -&gt; 子 created -&gt; 子 beforeMount -&gt; 子 mounted -&gt; 父 mounted</p>
+<p>子组件更新过程<br>父 beforeUpdate -&gt; 子 beforeUpdate -&gt; 子 updated -&gt; 父 updated</p>
+<p>父组件更新过程<br>父 beforeUpdate -&gt; 父 updated</p>
+<p>销毁过程<br>父 beforeDestroy -&gt; 子 beforeDestroy -&gt; 子 destroyed -&gt; 父 destroyed</p>
+<p>vue3<br>setup<br>onBeforeMount<br>onMounted<br>onBeforeUpdated<br>onUpdated<br>onBeforeUnmount<br>onUnmounted</p>
+<h4 id="vuex-和-pinia"><a href="#vuex-和-pinia" class="headerlink" title="vuex 和 pinia"></a>vuex 和 pinia</h4><p>vuex 分为 State、Getter、Mutation、Action、Module<br>dispatch 方法操作-&gt;action-&gt;commit 方法-&gt;mutation<br>State 是状态，mapState 通常用来解决一个组件需要获取多个状态时的辅助函数；<br>Getter state 对象读取方法，用来计算 state 然后生成新的数据，相当于对于部分 state 重新封装了一层<br>Mutation 对 state 进行改变的唯一方法，其中 Mutation 必须是同步的<br>Action 是通过触发 Mutation 从而改变 state，可以包含任意异步操作，其中通过 store.dispatch 进行触发<br>Module 可以说是对 store 进行分割，每一个 module 拥有自己的 state，mutation，action，getter 等。命名空间使得模块的封装和复用更加方便<br>插件使用使得 vuex 扩展性更好，表单处理的双向绑定需要绑定事件或者通过计算属性的 setter 进行双向绑定</p>
+<p>缺点：</p>
+<ol>
+<li>TS 支持不良好</li>
+<li>不能同时支持 Composition API 和 Option API（vuex5 之后支持）</li>
+</ol>
+<p>pinia</p>
+<ol>
+<li>去掉了容易混淆的 mutation 和 action 概念，只保留了 action，action 中的函数可以是同步的也可以是异步的，并且可以直接调用 action 中的方法，不再需要 commit、dispatch 等方法，语法更简洁；</li>
+<li>无需创建自定义复杂包装器来支持 TypeScript，所有内容都是类型化的，并且 API 的设计方式尽可能地利用了 TS 的类型推断；</li>
+<li>不再有 modules 的嵌套结构。 Pinia 通过设计提供平面结构，同时仍然支持 Store 之间的交叉组合方式；</li>
+<li>更加轻便 Pinia 大小约 1kb</li>
+</ol>
+<h4 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h4><p>在下次 DOM 更新循环结束之后执行延迟回调，在修改数据之后立即使用 nextTick 来获取更新后的 DOM。 nextTick 主要使用了宏任务和微任务。 根据执行环境分别尝试采用 Promise、MutationObserver、setImmediate，如果以上都不行则采用 setTimeout 定义了一个异步方法，多次调用 nextTick 会将方法存入队列中，通过这个异步方法清空当前队列。</p>
+<ol>
+<li>nextTick 是 Vue 提供的一个全局 API,是在下次 DOM 更新循环结束之后执行延迟回调，在修改数据之后使用$nextTick，则可以在回调中获取更新后的 DOM；</li>
+<li>Vue 在更新 DOM 时是异步执行的。只要侦听到数据变化，Vue 将开启 1 个队列，并缓冲在同一事件循环中发生的所有数据变更。如果同一个 watcher 被多次触发，只会被推入到队列中-次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作是非常重要的。nextTick 方法会在队列中加入一个回调函数，确保该函数在前面的 dom 操作完成后才调用；</li>
+<li>比如，我在干什么的时候就会使用 nextTick，传一个回调函数进去，在里面执行 dom 操作即可；</li>
+<li>我也有简单了解 nextTick 实现，它会在 callbacks 里面加入我们传入的函数，然后用 timerFunc 异步方式调用它们，首选的异步方式会是 Promise。这让我明白了为什么可以在 nextTick 中看到 dom 操作结果。</li>
+</ol>
+<h4 id="v-model-语法糖和-vue3-的-v-model-变化"><a href="#v-model-语法糖和-vue3-的-v-model-变化" class="headerlink" title="v-model 语法糖和 vue3 的 v-model 变化"></a>v-model 语法糖和 vue3 的 v-model 变化</h4><p>value+input 是 v-band 和 v-on 的简洁写法<br>在 vue2 中 v-model 只能绑定在组件的 value 属性上<br>在 2.x 版本中 可以在组件内部定义一个 model 项，其中 prop 用来设置 v-model 中默认的 value 的别名， event 用来设置 v-model 中默认的 input 事件的别名<br>一个组件上只能一个 v-model</p>
+<p>在 vue3 中 v-bind 的.sync 修饰符和组件的 model 选项被删除了<br>支持同一组件同时设置多个 v-model<br>也可以自定义修饰符<br>v-model 绑定的不再是 value，而是 modelValue，接收的方法也不再是 input，而是 update:modelValue</p>
+<h4 id="vue-的通信方式"><a href="#vue-的通信方式" class="headerlink" title="vue 的通信方式"></a>vue 的通信方式</h4><ul>
+<li>父子：props 和$emit</li>
+<li>爷孙：$attrs和$listeners</li>
+<li>eventbus</li>
+<li>provide 和 inject</li>
+<li>$parent 和$children</li>
+<li>vuex</li>
+<li>自定义 store</li>
+</ul>
+<h4 id="Object-defineProperty-处理-Array-的-push"><a href="#Object-defineProperty-处理-Array-的-push" class="headerlink" title="Object.defineProperty 处理 Array 的 push"></a>Object.defineProperty 处理 Array 的 push</h4><p>需要重新处理 push 方法</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> originProto <span class="token operator">=</span> Array<span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+<span class="token keyword">const</span> arrayProto <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>originProto<span class="token punctuation">)</span><span class="token punctuation">;</span>
+arrayProto<span class="token punctuation">[</span><span class="token string">"push"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  originProto<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"jjjkjkjk"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+data<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> arrayProto<span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token string">"push"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token keyword">set</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>newVal<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"kkkkjj"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="proxy-的写法"><a href="#proxy-的写法" class="headerlink" title="proxy 的写法"></a>proxy 的写法</h4><pre class=" language-js"><code class="language-js">data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token keyword">set</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> receiver<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"key"</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    target<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// Reflect.set(target.key,value,receiver)</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="浏览器回退、切换会触发-vue-的哪些生命周期"><a href="#浏览器回退、切换会触发-vue-的哪些生命周期" class="headerlink" title="浏览器回退、切换会触发 vue 的哪些生命周期"></a>浏览器回退、切换会触发 vue 的哪些生命周期</h4><p>页面刷新时, vue 执行的生命周期钩子<br>依次执行当前页面 vue 组件的 beforeCreate, created, beforeMount, mounted, beforUpdate, updated</p>
+<p>页面后退时, vue 执行的生命周期钩子<br>假设从 b 页面后退到 a 页面<br>依次执行 a 页面 vue 组件的 beforeCreate, created, beforeMount, 然后是 b 页面组件的 beforeDestroy, destroyed, 最后是执行 a 页面 vue 组件的 mounted, beforUpdate, updated</p>
+<p>页面前进时, vue 执行的生命周期钩子<br>假设从 a 页面到 b 页面<br>依次执行 b 页面 vue 组件的 beforeCreate, created, beforeMount, 然后是 a 页面组件的 beforeDestroy, destroyed, 最后是执行 b 页面 vue 组件的 mounted, beforUpdate, updated</p>
+<h4 id="vue-中的-diff"><a href="#vue-中的-diff" class="headerlink" title="vue 中的 diff"></a>vue 中的 diff</h4><p>在 vue1.0 中，通过 watch 来实现数据和视图的响应式更新，通过观察者模式<br>在 vue2.x 中，因为还是无法解决响应式数据过多而引起的卡顿的问题，vue2.x 引入了虚拟 DOM，对于 Vue 2 来说，组件之间的变化，可以通过响应式来通知更新。组件内部的数据变化，则通过虚拟 DOM 去更新页面。这样就把响应式的监听器，控制在了组件级别，而虚拟 DOM 的量级，也控制在了组件的大小。</p>
+<p>如果没有绑定 key，对于 DOM 的顺序发生变化，比如直接插入，会导致后面的数据不变的组件重新渲染</p>
+<h4 id="vue-的-keep-alive-的作用是什么？怎么实现的？如何刷新的"><a href="#vue-的-keep-alive-的作用是什么？怎么实现的？如何刷新的" class="headerlink" title="vue 的 keep-alive 的作用是什么？怎么实现的？如何刷新的?"></a>vue 的 keep-alive 的作用是什么？怎么实现的？如何刷新的?</h4><p>保持组件不被销毁，组件挂载的数据还存在，所以状态就可以保留。<br>在首次加载被包裹组建时，由 keep-alive.js 中的 render 函数可知，vnode.componentInstance 的值是 undfined，keepAlive 的值是 true，因为 keep-alive 组件作为父组件，它的 render 函数会先于被包裹组件执行；那么只执行到 i(vnode,false)，后面的逻辑不执行；<br>再次访问被包裹组件时，vnode.componentInstance 的值就是已经缓存的组件实例，那么会执行 insert(parentElm, vnode.elm, refElm)逻辑，这样就直接把上一次的 DOM 插入到父元素中。</p>
+<p>在 patch 的阶段，最后会执行 invokeInsertHook 函数，而这个函数就是去调用组件实例（VNode）自身的 insert 钩子：<br>在 insert 这个钩子里面，调用了 activateChildComponent 函数递归地去执行所有子组件的 activated 钩子函数：<br>相反地，deactivated 钩子函数也是一样的原理，在组件实例（VNode）的 destroy 钩子函数中调用 deactivateChildComponent 函数。</p>
+<h4 id="render-和-template-的区别"><a href="#render-和-template-的区别" class="headerlink" title="render 和 template 的区别"></a>render 和 template 的区别</h4><p>template—-html 的方式做渲染<br>render—-js 的方式做渲染<br>render（提供）是一种编译方式<br>render 里有一个函数 h，这个 h 的作用是将单文件组件进行虚拟 DOM 的创建，然后再通过 render 进行解析。<br>h 就是 createElement()方法：createElement(标签名称,属性配置,children)<br>template 也是一种编译方式，但是 template 最终还是要通过 render 的方式再次进行编译。</p>
+<p>render 渲染方式可以让我们将 js 发挥到极致，因为 render 的方式其实是通过 createElement()进行虚拟 DOM 的创建。逻辑性比较强，适合复杂的组件封装。<br>template 是类似于 html 一样的模板来进行组件的封装。<br>render 的性能比 template 的性能好很多<br>render 函数优先级大于 template</p>
+<h4 id="vue3-生命周期实现原理"><a href="#vue3-生命周期实现原理" class="headerlink" title="vue3 生命周期实现原理"></a>vue3 生命周期实现原理</h4><p>就是把各个生命周期的函数挂载或者叫注册到组件的实例上，然后等到组件运行到某个时刻，再去组件实例上把相应的生命周期的函数取出来执行。<br>各个生命周期的 Hooks 函数是通过 createHook 这个函数创建的。createHook 是一个闭包函数，通过闭包缓存当前是属于哪个生命周期的 Hooks,target 表示该生命周期 Hooks 函数被绑定到哪个组件实例上，默认是当前工作的组件实例。createHook 底层又调用了一个 injectHook 的函数，那么下面我们继续来看看这个 injectHook 函数。</p>
+<p>Vue3 组件实例化之后，通过 effect 包装一个更新的副作用函数来和响应式数据进行依赖收集。在这个副作用函数里面有两个分支，第一个是组件挂载之前执行的，也就是生命周期函数 beforeMount 和 mount 调用的地方，第二个分支是组件挂载之后更新的时候执行的，在这里就是生命周期函数 beforeUpdate 和 updated 调用的地方。具体就是在挂载之前，还没生成虚拟 DOM 之前就执行 beforeMount 函数，之后则去生成虚拟 DOM 经过 patch 之后，组件已经被挂载到页面上了，也就是页面上显示视图了，这个时候就去执行 mount 函数;在更新的时候，还没获取更新之后的虚拟 DOM 之前执行 beforeUpdate，然后去获取更新之后的虚拟 DOM，然后再去 patch，更新视图，之后就执行 updated。需要注意的是 beforeMount 和 beforeUpdate 是同步执行的，都是通过 invokeArrayFns 来调用的</p>
+<p>Vue 的 Hooks 设计是从 React 的 Hooks 那里借鉴过来的，React 的 Hooks 的本质就是把状态变量、副作用函数存到函数组件的 fiber 对象上，等到将来状态变量发生改变的时候，相关的函数组件 fiber 就重新进行更新。Vue3 这边的实现原理也类似，通过上面的生命周期的 Hooks 实现原理，我们可以知道 Vue3 的生命周期的 Hooks 是绑定到具体的组件实例上，而状态变量，则因为 Vue 的变量是响应式的，状态变量会通过 effect 和具体的组件更新函数进行依赖收集，然后进行绑定，将来状态变量发生改变的时候，相应的组件更新函数会重新进入调度器的任务队列进行调度执行。</p>
+<p>所以 Hooks 的本质就是让那些状态变量或生命周期函数和组件绑定起来，组件运行到相应时刻执行相应绑定的生命周期函数，那些绑定的变量发生改变的时候，相应的组件也重新进行更新。</p>
+<h4 id="组件设计原则"><a href="#组件设计原则" class="headerlink" title="组件设计原则"></a>组件设计原则</h4><p>单一职责： 一个组件负责完成一个职责/功能<br>保持简单：不要过度优化，从而牺牲了代码可读性和可维护性<br>不要重复：做好代码的复用性<br>控制反转：子组件的创建与管理交给外层容器组件来控制<br>关注点分离：如果一个问题能分解为独立且较小的问题，就是相对较易解决的。实现关注点分离的方式有两种：一种是标准化，另一种就是抽象与包装<br>松耦合：组件的核心思想是它们是可复用的,为此要求它们必须具有功能性和完整性。“耦合”是指实体彼此依赖的术语。松散耦合的实体应该能够独立运行，而不依赖于其他模块。就前端组件而言，耦合的主要部分是组件的功能依赖于其父级及其传递的 props 的多少，以及内部使用的子组件（当然还有引用的部分，如第三方模块或用户脚本）。在设计组件时，你应该考虑到更加通用的使用场景，而不仅仅只是为了满足最开始某个特定场景的需求。虽然一般来说组件最初都是出于特定目的进行设计，但没关系，如果在设计它们站在更高的角度去看待，那么很多组件将具有更好的适用性。</p>
+<h4 id="vue-router3-和-vue-router4-的区别"><a href="#vue-router3-和-vue-router4-的区别" class="headerlink" title="vue router3 和 vue router4 的区别"></a>vue router3 和 vue router4 的区别</h4><ol>
+<li>创建方式：在Vue Router 4中，使用createRouter来创建一个路由实例，而在Vue Router 3中，则是通过创建一个VueRouter实例来进行。</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//  4.x 写法</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue-router"</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// options</span>
+    <span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 3.x 写法</span>
+<span class="token keyword">import</span> VueRouter <span class="token keyword">from</span> <span class="token string">"vue-router"</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// options</span>
+    <span class="token operator">...</span><span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<ol start="2">
+<li>路由模式的定义方式：在Vue Router 4中，使用createWebHistory或createWebHashHistory来定义路由模式，而在Vue Router 3中，则是通过在路由实例中设置mode属性来定义。</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//  4.x 写法</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  createRouter<span class="token punctuation">,</span>
+  createWebHistory<span class="token punctuation">,</span>
+  createWebHashHistory<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue-router"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  history<span class="token punctuation">:</span> <span class="token function">createWebHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token function">createWebHashHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 3.x 写法</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mode<span class="token punctuation">:</span> <span class="token string">"hash"</span> <span class="token operator">/</span> <span class="token string">"history"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="3">
+<li>挂载方式：在Vue 3中使用Composition API，所以Vue Router也要以插件的形式进行挂载。在Vue Router 4中，使用useRouter和useRoute两个API来在组件中获取到路由实例和路由对象。而在Vue Router 3中，则是直接在组件实例中使用this.$router来获取路由实例，并使用this.$route来获取路由对象。</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 4.x</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">"./router.js"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">"./App.vue"</span><span class="token punctuation">;</span>
+<span class="token function">createApp</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">"#app"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 3.x</span>
+
+<span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">"./router.js"</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  router<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="4">
+<li>组件中的使用方式：因为在Vue 3的setup函数中无法使用this，所以在Vue Router 4中提供了useRouter和useRoute两个API来在组件中获取到路由实例和路由对象。而在Vue Router 3中，则是在组件的实例方法中使用this.$router来获取路由实例，并使用this.$route来获取路由对象。</li>
+</ol>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 4.x</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useRouter<span class="token punctuation">,</span>useRoute <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue-router"</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">useRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token function">useRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> linkToHome <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            path<span class="token punctuation">:</span><span class="token string">'/'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span><span class="token punctuation">{</span>
+        linkToHome
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 3.x</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token function">linkToHome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                path<span class="token punctuation">:</span><span class="token string">'/'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<ol start="5">
+<li>导航守卫：由于Vue 3的Composition API变革，beforeRouteUpdate 和 beforeRouteLeave 被替换为 onBeforeRouteUpdate 和 onBeforeRouteLeave。</li>
+</ol>
+<h4 id="app-use-操作了什么？"><a href="#app-use-操作了什么？" class="headerlink" title="app.use 操作了什么？"></a>app.use 操作了什么？</h4><p>在Vue中，app.use是Vue的全局API之一，用于在Vue应用程序中引入和注册插件。</p>
+<p>app.use操作会调用Vue构造器的use方法，该方法接受一个插件对象或模块作为参数。当调用app.use时，Vue会将插件对象或模块的原型链与Vue构造器的原型链进行合并，这样插件就可以访问Vue的核心API和功能。</p>
+<p>具体来说，app.use操作会执行以下操作：</p>
+<p>引入插件：如果参数是一个对象，它将作为插件对象被引入。插件对象的属性可以包含要注册的插件功能。<br>注册插件：如果参数是一个模块，它将被作为插件模块进行注册。这意味着它的属性和方法将被添加到Vue的全局API中，可以在整个应用程序中使用。<br>合并原型链：无论是引入插件对象还是注册插件模块，Vue都会将它们的原型链与Vue构造器的原型链进行合并。这样，插件就可以访问Vue的核心API和功能，例如this.$createElement、this.$set等。<br>通过app.use可以方便地将第三方库或自定义插件集成到Vue应用程序中，实现扩展和定制化功能，是Vue开发中常见的一种扩展方式。</p>
 
                 
             </div>
@@ -1115,7 +1773,7 @@ window<span class="token punctuation">.</span><span class="token function">addEv
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://s1p21.github.io/2022/11/29/js/">https://s1p21.github.io/2022/11/29/js/</a>
+                    <a href="https://s1p21.github.io/2025/09/19/mian-shi-quan/">https://s1p21.github.io/2025/09/19/mian-shi-quan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1155,10 +1813,6 @@ window<span class="token punctuation">.</span><span class="token function">addEv
                             
                                 <a href="/tags/%E9%9D%A2%E8%AF%95/">
                                     <span class="chip bg-color">面试</span>
-                                </a>
-                            
-                                <a href="/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
                                 </a>
                             
                         </div>
@@ -1237,17 +1891,18 @@ window<span class="token punctuation">.</span><span class="token function">addEv
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/11/29/shou-xie-shi-xian-promise/">
+                <a href="/2025/09/19/mian-shi-quan/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/21.jpg" class="responsive-img" alt="手写实现promise">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/6.jpg" class="responsive-img" alt="面试-全">
                         
-                        <span class="card-title">手写实现promise</span>
+                        <span class="card-title">面试-全</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1257,9 +1912,9 @@ window<span class="token punctuation">.</span><span class="token function">addEv
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-09-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1268,15 +1923,12 @@ window<span class="token punctuation">.</span><span class="token function">addEv
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/%E9%9D%A2%E8%AF%95/">
                         <span class="chip bg-color">面试</span>
-                    </a>
-                    
-                    <a href="/tags/promise/">
-                        <span class="chip bg-color">promise</span>
                     </a>
                     
                 </div>
@@ -1290,13 +1942,13 @@ window<span class="token punctuation">.</span><span class="token function">addEv
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/29/css/">
+                <a href="/2024/05/17/cong-prompt-dao-lun-wen-da-zao-gao-xiao-ke-yan-xie-zuo-liu-cheng-de-shi-yong-zhi-nan/">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/1.jpg" class="responsive-img" alt="面试-CSS">
+                        <img src="https://cdn.jsdelivr.net/gh/s1p21/s1p21.github.io//medias/featureimages/2.jpg" class="responsive-img" alt="从Prompt到论文：打造高效科研写作流程的实用指南">
                         
-                        <span class="card-title">面试-CSS</span>
+                        <span class="card-title">从Prompt到论文：打造高效科研写作流程的实用指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1307,7 +1959,7 @@ window<span class="token punctuation">.</span><span class="token function">addEv
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-17
                             </span>
                         <span class="publish-author">
                             
@@ -1320,12 +1972,12 @@ window<span class="token punctuation">.</span><span class="token function">addEv
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">面试</span>
+                    <a href="/tags/Prompt/">
+                        <span class="chip bg-color">Prompt</span>
                     </a>
                     
-                    <a href="/tags/css/">
-                        <span class="chip bg-color">css</span>
+                    <a href="/tags/%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">论文</span>
                     </a>
                     
                 </div>
