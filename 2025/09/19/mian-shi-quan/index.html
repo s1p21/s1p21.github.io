@@ -890,7 +890,7 @@ student<span class="token punctuation">.</span><span class="token function">acce
 student<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>mathTeacher<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 数学80</span>
 student<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>englishTeacher<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 英语60</span>
 </code></pre>
-<h3 id="26-async-await"><a href="#26-async-await" class="headerlink" title="26. async await"></a>26. async await</h3><p>作用：用同步方式，执行异步操作</p>
+<h4 id="26-async-await"><a href="#26-async-await" class="headerlink" title="26. async await"></a>26. async await</h4><p>作用：用同步方式，执行异步操作</p>
 <p>总结</p>
 <p>1）async函数是generator（迭代函数）的语法糖</p>
 <p>2）async函数返回的是一个Promise对象，有无值看有无return值</p>
@@ -949,8 +949,8 @@ student<span class="token punctuation">.</span><span class="token function">acce
 <span class="token punctuation">}</span>
 <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="28-Promise-then-第二个参数和catch的区别是什么"><a href="#28-Promise-then-第二个参数和catch的区别是什么" class="headerlink" title="28.Promise then 第二个参数和catch的区别是什么"></a>28.Promise then 第二个参数和catch的区别是什么</h3><p>主要区别就是，如果在then的第一个函数里抛出了异常，后面的catch能捕获到，而then的第二个函数捕获不到。<br>then的第二个参数和catch捕获错误信息的时候会就近原则，如果是promise内部报错，reject抛出错误后，then的第二个参数和catch方法都存在的情况下，只有then的第二个参数能捕获到，如果then的第二个参数不存在，则catch方法会捕获到。</p>
-<h3 id="29-promise-finally-方法实现"><a href="#29-promise-finally-方法实现" class="headerlink" title="29. promise finally 方法实现"></a>29. promise finally 方法实现</h3><p>调用当前 Promise 的 then 方法返回一个新的 Promise 对象（保证链式调用）<br>调用 Promise 中的 resolve 方法进行返回</p>
+<h4 id="28-Promise-then-第二个参数和catch的区别是什么"><a href="#28-Promise-then-第二个参数和catch的区别是什么" class="headerlink" title="28.Promise then 第二个参数和catch的区别是什么"></a>28.Promise then 第二个参数和catch的区别是什么</h4><p>主要区别就是，如果在then的第一个函数里抛出了异常，后面的catch能捕获到，而then的第二个函数捕获不到。<br>then的第二个参数和catch捕获错误信息的时候会就近原则，如果是promise内部报错，reject抛出错误后，then的第二个参数和catch方法都存在的情况下，只有then的第二个参数能捕获到，如果then的第二个参数不存在，则catch方法会捕获到。</p>
+<h4 id="29-promise-finally-方法实现"><a href="#29-promise-finally-方法实现" class="headerlink" title="29. promise finally 方法实现"></a>29. promise finally 方法实现</h4><p>调用当前 Promise 的 then 方法返回一个新的 Promise 对象（保证链式调用）<br>调用 Promise 中的 resolve 方法进行返回</p>
 <pre class=" language-js"><code class="language-js">
 Promise<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token keyword">finally</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>callback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
@@ -965,7 +965,7 @@ Promise<span class="token punctuation">.</span>prototype<span class="token punct
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="30-sleep函数的多种实现"><a href="#30-sleep函数的多种实现" class="headerlink" title="30. sleep函数的多种实现"></a>30. sleep函数的多种实现</h3><p>JS没有语言内置的休眠（sleep or wait）函数，所谓的sleep只是实现一种延迟执行的效果<br>等待指定时间后再执行对应方法</p>
+<h4 id="30-sleep函数的多种实现"><a href="#30-sleep函数的多种实现" class="headerlink" title="30. sleep函数的多种实现"></a>30. sleep函数的多种实现</h4><p>JS没有语言内置的休眠（sleep or wait）函数，所谓的sleep只是实现一种延迟执行的效果<br>等待指定时间后再执行对应方法</p>
 <ul>
 <li>循环阻止</li>
 <li>定时器</li>
@@ -1008,7 +1008,7 @@ Promise<span class="token punctuation">.</span>prototype<span class="token punct
 <span class="token function">sleep3</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">sleep4</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="手写map"><a href="#手写map" class="headerlink" title="手写map"></a>手写map</h3><pre class=" language-js"><code class="language-js">Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>selfMap <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> content<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h4 id="手写map"><a href="#手写map" class="headerlink" title="手写map"></a>手写map</h4><pre class=" language-js"><code class="language-js">Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>selfMap <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> content<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment" spellcheck="true">// map中的第二个参数作为fn函数的this</span>
   <span class="token comment" spellcheck="true">// Array.prototype.slice.call将类数组转化为数组，同Array.from, this为调用的数组（arr）</span>
   <span class="token keyword">let</span> arr <span class="token operator">=</span> Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>slice<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
