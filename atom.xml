@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>s1p21的blog</title>
+  
+  <subtitle>s1p21</subtitle>
+  <link href="https://s1p21.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://s1p21.github.io/"/>
+  <updated>2026-03-19T03:34:31.315Z</updated>
+  <id>https://s1p21.github.io/</id>
+  
+  <author>
+    <name>s1p21</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试-全</title>
+    <link href="https://s1p21.github.io/2025/09/19/mian-shi-quan/"/>
+    <id>https://s1p21.github.io/2025/09/19/mian-shi-quan/</id>
+    <published>2025-09-19T07:42:02.000Z</published>
+    <updated>2026-03-19T03:34:31.315Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;css&quot;&gt;&lt;a href=&quot;#css&quot; class=&quot;headerlink&quot; title=&quot;css&quot;&gt;&lt;/a&gt;css&lt;/h3&gt;&lt;h4 id=&quot;1-定位、布局&quot;&gt;&lt;a href=&quot;#1-定位、布局&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vibe Coding：AI 驱动的新一代编程范式</title>
+    <link href="https://s1p21.github.io/2025/03/19/vibe-coding-ai-qu-dong-de-xin-yi-dai-bian-cheng-fan-shi/"/>
+    <id>https://s1p21.github.io/2025/03/19/vibe-coding-ai-qu-dong-de-xin-yi-dai-bian-cheng-fan-shi/</id>
+    <published>2025-03-19T03:30:00.000Z</published>
+    <updated>2026-03-19T03:38:00.927Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;当代码不再是写出来的，而是”聊”出来的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;什么是-Vibe-Coding？&quot;&gt;&lt;a href=&quot;#什么是-Vibe-Coding？&quot; class=&quot;headerlink&quot; title=&quot;什么是</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://s1p21.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="AI" scheme="https://s1p21.github.io/tags/AI/"/>
+    
+    <category term="编程" scheme="https://s1p21.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Vibe Coding" scheme="https://s1p21.github.io/tags/Vibe-Coding/"/>
+    
+    <category term="前端" scheme="https://s1p21.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="趋势" scheme="https://s1p21.github.io/tags/%E8%B6%8B%E5%8A%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从Prompt到论文：打造高效科研写作流程的实用指南</title>
+    <link href="https://s1p21.github.io/2024/05/17/cong-prompt-dao-lun-wen-da-zao-gao-xiao-ke-yan-xie-zuo-liu-cheng-de-shi-yong-zhi-nan/"/>
+    <id>https://s1p21.github.io/2024/05/17/cong-prompt-dao-lun-wen-da-zao-gao-xiao-ke-yan-xie-zuo-liu-cheng-de-shi-yong-zhi-nan/</id>
+    <published>2024-05-17T09:00:40.000Z</published>
+    <updated>2026-03-19T03:34:31.190Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;随着人工智能技术的进步，Prompt（提示词）作为一种新兴工具，正在逐渐改变学术写作的方式。&lt;/p&gt;
+&lt;p&gt;Prompt不仅仅是一个简单的起点或灵感来源，更是一个系统化的写作引导工具。它能够帮助研究人员快速组织思路，生成有逻辑的段落，甚至优化语言表达，从而大幅提升写作效率和</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Prompt" scheme="https://s1p21.github.io/tags/Prompt/"/>
+    
+    <category term="论文" scheme="https://s1p21.github.io/tags/%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电池材料数据库平台</title>
+    <link href="https://s1p21.github.io/2024/01/19/dian-chi-cai-liao-shu-ju-ku-ping-tai/"/>
+    <id>https://s1p21.github.io/2024/01/19/dian-chi-cai-liao-shu-ju-ku-ping-tai/</id>
+    <published>2024-01-19T09:05:51.000Z</published>
+    <updated>2026-03-19T03:34:31.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;电池材料数据库的发展与应用及对于Material-project的调研及讨论&quot;&gt;&lt;a href=&quot;#电池材料数据库的发展与应用及对于Material-project的调研及讨论&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="电池" scheme="https://s1p21.github.io/tags/%E7%94%B5%E6%B1%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>低代码实践思路</title>
+    <link href="https://s1p21.github.io/2023/10/07/di-dai-ma-shi-jian-si-lu/"/>
+    <id>https://s1p21.github.io/2023/10/07/di-dai-ma-shi-jian-si-lu/</id>
+    <published>2023-10-07T03:44:46.000Z</published>
+    <updated>2026-03-19T03:34:31.199Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、前端研发复杂度背景&quot;&gt;&lt;a href=&quot;#一、前端研发复杂度背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="低代码" scheme="https://s1p21.github.io/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>领域驱动设计-DDD</title>
+    <link href="https://s1p21.github.io/2023/10/07/ling-yu-qu-dong-she-ji-ddd/"/>
+    <id>https://s1p21.github.io/2023/10/07/ling-yu-qu-dong-she-ji-ddd/</id>
+    <published>2023-10-07T03:23:21.000Z</published>
+    <updated>2026-03-19T03:34:31.327Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-为什么需要DDD&quot;&gt;&lt;a href=&quot;#1-为什么需要DDD&quot; class=&quot;headerlink&quot; title=&quot;1. 为什么需要DDD&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DDD" scheme="https://s1p21.github.io/tags/DDD/"/>
+    
+    <category term="前端架构" scheme="https://s1p21.github.io/tags/%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack 优化实践</title>
+    <link href="https://s1p21.github.io/2023/01/18/webpack-you-hua-shi-jian/"/>
+    <id>https://s1p21.github.io/2023/01/18/webpack-you-hua-shi-jian/</id>
+    <published>2023-01-18T09:38:49.000Z</published>
+    <updated>2026-03-19T03:34:31.167Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一、优化策略： 缓存、多核、抽离或拆分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存添加：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;babel-loader缓存 通过设置cacheDirectory为true来开启缓存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="webpack" scheme="https://s1p21.github.io/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RxJS与Promise的区别</title>
+    <link href="https://s1p21.github.io/2023/01/12/rxjs-yu-promise-de-qu-bie/"/>
+    <id>https://s1p21.github.io/2023/01/12/rxjs-yu-promise-de-qu-bie/</id>
+    <published>2023-01-12T11:15:13.000Z</published>
+    <updated>2026-03-19T03:34:31.024Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;RxJS 是 ReactiveX 项目的 JavaScript 实现。ReactiveX 项目旨在为不同编程语言的异步编程提供 API。&lt;br&gt;ReactiveX 的基本概念是 Gang of Four 的 Observer pattern (ReactiveX</summary>
+        
+      
+    
+    
+    
+    
+    <category term="RxJS" scheme="https://s1p21.github.io/tags/RxJS/"/>
+    
+    <category term="Promise" scheme="https://s1p21.github.io/tags/Promise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常见机器学习算法</title>
+    <link href="https://s1p21.github.io/2023/01/12/chang-jian-ji-qi-xue-xi-suan-fa/"/>
+    <id>https://s1p21.github.io/2023/01/12/chang-jian-ji-qi-xue-xi-suan-fa/</id>
+    <published>2023-01-12T07:54:00.000Z</published>
+    <updated>2026-03-19T03:34:31.224Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;什么是机器学习&quot;&gt;&lt;a href=&quot;#什么是机器学习&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="机器学习" scheme="https://s1p21.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-http</title>
+    <link href="https://s1p21.github.io/2022/12/05/http/"/>
+    <id>https://s1p21.github.io/2022/12/05/http/</id>
+    <published>2022-12-05T04:46:10.000Z</published>
+    <updated>2026-03-19T03:34:31.115Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;网络模型&quot;&gt;&lt;a href=&quot;#网络模型&quot; class=&quot;headerlink&quot; title=&quot;网络模型&quot;&gt;&lt;/a&gt;网络模型&lt;/h4&gt;&lt;p&gt;应用层、表示层、会话层、传输层、网络层、数据链路层、物理层&lt;/p&gt;
+&lt;h4 id=&quot;http的请求报文和返回报文&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="http" scheme="https://s1p21.github.io/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-webpack和Node</title>
+    <link href="https://s1p21.github.io/2022/12/04/webpack-he-node/"/>
+    <id>https://s1p21.github.io/2022/12/04/webpack-he-node/</id>
+    <published>2022-12-04T11:26:39.000Z</published>
+    <updated>2026-03-19T03:34:31.179Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;loader-和plugin的区别&quot;&gt;&lt;a href=&quot;#loader-和plugin的区别&quot; class=&quot;headerlink&quot; title=&quot;loader 和plugin的区别&quot;&gt;&lt;/a&gt;loader</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="webpack" scheme="https://s1p21.github.io/tags/webpack/"/>
+    
+    <category term="Node" scheme="https://s1p21.github.io/tags/Node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-算法</title>
+    <link href="https://s1p21.github.io/2022/12/04/suan-fa/"/>
+    <id>https://s1p21.github.io/2022/12/04/suan-fa/</id>
+    <published>2022-12-04T11:23:59.000Z</published>
+    <updated>2026-03-19T03:34:31.291Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-排序&quot;&gt;&lt;a href=&quot;#1-排序&quot; class=&quot;headerlink&quot; title=&quot;1.排序&quot;&gt;&lt;/a&gt;1.排序&lt;/h2&gt;&lt;h3 id=&quot;1-1-快排&quot;&gt;&lt;a href=&quot;#1-1-快排&quot; class=&quot;headerlink&quot; title=&quot;1.1</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="算法" scheme="https://s1p21.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-bff</title>
+    <link href="https://s1p21.github.io/2022/12/01/bff/"/>
+    <id>https://s1p21.github.io/2022/12/01/bff/</id>
+    <published>2022-12-01T09:56:59.000Z</published>
+    <updated>2026-03-19T03:34:31.069Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;bff-作用&quot;&gt;&lt;a href=&quot;#bff-作用&quot; class=&quot;headerlink&quot; title=&quot;bff 作用&quot;&gt;&lt;/a&gt;bff 作用&lt;/h3&gt;&lt;p&gt;业务遇到的问题：PC</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="bff" scheme="https://s1p21.github.io/tags/bff/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-vue</title>
+    <link href="https://s1p21.github.io/2022/11/30/vue/"/>
+    <id>https://s1p21.github.io/2022/11/30/vue/</id>
+    <published>2022-11-30T07:00:39.000Z</published>
+    <updated>2026-03-19T03:34:31.155Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;vue-的双向绑定&quot;&gt;&lt;a href=&quot;#vue-的双向绑定&quot; class=&quot;headerlink&quot; title=&quot;vue 的双向绑定&quot;&gt;&lt;/a&gt;vue 的双向绑定&lt;/h4&gt;&lt;p&gt;vue2.x 中通过发布者-订阅者设计模式的方式实现，通过 get 和 set</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="vue" scheme="https://s1p21.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-React</title>
+    <link href="https://s1p21.github.io/2022/11/30/react/"/>
+    <id>https://s1p21.github.io/2022/11/30/react/</id>
+    <published>2022-11-30T04:33:51.000Z</published>
+    <updated>2026-03-19T03:34:30.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;react生命周期&quot;&gt;&lt;a href=&quot;#react生命周期&quot; class=&quot;headerlink&quot; title=&quot;react生命周期&quot;&gt;&lt;/a&gt;react生命周期&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;constructor（并不属于生命周期 - 初始化</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="React" scheme="https://s1p21.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手写实现promise</title>
+    <link href="https://s1p21.github.io/2022/11/29/shou-xie-shi-xian-promise/"/>
+    <id>https://s1p21.github.io/2022/11/29/shou-xie-shi-xian-promise/</id>
+    <published>2022-11-29T12:46:39.000Z</published>
+    <updated>2026-03-19T03:34:31.236Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; PENDING &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="promise" scheme="https://s1p21.github.io/tags/promise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-JS</title>
+    <link href="https://s1p21.github.io/2022/11/29/js/"/>
+    <id>https://s1p21.github.io/2022/11/29/js/</id>
+    <published>2022-11-29T09:13:37.000Z</published>
+    <updated>2026-03-19T03:34:30.954Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-js-垃圾回收机制&quot;&gt;&lt;a href=&quot;#1-js-垃圾回收机制&quot; class=&quot;headerlink&quot; title=&quot;1.  js 垃圾回收机制&quot;&gt;&lt;/a&gt;1.  js 垃圾回收机制&lt;/h4&gt;&lt;p&gt;答:js</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="JS" scheme="https://s1p21.github.io/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-CSS</title>
+    <link href="https://s1p21.github.io/2022/11/29/css/"/>
+    <id>https://s1p21.github.io/2022/11/29/css/</id>
+    <published>2022-11-29T09:10:51.000Z</published>
+    <updated>2026-03-19T03:34:30.941Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-定位、布局&quot;&gt;&lt;a href=&quot;#1-定位、布局&quot; class=&quot;headerlink&quot; title=&quot;1.定位、布局&quot;&gt;&lt;/a&gt;1.定位、布局&lt;/h4&gt;&lt;p&gt;不同定位的区别，两栏布局、三栏布局，flex布局必会&lt;br&gt; 两栏布局:浮动布局、flex&lt;br&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="css" scheme="https://s1p21.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入了解Composition API和 watch 源码分析</title>
+    <link href="https://s1p21.github.io/2022/11/18/shen-ru-liao-jie-composition-api-he-watch-yuan-ma-fen-xi/"/>
+    <id>https://s1p21.github.io/2022/11/18/shen-ru-liao-jie-composition-api-he-watch-yuan-ma-fen-xi/</id>
+    <published>2022-11-18T07:24:30.000Z</published>
+    <updated>2026-03-19T03:34:31.252Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;什么是-Composition-API（VCA）&quot;&gt;&lt;a href=&quot;#什么是-Composition-API（VCA）&quot; class=&quot;headerlink&quot; title=&quot;什么是 Composition API（VCA）&quot;&gt;&lt;/a&gt;什么是</summary>
+        
+      
+    
+    
+    
+    
+    <category term="vue3" scheme="https://s1p21.github.io/tags/vue3/"/>
+    
+    <category term="composition API" scheme="https://s1p21.github.io/tags/composition-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>防腐层在前端领域的实践</title>
+    <link href="https://s1p21.github.io/2022/11/16/fang-fu-ceng-zai-qian-duan-ling-yu-de-shi-jian/"/>
+    <id>https://s1p21.github.io/2022/11/16/fang-fu-ceng-zai-qian-duan-ling-yu-de-shi-jian/</id>
+    <published>2022-11-16T11:36:44.000Z</published>
+    <updated>2026-03-19T03:34:31.302Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;什么是防腐层&quot;&gt;&lt;a href=&quot;#什么是防腐层&quot; class=&quot;headerlink&quot; title=&quot;什么是防腐层&quot;&gt;&lt;/a&gt;什么是防腐层&lt;/h3&gt;&lt;p&gt;防腐层(Anti-corruption layer) ： 防腐层（Anti-corruption</summary>
+        
+      
+    
+    
+    
+    
+    <category term="RxJS" scheme="https://s1p21.github.io/tags/RxJS/"/>
+    
+    <category term="DDD" scheme="https://s1p21.github.io/tags/DDD/"/>
+    
+    <category term="领域驱动设计" scheme="https://s1p21.github.io/tags/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+</feed>
