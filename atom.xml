@@ -6,7 +6,7 @@
   <link href="https://s1p21.github.io/atom.xml" rel="self"/>
   
   <link href="https://s1p21.github.io/"/>
-  <updated>2026-03-19T03:34:31.315Z</updated>
+  <updated>2026-03-21T07:05:50.673Z</updated>
   <id>https://s1p21.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Next.js 水合（Hydration）机制详解</title>
+    <link href="https://s1p21.github.io/2026/03/20/nextjs-hydration/"/>
+    <id>https://s1p21.github.io/2026/03/20/nextjs-hydration/</id>
+    <published>2026-03-20T23:00:00.000Z</published>
+    <updated>2026-03-21T07:05:50.673Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Next-js-水合（Hydration）机制详解&quot;&gt;&lt;a href=&quot;#Next-js-水合（Hydration）机制详解&quot; class=&quot;headerlink&quot; title=&quot;Next.js 水合（Hydration）机制详解&quot;&gt;&lt;/a&gt;Next.js</summary>
+        
+      
+    
+    
+    
+    <category term="前端技术" scheme="https://s1p21.github.io/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="React" scheme="https://s1p21.github.io/tags/React/"/>
+    
+    <category term="Next.js" scheme="https://s1p21.github.io/tags/Next-js/"/>
+    
+    <category term="SSR" scheme="https://s1p21.github.io/tags/SSR/"/>
+    
+    <category term="Hydration" scheme="https://s1p21.github.io/tags/Hydration/"/>
+    
+  </entry>
   
   <entry>
     <title>面试-全</title>
@@ -501,33 +532,6 @@
     <category term="vue3" scheme="https://s1p21.github.io/tags/vue3/"/>
     
     <category term="composition API" scheme="https://s1p21.github.io/tags/composition-API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>防腐层在前端领域的实践</title>
-    <link href="https://s1p21.github.io/2022/11/16/fang-fu-ceng-zai-qian-duan-ling-yu-de-shi-jian/"/>
-    <id>https://s1p21.github.io/2022/11/16/fang-fu-ceng-zai-qian-duan-ling-yu-de-shi-jian/</id>
-    <published>2022-11-16T11:36:44.000Z</published>
-    <updated>2026-03-19T03:34:31.302Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;什么是防腐层&quot;&gt;&lt;a href=&quot;#什么是防腐层&quot; class=&quot;headerlink&quot; title=&quot;什么是防腐层&quot;&gt;&lt;/a&gt;什么是防腐层&lt;/h3&gt;&lt;p&gt;防腐层(Anti-corruption layer) ： 防腐层（Anti-corruption</summary>
-        
-      
-    
-    
-    
-    
-    <category term="RxJS" scheme="https://s1p21.github.io/tags/RxJS/"/>
-    
-    <category term="DDD" scheme="https://s1p21.github.io/tags/DDD/"/>
-    
-    <category term="领域驱动设计" scheme="https://s1p21.github.io/tags/%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
