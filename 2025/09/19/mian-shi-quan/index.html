@@ -5,11 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="面试-全, 前端 vue js ts react node">
-    <meta name="description" content="一、css1.定位、布局不同定位的区别，两栏布局、三栏布局，flex布局必会 两栏布局:浮动布局、flex 三栏布局:双飞翼布局 三栏都采用左浮动
+    <meta name="description" content="AI 面试1. 如何优化 AI 长文本流式输出的渲染性能？核心问题是 Token 到达频率高，如果每个 Token 都触发 React 更新、Markdown 全量解析和 DOM 重排，页面会卡顿。
+我的方案是：
 
- #main{
-  background-color:aqua;
-  width:100%">
+网络层持续接收分片，但先">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -363,7 +362,71 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一、css"><a href="#一、css" class="headerlink" title="一、css"></a>一、css</h3><h4 id="1-定位、布局"><a href="#1-定位、布局" class="headerlink" title="1.定位、布局"></a>1.定位、布局</h4><p>不同定位的区别，两栏布局、三栏布局，flex布局必会<br> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
+                <h3 id="AI-面试"><a href="#AI-面试" class="headerlink" title="AI 面试"></a>AI 面试</h3><h4 id="1-如何优化-AI-长文本流式输出的渲染性能？"><a href="#1-如何优化-AI-长文本流式输出的渲染性能？" class="headerlink" title="1. 如何优化 AI 长文本流式输出的渲染性能？"></a>1. 如何优化 AI 长文本流式输出的渲染性能？</h4><p>核心问题是 Token 到达频率高，如果每个 Token 都触发 React 更新、Markdown 全量解析和 DOM 重排，页面会卡顿。</p>
+<p>我的方案是：</p>
+<ul>
+<li>网络层持续接收分片，但先写入缓冲区；</li>
+<li>通过 requestAnimationFrame 或 30～50ms 定时批量刷新；</li>
+<li>只更新当前正在生成的消息；</li>
+<li>已完成消息使用 React.memo；</li>
+<li>Markdown 按块解析，避免每次从头解析全部内容；</li>
+<li>代码块和图表完成后再做高亮或渲染；</li>
+<li>长消息使用虚拟列表；</li>
+<li>自动滚动时尊重用户位置，用户上滑后停止强制跟随；</li>
+<li>使用 AbortController 支持停止生成；</li>
+<li>大量解析可以放入 Web Worker。</li>
+<li>状态上可把“正在生成的字符串”放在局部 Store 或 ref 中，降低整个会话树的重新渲染。</li>
+</ul>
+<h4 id="2-Fetch-处理-ReadableStream"><a href="#2-Fetch-处理-ReadableStream" class="headerlink" title="2. Fetch 处理 ReadableStream"></a>2. Fetch 处理 ReadableStream</h4><p>调用 fetch 获取响应，检查状态和 response.body。<br>调用 getReader() 获取读取器。<br>循环执行 reader.read()，直到 done 为 true。<br>使用 TextDecoder.decode(value, { stream: true }) 解码。<br>将结果写入 Buffer，按 SSE 或 JSON 协议拆分完整消息。<br>完成、异常或用户取消时释放 Reader，并使用 AbortController 终止请求。</p>
+<pre><code>async function readStream(url, signal) {
+  const response = await fetch(url, { signal });
+  if (!response.ok || !response.body) throw new Error("请求失败");
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+    }
+    buffer += decoder.decode();
+  } finally {
+    reader.releaseLock();
+  }
+}
+</code></pre>
+<p>面试总结： Reader 负责读取，Decoder 负责解码，Buffer 负责组装，AbortController 负责取消。</p>
+<p>面试追问：为什么不能把每个 chunk 直接当成一条消息？</p>
+<p>网络分片边界与业务消息边界没有关系，一条消息可能跨多个 chunk，一个 chunk 也可能包含多条消息，因此必须通过 Buffer 和协议分隔符组装。</p>
+<p>TextDecoder 的 stream: true 解决什么问题？<br>它会保留尚未组成完整字符的字节，等待下一个 chunk 继续解码，从而避免中文等多字节字符被拆分后乱码。流结束时还应调用一次 decoder.decode() 刷新残留字节。</p>
+<h4 id="3-自动滚动与用户手动上滚"><a href="#3-自动滚动与用户手动上滚" class="headerlink" title="3.自动滚动与用户手动上滚"></a>3.自动滚动与用户手动上滚</h4><p>核心观点： 只有用户仍在底部时才自动滚动；用户上滚后必须暂停。</p>
+<ul>
+<li>用 scrollHeight - scrollTop - clientHeight 判断是否接近底部，并设置容差。</li>
+<li>新内容到达且处于底部时，调用 scrollIntoView 或更新 scrollTop。</li>
+<li>监听滚动、wheel 或 touchmove，识别用户是否查看历史内容。</li>
+<li>上滚后暂停自动滚动，显示“回到最新消息”按钮。</li>
+<li>用户点击按钮后恢复自动滚动。</li>
+<li>图片、公式和代码高亮加载完成后重新计算位置。</li>
+<li>使用节流处理滚动事件。<br>面试总结： 判断标准不是内容是否更新，而是用户是否仍然在底部。<br>面试追问：为什么不能只监听 wheel 事件？<br>触摸板、触摸屏、键盘和代码滚动不一定触发 wheel。更稳妥的方式是监听滚动位置，持续判断用户是否接近底部。</li>
+</ul>
+<h4 id="4-如何设计灵活的-Prompt-模板管理系统？"><a href="#4-如何设计灵活的-Prompt-模板管理系统？" class="headerlink" title="4.如何设计灵活的 Prompt 模板管理系统？"></a>4.如何设计灵活的 Prompt 模板管理系统？</h4><p>我会将模板作为版本化配置，而不是散落在源码中的字符串。<br>核心模型包括：</p>
+<p>Template</p>
+<ul>
+<li>id / name</li>
+<li>version</li>
+<li>system_prompt</li>
+<li>user_prompt</li>
+<li>variables_schema</li>
+<li>defaults</li>
+<li>model_config</li>
+<li>output_schema</li>
+<li>examples</li>
+<li>tags</li>
+<li>status: draft / published / archived<br>设计重点：</li>
+</ul>
+<p>使用明确的变量语法，如 ；<br>变量通过 JSON Schema 校验；<br>模板版本发布后保持不可变；<br>支持草稿、发布、回滚和环境隔离；<br>支持预览最终 Prompt；<br>模型参数与 Prompt 一起版本化；<br>敏感信息由服务端注入；<br>支持 A/B 测试和效果评估；<br>保存修改人、发布时间和使用记录；<br>对模板做快照，保证历史请求可以重现。<br>复杂场景可以拆成 System、Context、Examples、User Input 等多个片段再组合。</p>
+<h3 id="二、css"><a href="#二、css" class="headerlink" title="二、css"></a>二、css</h3><h4 id="1-定位、布局"><a href="#1-定位、布局" class="headerlink" title="1.定位、布局"></a>1.定位、布局</h4><p>不同定位的区别，两栏布局、三栏布局，flex布局必会<br> 两栏布局:浮动布局、flex<br> 三栏布局:双飞翼布局 三栏都采用左浮动</p>
 <pre class=" language-css"><code class="language-css">
  <span class="token selector"><span class="token id">#main</span></span><span class="token punctuation">{</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span>aqua<span class="token punctuation">;</span>
@@ -446,8 +509,7 @@
 <h4 id="6-BFC"><a href="#6-BFC" class="headerlink" title="6. BFC"></a>6. BFC</h4><p>BFC（Block formatting context），即块级格式化上下文，它作为HTML页面上的一个独立渲染区域，只有区域内元素参与渲染，且不会影响其外部元素。简单来说，可以将 BFC 看做是一个“围城”，外面的元素进不来，里面的元素出不去<br>形成BFC的条件:</p>
 <p>1、浮动元素，float 除 none 以外的值；<br>2、定位元素，position（absolute，fixed）；<br>3、display 为以下其中之一的值 inline-block，table-cell，table-caption；<br>4、overflow 除了 visible 以外的值（hidden，auto，scroll）；</p>
 <p>BFC 一般用来解决以下几个问题<br>边距重叠问题<br>消除浮动问题<br>自适应布局问题</p>
-<h3 id="二、-js"><a href="#二、-js" class="headerlink" title="二、 js"></a>二、 js</h3><hr>
-<h2 id="title-面试-JSdate-2022-11-29-17-13-37tags-面试-JS"><a href="#title-面试-JSdate-2022-11-29-17-13-37tags-面试-JS" class="headerlink" title="title: 面试-JSdate: 2022-11-29 17:13:37tags: [面试, JS]"></a>title: 面试-JS<br>date: 2022-11-29 17:13:37<br>tags: [面试, JS]</h2><h4 id="1-js-垃圾回收机制"><a href="#1-js-垃圾回收机制" class="headerlink" title="1.  js 垃圾回收机制"></a>1.  js 垃圾回收机制</h4><p>答:js 的内存泄漏可以通过三个:闭包、全局变量、对象属性循环使用、DOM 节点删除时未解绑事件、计时器引用未及时删除</p>
+<h3 id="二、-js"><a href="#二、-js" class="headerlink" title="二、 js"></a>二、 js</h3><h4 id="1-js-垃圾回收机制"><a href="#1-js-垃圾回收机制" class="headerlink" title="1.  js 垃圾回收机制"></a>1.  js 垃圾回收机制</h4><p>答:js 的内存泄漏可以通过三个:闭包、全局变量、对象属性循环使用、DOM 节点删除时未解绑事件、计时器引用未及时删除</p>
 <p>垃圾回收机制:手动回收和自动回收、自动回收分为对调用栈的数据回收、对调用堆的数据回收、<br>调用栈的数据回收基于 ESP（记录当前执行状态的指针）来销毁保存在栈的执行上下文；<br>调用堆的数据回收:v8 把堆分为<code>新生代</code>和<code>老生代</code>,新生代存放的是生存时间短的对象，老生代存放生存时间长的对象<br>执行流程:</p>
 <ol>
 <li>标记活动对象和非活动对象</li>
@@ -2412,25 +2474,6 @@ $(function () {
 
     
 
-    
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i["DaoVoiceObject"] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            a.charset = "utf-8";
-            m.parentNode.insertBefore(a, m)
-        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
-            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
-        daovoice('init', {
-            app_id: "89660989"
-        });
-        daovoice('update');
-    </script>
     
 
     <!--腾讯兔小巢-->
