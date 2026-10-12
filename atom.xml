@@ -17,28 +17,6 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://s1p21.github.io/2026/10/12/js/"/>
-    <id>https://s1p21.github.io/2026/10/12/js/</id>
-    <published>2026-10-12T06:11:34.552Z</published>
-    <updated>2026-10-12T06:11:34.552Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;hr&gt;
-&lt;h2 id=&quot;title-面试-JS&quot;&gt;&lt;a href=&quot;#title-面试-JS&quot; class=&quot;headerlink&quot; title=&quot;title: 面试-JS&quot;&gt;&lt;/a&gt;title: 面试-JS&lt;/h2&gt;&lt;p&gt;date: 2022-11-29</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>prompt面试</title>
     <link href="https://s1p21.github.io/2026/10/09/prompt-mian-shi/"/>
     <id>https://s1p21.github.io/2026/10/09/prompt-mian-shi/</id>
@@ -534,6 +512,32 @@
     <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="vue" scheme="https://s1p21.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-React</title>
+    <link href="https://s1p21.github.io/2022/11/30/react/"/>
+    <id>https://s1p21.github.io/2022/11/30/react/</id>
+    <published>2022-11-30T04:33:51.000Z</published>
+    <updated>2026-10-09T13:18:56.865Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;react生命周期&quot;&gt;&lt;a href=&quot;#react生命周期&quot; class=&quot;headerlink&quot; title=&quot;react生命周期&quot;&gt;&lt;/a&gt;react生命周期&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;constructor（并不属于生命周期 - 初始化</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试" scheme="https://s1p21.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="React" scheme="https://s1p21.github.io/tags/React/"/>
     
   </entry>
   
